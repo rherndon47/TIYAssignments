@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE8BBA021AB20813003AA5B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8BBA011AB20813003AA5B1 /* main.m */; };
+		EE8BBA051AB20813003AA5B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8BBA041AB20813003AA5B1 /* AppDelegate.m */; };
+		EE8BBA0D1AB20813003AA5B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8BBA0C1AB20813003AA5B1 /* Images.xcassets */; };
+		EE8BBA101AB20813003AA5B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8BBA0E1AB20813003AA5B1 /* LaunchScreen.xib */; };
+		EE8BBA1C1AB20813003AA5B1 /* HighVoltageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8BBA1B1AB20813003AA5B1 /* HighVoltageViewControllerTests.m */; };
+		EE8BBA271AB208DE003AA5B1 /* HighVoltageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8BBA261AB208DE003AA5B1 /* HighVoltageTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE8BBA161AB20813003AA5B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE8BB9F41AB20813003AA5B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE8BB9FB1AB20813003AA5B1;
+			remoteInfo = HighVoltageViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE8BB9FC1AB20813003AA5B1 /* HighVoltageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighVoltageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8BBA001AB20813003AA5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8BBA011AB20813003AA5B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE8BBA031AB20813003AA5B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE8BBA041AB20813003AA5B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE8BBA0C1AB20813003AA5B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE8BBA0F1AB20813003AA5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE8BBA151AB20813003AA5B1 /* HighVoltageViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighVoltageViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8BBA1A1AB20813003AA5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8BBA1B1AB20813003AA5B1 /* HighVoltageViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighVoltageViewControllerTests.m; sourceTree = "<group>"; };
+		EE8BBA251AB208DE003AA5B1 /* HighVoltageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighVoltageTableViewController.h; sourceTree = "<group>"; };
+		EE8BBA261AB208DE003AA5B1 /* HighVoltageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighVoltageTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE8BB9F91AB20813003AA5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8BBA121AB20813003AA5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE8BB9F31AB20813003AA5B1 = {
+			isa = PBXGroup;
+			children = (
+				EE8BB9FE1AB20813003AA5B1 /* HighVoltageViewController */,
+				EE8BBA181AB20813003AA5B1 /* HighVoltageViewControllerTests */,
+				EE8BB9FD1AB20813003AA5B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE8BB9FD1AB20813003AA5B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BB9FC1AB20813003AA5B1 /* HighVoltageViewController.app */,
+				EE8BBA151AB20813003AA5B1 /* HighVoltageViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE8BB9FE1AB20813003AA5B1 /* HighVoltageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BBA031AB20813003AA5B1 /* AppDelegate.h */,
+				EE8BBA041AB20813003AA5B1 /* AppDelegate.m */,
+				EE8BBA0C1AB20813003AA5B1 /* Images.xcassets */,
+				EE8BBA0E1AB20813003AA5B1 /* LaunchScreen.xib */,
+				EE8BB9FF1AB20813003AA5B1 /* Supporting Files */,
+				EE8BBA251AB208DE003AA5B1 /* HighVoltageTableViewController.h */,
+				EE8BBA261AB208DE003AA5B1 /* HighVoltageTableViewController.m */,
+			);
+			path = HighVoltageViewController;
+			sourceTree = "<group>";
+		};
+		EE8BB9FF1AB20813003AA5B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BBA001AB20813003AA5B1 /* Info.plist */,
+				EE8BBA011AB20813003AA5B1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE8BBA181AB20813003AA5B1 /* HighVoltageViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BBA1B1AB20813003AA5B1 /* HighVoltageViewControllerTests.m */,
+				EE8BBA191AB20813003AA5B1 /* Supporting Files */,
+			);
+			path = HighVoltageViewControllerTests;
+			sourceTree = "<group>";
+		};
+		EE8BBA191AB20813003AA5B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BBA1A1AB20813003AA5B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE8BB9FB1AB20813003AA5B1 /* HighVoltageViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8BBA1F1AB20813003AA5B1 /* Build configuration list for PBXNativeTarget "HighVoltageViewController" */;
+			buildPhases = (
+				EE8BB9F81AB20813003AA5B1 /* Sources */,
+				EE8BB9F91AB20813003AA5B1 /* Frameworks */,
+				EE8BB9FA1AB20813003AA5B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HighVoltageViewController;
+			productName = HighVoltageViewController;
+			productReference = EE8BB9FC1AB20813003AA5B1 /* HighVoltageViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE8BBA141AB20813003AA5B1 /* HighVoltageViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8BBA221AB20813003AA5B1 /* Build configuration list for PBXNativeTarget "HighVoltageViewControllerTests" */;
+			buildPhases = (
+				EE8BBA111AB20813003AA5B1 /* Sources */,
+				EE8BBA121AB20813003AA5B1 /* Frameworks */,
+				EE8BBA131AB20813003AA5B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE8BBA171AB20813003AA5B1 /* PBXTargetDependency */,
+			);
+			name = HighVoltageViewControllerTests;
+			productName = HighVoltageViewControllerTests;
+			productReference = EE8BBA151AB20813003AA5B1 /* HighVoltageViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE8BB9F41AB20813003AA5B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EE8BB9FB1AB20813003AA5B1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EE8BBA141AB20813003AA5B1 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EE8BB9FB1AB20813003AA5B1;
+					};
+				};
+			};
+			buildConfigurationList = EE8BB9F71AB20813003AA5B1 /* Build configuration list for PBXProject "HighVoltageViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE8BB9F31AB20813003AA5B1;
+			productRefGroup = EE8BB9FD1AB20813003AA5B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE8BB9FB1AB20813003AA5B1 /* HighVoltageViewController */,
+				EE8BBA141AB20813003AA5B1 /* HighVoltageViewControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE8BB9FA1AB20813003AA5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8BBA101AB20813003AA5B1 /* LaunchScreen.xib in Resources */,
+				EE8BBA0D1AB20813003AA5B1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8BBA131AB20813003AA5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE8BB9F81AB20813003AA5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8BBA271AB208DE003AA5B1 /* HighVoltageTableViewController.m in Sources */,
+				EE8BBA051AB20813003AA5B1 /* AppDelegate.m in Sources */,
+				EE8BBA021AB20813003AA5B1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8BBA111AB20813003AA5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8BBA1C1AB20813003AA5B1 /* HighVoltageViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE8BBA171AB20813003AA5B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE8BB9FB1AB20813003AA5B1 /* HighVoltageViewController */;
+			targetProxy = EE8BBA161AB20813003AA5B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE8BBA0E1AB20813003AA5B1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8BBA0F1AB20813003AA5B1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE8BBA1D1AB20813003AA5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE8BBA1E1AB20813003AA5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE8BBA201AB20813003AA5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HighVoltageViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE8BBA211AB20813003AA5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HighVoltageViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE8BBA231AB20813003AA5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HighVoltageViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighVoltageViewController.app/HighVoltageViewController";
+			};
+			name = Debug;
+		};
+		EE8BBA241AB20813003AA5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HighVoltageViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighVoltageViewController.app/HighVoltageViewController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE8BB9F71AB20813003AA5B1 /* Build configuration list for PBXProject "HighVoltageViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8BBA1D1AB20813003AA5B1 /* Debug */,
+				EE8BBA1E1AB20813003AA5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8BBA1F1AB20813003AA5B1 /* Build configuration list for PBXNativeTarget "HighVoltageViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8BBA201AB20813003AA5B1 /* Debug */,
+				EE8BBA211AB20813003AA5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE8BBA221AB20813003AA5B1 /* Build configuration list for PBXNativeTarget "HighVoltageViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8BBA231AB20813003AA5B1 /* Debug */,
+				EE8BBA241AB20813003AA5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE8BB9F41AB20813003AA5B1 /* Project object */;
+}
