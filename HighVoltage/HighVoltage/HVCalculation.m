@@ -16,7 +16,7 @@
     self = [super init]; // creates an instance of the NSObject class
     if (self)
     {
-        _energy = EngergyTypeNone;
+        _ienergy = EngergyTypeNone;
     }
     
     return self;
@@ -24,6 +24,7 @@
 
 + (NSArray *)allEnergyTypes
 {
+    
     return @[@"Watts", @"Volts", @"amps", @"ohms"];
 }
 
@@ -31,7 +32,7 @@
 {
     NSString *rc;
     
-    switch (self.energy)
+    switch (self.ienergy)
     {
         case EngergyTypeWatts:
             rc = @"Watts";

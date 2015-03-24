@@ -426,6 +426,7 @@
 				EE8BBA561AB2093E003AA5B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE8BBA571AB2093E003AA5B1 /* Build configuration list for PBXNativeTarget "HighVoltageTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +435,7 @@
 				EE8BBA591AB2093E003AA5B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tcr-oC-8m9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do Table View Controller-->
+        <scene sceneID="txP-vU-J5i">
+            <objects>
+                <tableViewController id="AC9-OZ-Dg5" customClass="ToDoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lpb-Oz-Hns">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell tag="1" contentMode="scaleToFill" restorationIdentifier="addTaskId" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="tH4-rf-PFM" customClass="ToDoTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tH4-rf-PFM" id="isQ-Uz-Nzm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter do to here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-Re-exx">
+                                            <rect key="frame" x="113" y="-5" width="467" height="40"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="AC9-OZ-Dg5" id="Qwh-vH-djJ"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fz-m0-YNQ">
+                                            <rect key="frame" x="15" y="-5" width="88" height="40"/>
+                                            <state key="normal" title="!Done" image="unchecked">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" title="Done" image="checked"/>
+                                            <connections>
+                                                <action selector="checkmarkTapped:" destination="AC9-OZ-Dg5" eventType="touchUpInside" id="Mwv-oY-gOA"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dnb-Re-exx" firstAttribute="leading" secondItem="isQ-Uz-Nzm" secondAttribute="leading" constant="100" id="4cL-1f-cHx"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dnb-Re-exx" secondAttribute="trailing" constant="20" id="6Wd-hX-DcP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dnb-Re-exx" secondAttribute="trailing" constant="20" id="Ecx-Ps-Ano"/>
+                                        <constraint firstAttribute="centerYWithinMargins" secondItem="9fz-m0-YNQ" secondAttribute="centerYWithinMargins" constant="6.75" id="IIZ-x0-ABc"/>
+                                        <constraint firstItem="9fz-m0-YNQ" firstAttribute="leading" secondItem="isQ-Uz-Nzm" secondAttribute="leading" constant="15" id="NgQ-nV-sB6"/>
+                                        <constraint firstItem="Dnb-Re-exx" firstAttribute="centerY" secondItem="9fz-m0-YNQ" secondAttribute="centerY" id="aB5-5q-UvQ"/>
+                                        <constraint firstItem="Dnb-Re-exx" firstAttribute="leading" secondItem="9fz-m0-YNQ" secondAttribute="trailing" constant="10" id="h7z-y7-zBV"/>
+                                        <constraint firstItem="Dnb-Re-exx" firstAttribute="top" secondItem="isQ-Uz-Nzm" secondAttribute="top" constant="5" id="jGg-cj-GpH"/>
+                                        <constraint firstItem="9fz-m0-YNQ" firstAttribute="height" secondItem="Dnb-Re-exx" secondAttribute="height" id="zZP-L3-4YO"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="4cL-1f-cHx"/>
+                                            <exclude reference="6Wd-hX-DcP"/>
+                                            <exclude reference="jGg-cj-GpH"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBoxButton" destination="9fz-m0-YNQ" id="Nsj-Da-egz"/>
+                                    <outlet property="descriptionTextField" destination="Dnb-Re-exx" id="AAb-kw-6vT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AC9-OZ-Dg5" id="Z9e-Zm-vdp"/>
+                            <outlet property="delegate" destination="AC9-OZ-Dg5" id="TCe-ve-xKm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0N5-xg-vLk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="oFr-Qa-uhD">
+                            <connections>
+                                <action selector="clearTasksButton:" destination="AC9-OZ-Dg5" id="fel-eD-8do"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aSX-CF-pm8">
+                            <connections>
+                                <action selector="addTaskItemButton:" destination="AC9-OZ-Dg5" id="tRy-B1-r61"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgA-Lc-C5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="945"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UZl-Bo-laf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tcr-oC-8m9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gTh-TE-Kng"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gN7-Hy-A8R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AC9-OZ-Dg5" kind="relationship" relationship="rootViewController" id="VQS-Yh-CYd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNe-hE-Dnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="945"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checked" width="40" height="40"/>
+        <image name="unchecked" width="40" height="40"/>
+    </resources>
+</document>

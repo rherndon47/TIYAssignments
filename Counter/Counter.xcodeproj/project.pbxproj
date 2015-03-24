@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEEF7C6F1AB8A70A00FCF4FD /* CounterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEF7C6E1AB8A70A00FCF4FD /* CounterTableViewCell.m */; };
+		EEEF7C721AB8BC7400FCF4FD /* CounterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEF7C711AB8BC7400FCF4FD /* CounterItem.m */; };
+		EEFD52C81AB89DDD0045E186 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD52C71AB89DDD0045E186 /* main.m */; };
+		EEFD52CB1AB89DDD0045E186 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD52CA1AB89DDD0045E186 /* AppDelegate.m */; };
+		EEFD52D11AB89DDD0045E186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFD52CF1AB89DDD0045E186 /* Main.storyboard */; };
+		EEFD52D31AB89DDD0045E186 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFD52D21AB89DDD0045E186 /* Images.xcassets */; };
+		EEFD52D61AB89DDD0045E186 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD52D41AB89DDD0045E186 /* LaunchScreen.xib */; };
+		EEFD52E21AB89DDE0045E186 /* CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD52E11AB89DDE0045E186 /* CounterTests.m */; };
+		EEFD52F01AB89F6F0045E186 /* CounterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD52EF1AB89F6F0045E186 /* CounterTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEFD52DC1AB89DDE0045E186 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEFD52BA1AB89DDD0045E186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEFD52C11AB89DDD0045E186;
+			remoteInfo = Counter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEEF7C6D1AB8A70A00FCF4FD /* CounterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterTableViewCell.h; sourceTree = "<group>"; };
+		EEEF7C6E1AB8A70A00FCF4FD /* CounterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterTableViewCell.m; sourceTree = "<group>"; };
+		EEEF7C701AB8BC7400FCF4FD /* CounterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterItem.h; sourceTree = "<group>"; };
+		EEEF7C711AB8BC7400FCF4FD /* CounterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterItem.m; sourceTree = "<group>"; };
+		EEFD52C21AB89DDD0045E186 /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFD52C61AB89DDD0045E186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFD52C71AB89DDD0045E186 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEFD52C91AB89DDD0045E186 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EEFD52CA1AB89DDD0045E186 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EEFD52D01AB89DDD0045E186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEFD52D21AB89DDD0045E186 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EEFD52D51AB89DDD0045E186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EEFD52DB1AB89DDE0045E186 /* CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFD52E01AB89DDE0045E186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFD52E11AB89DDE0045E186 /* CounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterTests.m; sourceTree = "<group>"; };
+		EEFD52EE1AB89F6F0045E186 /* CounterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterTableViewController.h; sourceTree = "<group>"; };
+		EEFD52EF1AB89F6F0045E186 /* CounterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEFD52BF1AB89DDD0045E186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFD52D81AB89DDE0045E186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEFD52B91AB89DDD0045E186 = {
+			isa = PBXGroup;
+			children = (
+				EEFD52C41AB89DDD0045E186 /* Counter */,
+				EEFD52DE1AB89DDE0045E186 /* CounterTests */,
+				EEFD52C31AB89DDD0045E186 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEFD52C31AB89DDD0045E186 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD52C21AB89DDD0045E186 /* Counter.app */,
+				EEFD52DB1AB89DDE0045E186 /* CounterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEFD52C41AB89DDD0045E186 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD52C91AB89DDD0045E186 /* AppDelegate.h */,
+				EEFD52CA1AB89DDD0045E186 /* AppDelegate.m */,
+				EEFD52EE1AB89F6F0045E186 /* CounterTableViewController.h */,
+				EEFD52EF1AB89F6F0045E186 /* CounterTableViewController.m */,
+				EEEF7C6D1AB8A70A00FCF4FD /* CounterTableViewCell.h */,
+				EEEF7C6E1AB8A70A00FCF4FD /* CounterTableViewCell.m */,
+				EEEF7C701AB8BC7400FCF4FD /* CounterItem.h */,
+				EEEF7C711AB8BC7400FCF4FD /* CounterItem.m */,
+				EEFD52CF1AB89DDD0045E186 /* Main.storyboard */,
+				EEFD52D21AB89DDD0045E186 /* Images.xcassets */,
+				EEFD52D41AB89DDD0045E186 /* LaunchScreen.xib */,
+				EEFD52C51AB89DDD0045E186 /* Supporting Files */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		EEFD52C51AB89DDD0045E186 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD52C61AB89DDD0045E186 /* Info.plist */,
+				EEFD52C71AB89DDD0045E186 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEFD52DE1AB89DDE0045E186 /* CounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD52E11AB89DDE0045E186 /* CounterTests.m */,
+				EEFD52DF1AB89DDE0045E186 /* Supporting Files */,
+			);
+			path = CounterTests;
+			sourceTree = "<group>";
+		};
+		EEFD52DF1AB89DDE0045E186 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD52E01AB89DDE0045E186 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEFD52C11AB89DDD0045E186 /* Counter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFD52E51AB89DDE0045E186 /* Build configuration list for PBXNativeTarget "Counter" */;
+			buildPhases = (
+				EEFD52BE1AB89DDD0045E186 /* Sources */,
+				EEFD52BF1AB89DDD0045E186 /* Frameworks */,
+				EEFD52C01AB89DDD0045E186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Counter;
+			productName = Counter;
+			productReference = EEFD52C21AB89DDD0045E186 /* Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEFD52DA1AB89DDE0045E186 /* CounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFD52E81AB89DDE0045E186 /* Build configuration list for PBXNativeTarget "CounterTests" */;
+			buildPhases = (
+				EEFD52D71AB89DDE0045E186 /* Sources */,
+				EEFD52D81AB89DDE0045E186 /* Frameworks */,
+				EEFD52D91AB89DDE0045E186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEFD52DD1AB89DDE0045E186 /* PBXTargetDependency */,
+			);
+			name = CounterTests;
+			productName = CounterTests;
+			productReference = EEFD52DB1AB89DDE0045E186 /* CounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEFD52BA1AB89DDD0045E186 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EEFD52C11AB89DDD0045E186 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EEFD52DA1AB89DDE0045E186 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EEFD52C11AB89DDD0045E186;
+					};
+				};
+			};
+			buildConfigurationList = EEFD52BD1AB89DDD0045E186 /* Build configuration list for PBXProject "Counter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEFD52B91AB89DDD0045E186;
+			productRefGroup = EEFD52C31AB89DDD0045E186 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEFD52C11AB89DDD0045E186 /* Counter */,
+				EEFD52DA1AB89DDE0045E186 /* CounterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEFD52C01AB89DDD0045E186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEFD52D11AB89DDD0045E186 /* Main.storyboard in Resources */,
+				EEFD52D61AB89DDD0045E186 /* LaunchScreen.xib in Resources */,
+				EEFD52D31AB89DDD0045E186 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFD52D91AB89DDE0045E186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEFD52BE1AB89DDD0045E186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEF7C6F1AB8A70A00FCF4FD /* CounterTableViewCell.m in Sources */,
+				EEFD52CB1AB89DDD0045E186 /* AppDelegate.m in Sources */,
+				EEEF7C721AB8BC7400FCF4FD /* CounterItem.m in Sources */,
+				EEFD52F01AB89F6F0045E186 /* CounterTableViewController.m in Sources */,
+				EEFD52C81AB89DDD0045E186 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFD52D71AB89DDE0045E186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEFD52E21AB89DDE0045E186 /* CounterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEFD52DD1AB89DDE0045E186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEFD52C11AB89DDD0045E186 /* Counter */;
+			targetProxy = EEFD52DC1AB89DDE0045E186 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEFD52CF1AB89DDD0045E186 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFD52D01AB89DDD0045E186 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEFD52D41AB89DDD0045E186 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFD52D51AB89DDD0045E186 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEFD52E31AB89DDE0045E186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEFD52E41AB89DDE0045E186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEFD52E61AB89DDE0045E186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Counter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEFD52E71AB89DDE0045E186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Counter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEFD52E91AB89DDE0045E186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CounterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/Counter";
+			};
+			name = Debug;
+		};
+		EEFD52EA1AB89DDE0045E186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CounterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/Counter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEFD52BD1AB89DDD0045E186 /* Build configuration list for PBXProject "Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFD52E31AB89DDE0045E186 /* Debug */,
+				EEFD52E41AB89DDE0045E186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFD52E51AB89DDE0045E186 /* Build configuration list for PBXNativeTarget "Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFD52E61AB89DDE0045E186 /* Debug */,
+				EEFD52E71AB89DDE0045E186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFD52E81AB89DDE0045E186 /* Build configuration list for PBXNativeTarget "CounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFD52E91AB89DDE0045E186 /* Debug */,
+				EEFD52EA1AB89DDE0045E186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEFD52BA1AB89DDD0045E186 /* Project object */;
+}

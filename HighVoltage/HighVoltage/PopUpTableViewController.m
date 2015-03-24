@@ -7,6 +7,7 @@
 //
 
 #import "PopUpTableViewController.h"
+#import "HighVoltageTableViewController.h"
 
 @interface PopUpTableViewController ()
 
@@ -14,10 +15,14 @@
 
 @implementation PopUpTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.energy= [[NSMutableArray alloc] initWithObjects: @"Watts", @"Volts", @"amps", @"ohms", nil];
+    NSLog(@"entered viewddi load");
+    
+//    self.energy= [[NSMutableArray alloc] initWithObjects: @"Watts", @"Volts", @"amps", @"ohms", nil];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,6 +72,12 @@
     
     
     [self.delegate energyTypeWasSelected:astring];
+
+    
+    [self.energy removeObjectAtIndex:(NSUInteger)indexPath.row];
+    
+    NSLog(@"energy %@",self.energy);
+
     
 }
 

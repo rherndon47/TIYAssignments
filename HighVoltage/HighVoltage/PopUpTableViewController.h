@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) id<PopupReturnDelegate> delegate;
 @property (nonatomic,strong) NSMutableArray *energy;
+@property (strong, nonatomic) NSString *firstTimeThru;
 
 @end

@@ -20,7 +20,7 @@ typedef enum
 @interface HVCalculation : NSObject
 
 @property (strong, nonatomic) NSString *highVoltageName;
-@property (assign) EngergyType energy;
+@property (assign) EngergyType ienergy;
 
 + (NSArray *)allEnergyTypes;
 

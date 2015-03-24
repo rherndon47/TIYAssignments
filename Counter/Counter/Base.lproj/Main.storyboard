@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GSf-TZ-N03">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter Table View Controller-->
+        <scene sceneID="FqM-SI-2sV">
+            <objects>
+                <tableViewController id="f74-6j-Aox" customClass="CounterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="counterCellsId" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="WRd-43-rJX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26143523398520291" green="0.89178898358585856" blue="0.42966632288026962" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.68137390260878172" green="1" blue="0.63516700456032382" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCounterCell" rowHeight="95" id="irS-Me-DRk" customClass="CounterTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="counterNameField" tableViewCell="irS-Me-DRk" id="B1q-Mq-vYD">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="addCnt" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-lq-ZGM">
+                                            <rect key="frame" x="330" y="16" width="50" height="62"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="guH-Aq-CU9"/>
+                                            </constraints>
+                                            <state key="normal" title="AddCnt" image="plus1"/>
+                                            <connections>
+                                                <action selector="addToCounterTapped:" destination="f74-6j-Aox" eventType="touchUpInside" id="OSu-QF-0v8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="subtractCnt" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqz-cp-dEA">
+                                            <rect key="frame" x="500" y="36" width="50" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="3Wr-FD-vB2"/>
+                                            </constraints>
+                                            <state key="normal" title="SubCnt" image="minus1">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="subtractFromCounterTapped:" destination="f74-6j-Aox" eventType="touchUpInside" id="HqK-9E-ko8"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Counter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJU-Jr-KHy">
+                                            <rect key="frame" x="8" y="32" width="315" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="f74-6j-Aox" id="Vcj-E9-RT5"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CounterLabel" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nul-Sc-l1T">
+                                            <rect key="frame" x="390" y="25" width="100" height="44.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="UbT-Mr-iac"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Nul-Sc-l1T" firstAttribute="leading" secondItem="hKm-lq-ZGM" secondAttribute="trailing" constant="10" id="BZz-PP-RV1"/>
+                                        <constraint firstItem="hKm-lq-ZGM" firstAttribute="leading" secondItem="jJU-Jr-KHy" secondAttribute="trailing" constant="7" id="DgT-dW-dOq"/>
+                                        <constraint firstItem="jJU-Jr-KHy" firstAttribute="leading" secondItem="B1q-Mq-vYD" secondAttribute="leading" constant="8" id="Hsn-Bj-3JC"/>
+                                        <constraint firstItem="jJU-Jr-KHy" firstAttribute="centerY" secondItem="hKm-lq-ZGM" secondAttribute="centerY" id="Qbb-JS-por"/>
+                                        <constraint firstItem="Lqz-cp-dEA" firstAttribute="leading" secondItem="Nul-Sc-l1T" secondAttribute="trailing" constant="10" id="Rt8-8W-MEG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lqz-cp-dEA" secondAttribute="trailing" constant="50" id="S0O-8X-cxI"/>
+                                        <constraint firstItem="Nul-Sc-l1T" firstAttribute="centerY" secondItem="hKm-lq-ZGM" secondAttribute="centerY" id="a1u-YW-LNZ"/>
+                                        <constraint firstItem="Nul-Sc-l1T" firstAttribute="width" secondItem="hKm-lq-ZGM" secondAttribute="height" multiplier="17:3" id="csG-wi-BSk"/>
+                                        <constraint firstItem="Lqz-cp-dEA" firstAttribute="centerY" secondItem="Nul-Sc-l1T" secondAttribute="centerY" id="wgJ-5I-1f9"/>
+                                        <constraint firstAttribute="centerYWithinMargins" secondItem="Lqz-cp-dEA" secondAttribute="centerYWithinMargins" id="zpE-Re-L5Z"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="csG-wi-BSk"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.26143523400000002" green="0.89178898360000003" blue="0.42966632290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="addToCounterButton" destination="hKm-lq-ZGM" id="xjn-ee-yho"/>
+                                    <outlet property="counterNameTextField" destination="jJU-Jr-KHy" id="LLf-I7-y0T"/>
+                                    <outlet property="displayCounterLabel" destination="Nul-Sc-l1T" id="l1T-uH-3NZ"/>
+                                    <outlet property="subtractFromCounterButton" destination="Lqz-cp-dEA" id="pdj-x8-sBd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f74-6j-Aox" id="kso-xV-fb9"/>
+                            <outlet property="delegate" destination="f74-6j-Aox" id="8aY-Ay-tCM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OW0-V1-gG1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="xyH-n0-YTB">
+                            <connections>
+                                <action selector="clearAllCountersButton:" destination="f74-6j-Aox" id="76d-d9-9cC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3yj-z7-Lhu">
+                            <connections>
+                                <action selector="addCounterItemButton:" destination="f74-6j-Aox" id="P4P-DP-JPA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JmQ-wa-Hys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dDH-gl-hta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GSf-TZ-N03" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyA-Oo-sJS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f74-6j-Aox" kind="relationship" relationship="rootViewController" id="IJU-r3-rZ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icc-Qa-xV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus1" width="56" height="12"/>
+        <image name="plus1" width="56" height="62"/>
+    </resources>
+</document>

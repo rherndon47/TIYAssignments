@@ -13,6 +13,7 @@
 @interface HighVoltageTableViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate, PopupReturnDelegate>
 {
     NSMutableArray *hvArray;
+//    NSMutableArray *popUpEnergyArray;
     NSString *itemFromPopupModal;
     NSDictionary *stringWithCellIdentifierDict;
 }
@@ -24,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     hvArray = [[NSMutableArray alloc] init];
+    NSLog(@"Enter HV viewDidLoad");
+
+    self.energy= [[NSMutableArray alloc] initWithObjects: @"Watts", @"Volts", @"amps", @"ohms", nil];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,7 +60,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[hvArray objectAtIndex:indexPath.row] forIndexPath:indexPath];
-    
     
     return cell;
 }
@@ -159,6 +163,8 @@
     stringWithCellIdentifierDict = @{@"Watts":@"PowerIdentifier",@"Volts":@"ElectricPotentialIdentifier",@"amps":@"CurrentIdentifier",@"ohms":@"ResistanceIdentifier"};
     
     [hvArray addObject:[stringWithCellIdentifierDict objectForKey:energyString]];
+    
+    NSLog(@"hvArray %@",hvArray);
     
 
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -70,8 +70,8 @@
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="jil-UU-lec"/>
                                                     <exclude reference="XOD-oe-Dg9"/>
+                                                    <exclude reference="jil-UU-lec"/>
                                                 </mask>
                                             </variation>
                                         </label>
@@ -158,8 +158,8 @@
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="bjE-VH-Zcj"/>
                                                     <exclude reference="VqT-wb-Gy7"/>
+                                                    <exclude reference="bjE-VH-Zcj"/>
                                                 </mask>
                                             </variation>
                                         </label>
