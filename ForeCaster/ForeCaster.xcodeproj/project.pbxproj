@@ -20,8 +20,6 @@
 		DFA3928B1ABF3D4400338DC4 /* CityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA3928A1ABF3D4400338DC4 /* CityCell.m */; };
 		DFA3928E1ABF3DCD00338DC4 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA3928D1ABF3DCD00338DC4 /* Weather.m */; };
 		DFA392931ABF4F0400338DC4 /* WeatherDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA392921ABF4F0400338DC4 /* WeatherDetailViewController.m */; };
-		EE02FD9D1AC1E16F0041875B /* CityDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE02FD991AC1C38D0041875B /* CityDatabase.m */; };
-		EE02FD9E1AC1E1C10041875B /* CityDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = EE02FD961AC1BD7B0041875B /* CityDoc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +58,6 @@
 		DFA3928D1ABF3DCD00338DC4 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		DFA392911ABF4F0400338DC4 /* WeatherDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDetailViewController.h; sourceTree = "<group>"; };
 		DFA392921ABF4F0400338DC4 /* WeatherDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDetailViewController.m; sourceTree = "<group>"; };
-		EE02FD951AC1BD7B0041875B /* CityDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDoc.h; sourceTree = "<group>"; };
-		EE02FD961AC1BD7B0041875B /* CityDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDoc.m; sourceTree = "<group>"; };
-		EE02FD981AC1C38D0041875B /* CityDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDatabase.h; sourceTree = "<group>"; };
-		EE02FD991AC1C38D0041875B /* CityDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +101,6 @@
 			children = (
 				DFA3928F1ABF3E5100338DC4 /* Application */,
 				DFA392901ABF3E6400338DC4 /* Models */,
-				EE02FD951AC1BD7B0041875B /* CityDoc.h */,
-				EE02FD961AC1BD7B0041875B /* CityDoc.m */,
-				EE02FD981AC1C38D0041875B /* CityDatabase.h */,
-				EE02FD991AC1C38D0041875B /* CityDatabase.m */,
 				DFA3927D1ABE110600338DC4 /* CitiesTableViewController.h */,
 				DFA3927E1ABE110600338DC4 /* CitiesTableViewController.m */,
 				DFA392891ABF3D4300338DC4 /* CityCell.h */,
@@ -278,9 +268,7 @@
 				DFA392851ABE16C300338DC4 /* City.m in Sources */,
 				DFA3925D1ABE10C300338DC4 /* AppDelegate.m in Sources */,
 				DFA3925A1ABE10C300338DC4 /* main.m in Sources */,
-				EE02FD9D1AC1E16F0041875B /* CityDatabase.m in Sources */,
 				DFA3927F1ABE110600338DC4 /* CitiesTableViewController.m in Sources */,
-				EE02FD9E1AC1E1C10041875B /* CityDoc.m in Sources */,
 				DFA3928E1ABF3DCD00338DC4 /* Weather.m in Sources */,
 				DFA392881ABE184F00338DC4 /* NetworkManager.m in Sources */,
 				DFA392931ABF4F0400338DC4 /* WeatherDetailViewController.m in Sources */,

@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  Forecaster
+//  LocateCar
 //
-//  Created by Ben Gohlke on 3/21/15.
-//  Copyright (c) 2015 The Iron Yard. All rights reserved.
+//  Created by Richard Herndon on 3/25/15.
+//  Copyright (c) 2015 Richard Herndon. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "CitiesTableViewController.h"
+#import "LocateCarViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,14 +26,15 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
     
-    CitiesTableViewController *citiesVC = [navController viewControllers][0];
-    [citiesVC saveCarData];
+    LocateCarViewController *carVC = [navController viewControllers][0];
+    [carVC saveCarLocationData];
+    
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

@@ -34,6 +34,7 @@
         _latitude = lat;
         _longitude = lng;
         _name = name;
+        _coordinate = CLLocationCoordinate2DMake(lat, lng);
     }
     return self;
 }

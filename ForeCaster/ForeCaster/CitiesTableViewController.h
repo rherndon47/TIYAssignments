@@ -14,8 +14,11 @@
 - (void)cityWasFound:(City *)aCity;
 - (void)weatherWasFoundForCity:(City *)aCity;
 
+
 @end
 
 @interface CitiesTableViewController : UITableViewController <CitiesTableViewControllerDelegate>
+
+- (void)saveCarData;
 
 @end

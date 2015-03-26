@@ -37,6 +37,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Location services allows the user to choose a weather city based on thier current location.</string>
+	<string>Location services allows you to choose your current location.</string>
 </dict>
 </plist>

@@ -13,6 +13,9 @@
 
 #import "NetworkManager.h"
 
+#define kCitiesKey @"cities"
+
+
 @interface CitiesTableViewController ()
 
 @end
@@ -25,9 +28,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    cities = [[NSMutableArray alloc] init];
+    [self loadCityData];
+    
+    if ([cities count] > 0)
+    {
+        for (City *aCity in cities)
+        {
+            aCity.currentWeather = [[Weather alloc] init];
+            
+        }
+        [[NetworkManager sharedNetworkManager] fetchCurrentWeatherForCities:cities];
+    }
+    
     [NetworkManager sharedNetworkManager].delegate = self;
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadCityData
+{
+    NSData *cityData = [[NSUserDefaults standardUserDefaults] objectForKey:kCitiesKey];kCitiesKey;
+    if (cityData)
+    {
+        cities = [NSKeyedUnarchiver unarchiveObjectWithData:cityData];
+    }
+    else
+    {
+        cities = [[NSMutableArray alloc] init];
+    }
+}
+
+- (void)saveCarData
+{
+    NSData *cityData = [NSKeyedArchiver archivedDataWithRootObject:cities];
+    [[ NSUserDefaults standardUserDefaults] setObject:cityData forKey:kCitiesKey];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,6 +155,5 @@
 {
     
 }
-
 
 @end
