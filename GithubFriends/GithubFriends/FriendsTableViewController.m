@@ -77,7 +77,6 @@
 
     [self.navigationController pushViewController:friendDetailVC animated:YES];
     
-    
 }
 
 #pragma mark - Action Handlers

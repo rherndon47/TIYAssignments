@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MgK-gA-anY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Todo List Main Table View Controller-->
+        <scene sceneID="a8H-fN-gpG">
+            <objects>
+                <tableViewController id="w9V-kc-1QL" customClass="TodoListMainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZBl-cq-uWt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" id="Xet-rB-Dpz" customClass="TodoTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xet-rB-Dpz" id="uZx-nT-POi">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvW-cP-Wpr">
+                                            <rect key="frame" x="20" y="5" width="40" height="49"/>
+                                            <state key="normal" image="Unchecked">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="Checked"/>
+                                            <connections>
+                                                <action selector="checkmarkTapped:" destination="w9V-kc-1QL" eventType="touchUpInside" id="FAj-RN-gqb"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="25" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Todo goes here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-hq-idU">
+                                            <rect key="frame" x="80" y="17" width="500" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="479" id="prN-BX-oaa"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.15656565656565657" green="0.15656565656565657" blue="0.15656565656565657" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="alert"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="prN-BX-oaa"/>
+                                                </mask>
+                                            </variation>
+                                            <connections>
+                                                <outlet property="delegate" destination="w9V-kc-1QL" id="dHV-wq-bfy"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="RvW-cP-Wpr" firstAttribute="top" secondItem="uZx-nT-POi" secondAttribute="top" constant="5" id="26E-g4-1es"/>
+                                        <constraint firstItem="ovR-hq-idU" firstAttribute="leading" secondItem="RvW-cP-Wpr" secondAttribute="trailing" constant="20" id="3iY-Rm-Jr4"/>
+                                        <constraint firstItem="RvW-cP-Wpr" firstAttribute="centerY" secondItem="ovR-hq-idU" secondAttribute="centerY" id="JJu-ig-P2Q"/>
+                                        <constraint firstItem="RvW-cP-Wpr" firstAttribute="leading" secondItem="uZx-nT-POi" secondAttribute="leading" constant="20" id="MuN-hb-eZ8"/>
+                                        <constraint firstAttribute="trailing" secondItem="ovR-hq-idU" secondAttribute="trailing" constant="20" id="XaY-3u-eK8"/>
+                                        <constraint firstAttribute="centerX" secondItem="RvW-cP-Wpr" secondAttribute="centerX" constant="256" id="YMl-zC-DgC"/>
+                                        <constraint firstItem="ovR-hq-idU" firstAttribute="top" secondItem="uZx-nT-POi" secondAttribute="topMargin" id="mPj-G5-nEv"/>
+                                        <constraint firstItem="ovR-hq-idU" firstAttribute="centerY" secondItem="RvW-cP-Wpr" secondAttribute="centerY" id="r1G-Bd-6aO"/>
+                                        <constraint firstAttribute="centerY" secondItem="RvW-cP-Wpr" secondAttribute="centerY" id="xFC-OP-ShX"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="JJu-ig-P2Q"/>
+                                            <exclude reference="YMl-zC-DgC"/>
+                                            <exclude reference="mPj-G5-nEv"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBoxButton" destination="RvW-cP-Wpr" id="MfO-XD-tpI"/>
+                                    <outlet property="descriptionTextField" destination="ovR-hq-idU" id="H9w-v6-7Ji"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="w9V-kc-1QL" id="rTO-PT-AtW"/>
+                            <outlet property="delegate" destination="w9V-kc-1QL" id="MRs-ae-6LI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5Yu-YC-UEI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Pom-5e-YMy">
+                            <color key="tintColor" red="0.51899675482826257" green="0.55782433712121215" blue="0.52463860515983951" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="ClearAll:" destination="w9V-kc-1QL" id="p8j-fX-3lW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FXX-yv-CRM">
+                            <connections>
+                                <action selector="AddTodoItem:" destination="w9V-kc-1QL" id="oYO-4U-rOj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36l-Va-8JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0t-Lv-vBc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MgK-gA-anY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hRD-ub-YKB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w9V-kc-1QL" kind="relationship" relationship="rootViewController" id="Fak-pS-wYT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmX-q0-5hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Checked" width="40" height="40"/>
+        <image name="Unchecked" width="40" height="40"/>
+    </resources>
+    <color key="tintColor" red="0.25198145223574819" green="0.63833648989898983" blue="0.43600733801076008" alpha="1" colorSpace="calibratedRGB"/>
+</document>
