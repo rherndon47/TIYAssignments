@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE3049BA1ACC6980009FB5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3049B91ACC6980009FB5E9 /* AppDelegate.swift */; };
+		EE3049BC1ACC6980009FB5E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3049BB1ACC6980009FB5E9 /* ViewController.swift */; };
+		EE3049BF1ACC6980009FB5E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3049BD1ACC6980009FB5E9 /* Main.storyboard */; };
+		EE3049C11ACC6980009FB5E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3049C01ACC6980009FB5E9 /* Images.xcassets */; };
+		EE3049C41ACC6980009FB5E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3049C21ACC6980009FB5E9 /* LaunchScreen.xib */; };
+		EE3049D01ACC6980009FB5E9 /* _0____Mission_Briefing_TwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3049CF1ACC6980009FB5E9 /* _0____Mission_Briefing_TwoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE3049CA1ACC6980009FB5E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE3049AC1ACC6980009FB5E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE3049B31ACC6980009FB5E9;
+			remoteInfo = "20 -- Mission Briefing Two";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE3049B41ACC6980009FB5E9 /* 20 -- Mission Briefing Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20 -- Mission Briefing Two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3049B81ACC6980009FB5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3049B91ACC6980009FB5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE3049BB1ACC6980009FB5E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE3049BE1ACC6980009FB5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE3049C01ACC6980009FB5E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE3049C31ACC6980009FB5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE3049C91ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20 -- Mission Briefing TwoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3049CE1ACC6980009FB5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3049CF1ACC6980009FB5E9 /* _0____Mission_Briefing_TwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_0____Mission_Briefing_TwoTests.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE3049B11ACC6980009FB5E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3049C61ACC6980009FB5E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE3049AB1ACC6980009FB5E9 = {
+			isa = PBXGroup;
+			children = (
+				EE3049B61ACC6980009FB5E9 /* 20 -- Mission Briefing Two */,
+				EE3049CC1ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests */,
+				EE3049B51ACC6980009FB5E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE3049B51ACC6980009FB5E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE3049B41ACC6980009FB5E9 /* 20 -- Mission Briefing Two.app */,
+				EE3049C91ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE3049B61ACC6980009FB5E9 /* 20 -- Mission Briefing Two */ = {
+			isa = PBXGroup;
+			children = (
+				EE3049B91ACC6980009FB5E9 /* AppDelegate.swift */,
+				EE3049BB1ACC6980009FB5E9 /* ViewController.swift */,
+				EE3049BD1ACC6980009FB5E9 /* Main.storyboard */,
+				EE3049C01ACC6980009FB5E9 /* Images.xcassets */,
+				EE3049C21ACC6980009FB5E9 /* LaunchScreen.xib */,
+				EE3049B71ACC6980009FB5E9 /* Supporting Files */,
+			);
+			path = "20 -- Mission Briefing Two";
+			sourceTree = "<group>";
+		};
+		EE3049B71ACC6980009FB5E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE3049B81ACC6980009FB5E9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE3049CC1ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE3049CF1ACC6980009FB5E9 /* _0____Mission_Briefing_TwoTests.swift */,
+				EE3049CD1ACC6980009FB5E9 /* Supporting Files */,
+			);
+			path = "20 -- Mission Briefing TwoTests";
+			sourceTree = "<group>";
+		};
+		EE3049CD1ACC6980009FB5E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE3049CE1ACC6980009FB5E9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE3049B31ACC6980009FB5E9 /* 20 -- Mission Briefing Two */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3049D31ACC6980009FB5E9 /* Build configuration list for PBXNativeTarget "20 -- Mission Briefing Two" */;
+			buildPhases = (
+				EE3049B01ACC6980009FB5E9 /* Sources */,
+				EE3049B11ACC6980009FB5E9 /* Frameworks */,
+				EE3049B21ACC6980009FB5E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "20 -- Mission Briefing Two";
+			productName = "20 -- Mission Briefing Two";
+			productReference = EE3049B41ACC6980009FB5E9 /* 20 -- Mission Briefing Two.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE3049C81ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3049D61ACC6980009FB5E9 /* Build configuration list for PBXNativeTarget "20 -- Mission Briefing TwoTests" */;
+			buildPhases = (
+				EE3049C51ACC6980009FB5E9 /* Sources */,
+				EE3049C61ACC6980009FB5E9 /* Frameworks */,
+				EE3049C71ACC6980009FB5E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE3049CB1ACC6980009FB5E9 /* PBXTargetDependency */,
+			);
+			name = "20 -- Mission Briefing TwoTests";
+			productName = "20 -- Mission Briefing TwoTests";
+			productReference = EE3049C91ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE3049AC1ACC6980009FB5E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EE3049B31ACC6980009FB5E9 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EE3049C81ACC6980009FB5E9 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EE3049B31ACC6980009FB5E9;
+					};
+				};
+			};
+			buildConfigurationList = EE3049AF1ACC6980009FB5E9 /* Build configuration list for PBXProject "20 -- Mission Briefing Two" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE3049AB1ACC6980009FB5E9;
+			productRefGroup = EE3049B51ACC6980009FB5E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE3049B31ACC6980009FB5E9 /* 20 -- Mission Briefing Two */,
+				EE3049C81ACC6980009FB5E9 /* 20 -- Mission Briefing TwoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE3049B21ACC6980009FB5E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3049BF1ACC6980009FB5E9 /* Main.storyboard in Resources */,
+				EE3049C41ACC6980009FB5E9 /* LaunchScreen.xib in Resources */,
+				EE3049C11ACC6980009FB5E9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3049C71ACC6980009FB5E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE3049B01ACC6980009FB5E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3049BC1ACC6980009FB5E9 /* ViewController.swift in Sources */,
+				EE3049BA1ACC6980009FB5E9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3049C51ACC6980009FB5E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3049D01ACC6980009FB5E9 /* _0____Mission_Briefing_TwoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE3049CB1ACC6980009FB5E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE3049B31ACC6980009FB5E9 /* 20 -- Mission Briefing Two */;
+			targetProxy = EE3049CA1ACC6980009FB5E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE3049BD1ACC6980009FB5E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE3049BE1ACC6980009FB5E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE3049C21ACC6980009FB5E9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE3049C31ACC6980009FB5E9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE3049D11ACC6980009FB5E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE3049D21ACC6980009FB5E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE3049D41ACC6980009FB5E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "20 -- Mission Briefing Two/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE3049D51ACC6980009FB5E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "20 -- Mission Briefing Two/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE3049D71ACC6980009FB5E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "20 -- Mission Briefing TwoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20 -- Mission Briefing Two.app/20 -- Mission Briefing Two";
+			};
+			name = Debug;
+		};
+		EE3049D81ACC6980009FB5E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "20 -- Mission Briefing TwoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20 -- Mission Briefing Two.app/20 -- Mission Briefing Two";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE3049AF1ACC6980009FB5E9 /* Build configuration list for PBXProject "20 -- Mission Briefing Two" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3049D11ACC6980009FB5E9 /* Debug */,
+				EE3049D21ACC6980009FB5E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3049D31ACC6980009FB5E9 /* Build configuration list for PBXNativeTarget "20 -- Mission Briefing Two" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3049D41ACC6980009FB5E9 /* Debug */,
+				EE3049D51ACC6980009FB5E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE3049D61ACC6980009FB5E9 /* Build configuration list for PBXNativeTarget "20 -- Mission Briefing TwoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3049D71ACC6980009FB5E9 /* Debug */,
+				EE3049D81ACC6980009FB5E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE3049AC1ACC6980009FB5E9 /* Project object */;
+}

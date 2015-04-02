@@ -73,19 +73,13 @@
     MKMapItem *mapItem = self.locationsArray[indexPath.row];
     self.aTask.POIName = mapItem.name;
     self.aTask.POIAddress = mapItem.placemark.addressDictionary[@"Street"];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //    [self.navigationController popViewControllerAnimated: animated:YES];
 //    [self.navigationController popToViewController:ToDoDetailViewController animated:YES];
     
-//    for (UIViewController *vc in [self.navigationController viewControllers])
-//    {
-//        if ([vc isMemberOfClass:[ToDoDetailTableViewController class]])
-//        {
-//            NSLog(@"Inside if");
-//            [self.navigationController popToViewController:vc animated:YES];
-//            return;
-//        }
-//    }
 }
 
 
