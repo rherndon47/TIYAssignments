@@ -44,18 +44,19 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="joX-JA-rSS"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQa-zQ-5T6">
-                                <rect key="frame" x="16" y="150" width="568" height="430"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMm-fZ-7mR">
                                 <rect key="frame" x="187" y="23" width="396.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3tZ-Im-cwI">
+                                <rect key="frame" x="0.0" y="150" width="600" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="YXr-Ie-QuU"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ZM5-tg-njS"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -64,19 +65,19 @@
                             <constraint firstItem="DJ2-c2-NL6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="31" id="32y-Xw-uuZ"/>
                             <constraint firstAttribute="trailing" secondItem="WJT-sz-TnQ" secondAttribute="trailing" constant="16" id="5UC-hU-p7C"/>
                             <constraint firstItem="DJ2-c2-NL6" firstAttribute="trailing" secondItem="Ac1-BT-yqE" secondAttribute="trailing" id="6sR-sz-Y52"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UQa-zQ-5T6" secondAttribute="bottom" constant="20" id="AQ1-oT-36M"/>
-                            <constraint firstItem="UQa-zQ-5T6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="C9j-Ed-dm6"/>
+                            <constraint firstItem="3tZ-Im-cwI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7IR-ha-K4V"/>
                             <constraint firstItem="DJ2-c2-NL6" firstAttribute="centerY" secondItem="gMm-fZ-7mR" secondAttribute="centerY" id="DDR-7H-Hgp"/>
                             <constraint firstItem="DJ2-c2-NL6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Jq2-qa-8XC"/>
+                            <constraint firstAttribute="trailing" secondItem="3tZ-Im-cwI" secondAttribute="trailing" id="Nul-uZ-4eC"/>
                             <constraint firstItem="gMm-fZ-7mR" firstAttribute="leading" secondItem="DJ2-c2-NL6" secondAttribute="trailing" constant="8" id="RMV-f8-kCq"/>
                             <constraint firstAttribute="trailing" secondItem="gMm-fZ-7mR" secondAttribute="trailing" constant="16" id="Wo1-cY-cgs"/>
                             <constraint firstItem="WJT-sz-TnQ" firstAttribute="centerY" secondItem="Ac1-BT-yqE" secondAttribute="centerY" id="YtG-Pp-Cq6"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3tZ-Im-cwI" secondAttribute="bottom" id="gnA-BH-jb2"/>
                             <constraint firstItem="WJT-sz-TnQ" firstAttribute="leading" secondItem="Ac1-BT-yqE" secondAttribute="trailing" constant="16" id="jDB-Au-dTN"/>
-                            <constraint firstAttribute="trailing" secondItem="UQa-zQ-5T6" secondAttribute="trailing" constant="16" id="kzk-6B-0DM"/>
                             <constraint firstAttribute="centerX" secondItem="eOU-hQ-JNg" secondAttribute="centerX" id="lDQ-vL-Hyz"/>
                             <constraint firstAttribute="centerXWithinMargins" secondItem="DJ2-c2-NL6" secondAttribute="centerXWithinMargins" constant="191.5" id="pBi-v6-r25"/>
                             <constraint firstItem="Ac1-BT-yqE" firstAttribute="top" secondItem="DJ2-c2-NL6" secondAttribute="bottom" constant="30" id="vui-ce-2a8"/>
-                            <constraint firstItem="UQa-zQ-5T6" firstAttribute="top" secondItem="eOU-hQ-JNg" secondAttribute="bottom" constant="8" id="yc2-W4-SQS"/>
+                            <constraint firstItem="3tZ-Im-cwI" firstAttribute="top" secondItem="eOU-hQ-JNg" secondAttribute="bottom" constant="8" id="zl7-0C-wul"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -88,7 +89,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="resultsTextView" destination="UQa-zQ-5T6" id="feP-bw-RRK"/>
+                        <outlet property="tableView" destination="3tZ-Im-cwI" id="Wb0-D1-Hsp"/>
                         <outlet property="taxPercentLabel" destination="Ac1-BT-yqE" id="hZ0-Bw-rqr"/>
                         <outlet property="taxPercentSlider" destination="WJT-sz-TnQ" id="YqG-4j-c9X"/>
                         <outlet property="totalTextField" destination="gMm-fZ-7mR" id="IbV-7e-faU"/>

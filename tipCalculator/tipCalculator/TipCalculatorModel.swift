@@ -5,6 +5,7 @@
 //  Created by Richard Herndon on 4/1/15.
 //  Copyright (c) 2015 Richard Herndon. All rights reserved.
 //
+//  updated to use tuple on 4/2/15.
 
 import Foundation
 
@@ -13,7 +14,7 @@ class TipCalculatorModel
     var total: Double
     var taxPercent: Double
     var subTotal: Double
-    {
+        {
         get
         {
             return total / (taxPercent + 1)
@@ -26,29 +27,29 @@ class TipCalculatorModel
         self.taxPercent = taxPercent
     }
     
-    func calcTipWithPercent(tipPercent: Double) -> Double   // function declare
+    func calcTipWithTipPercent(tipPercent: Double) -> (tipAmount:Double, total:Double)
     {
-        return subTotal * tipPercent
+        let tipAmount = subTotal * tipPercent
+        let finalTotal = total + tipAmount
+        return (tipAmount, finalTotal)
     }
     
     func printPossibleTips()
     {
-        println("15%: \(calcTipWithPercent(0.15))")
-        println("18%: \(calcTipWithPercent(0.18))")
-        println("20%: \(calcTipWithPercent(0.20))")
+        println("15%: \(calcTipWithTipPercent(0.15))")
+        println("18%: \(calcTipWithTipPercent(0.18))")
+        println("20%: \(calcTipWithTipPercent(0.20))")
     }
     
-    func returnPossibleTips() -> [Int: Double]
+    func returnPossibleTips() -> [Int: (tipAmount:Double, total:Double)]
     {
-        let possibleTips = [0.15, 0.18, 0.20]               // creates an array initialized with values
-        // arrays must be of all one type
-        var rValue = [Int: Double]()                        // initializing bran new empty variable
-        for possibleTips in possibleTips                    // for loop number of times there is members of array
+        let possibleTips = [0.15, 0.18, 0.20]
+        var rValue = Dictionary<Int, (tipAmount:Double, total:Double)>()
+        for possibleTip in possibleTips
         {
-            let integerPercent = Int(possibleTips*100)        // store percent as integer
-            rValue[integerPercent] = calcTipWithPercent(possibleTips)
+            let integerPercent = Int(possibleTip*100)
+            rValue[integerPercent] = calcTipWithTipPercent(possibleTip)
         }
         return rValue
-        
     }
 }

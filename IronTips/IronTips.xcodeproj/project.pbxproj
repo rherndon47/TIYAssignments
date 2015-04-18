@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21EAE851CC866B3519A953CE /* libPods-IronTips.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8BCE9B58890C0694717349 /* libPods-IronTips.a */; };
+		EEA809031ADFEE5A00CE3737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA809021ADFEE5A00CE3737 /* main.m */; };
+		EEA809061ADFEE5A00CE3737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA809051ADFEE5A00CE3737 /* AppDelegate.m */; };
+		EEA809091ADFEE5A00CE3737 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA809081ADFEE5A00CE3737 /* LoginViewController.m */; };
+		EEA8090E1ADFEE5B00CE3737 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA8090D1ADFEE5B00CE3737 /* Images.xcassets */; };
+		EEA809111ADFEE5B00CE3737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA8090F1ADFEE5B00CE3737 /* LaunchScreen.xib */; };
+		EEA8091D1ADFEE5B00CE3737 /* IronTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA8091C1ADFEE5B00CE3737 /* IronTipsTests.m */; };
+		EEA809271ADFF5B400CE3737 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809261ADFF5B400CE3737 /* CFNetwork.framework */; };
+		EEA809291ADFF5C000CE3737 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809281ADFF5C000CE3737 /* CoreGraphics.framework */; };
+		EEA8092B1ADFF5D700CE3737 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA8092A1ADFF5D700CE3737 /* QuartzCore.framework */; };
+		EEA8092D1ADFF5EC00CE3737 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA8092C1ADFF5EC00CE3737 /* libz.dylib */; };
+		EEA8092F1ADFF5F900CE3737 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA8092E1ADFF5F900CE3737 /* libsqlite3.dylib */; };
+		EEA809311ADFF60D00CE3737 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809301ADFF60D00CE3737 /* AudioToolbox.framework */; };
+		EEA809331ADFF62F00CE3737 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809321ADFF62F00CE3737 /* MobileCoreServices.framework */; };
+		EEA809351ADFF63C00CE3737 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809341ADFF63C00CE3737 /* Security.framework */; };
+		EEA809371ADFF64800CE3737 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809361ADFF64800CE3737 /* StoreKit.framework */; };
+		EEA809391ADFF65600CE3737 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA809381ADFF65600CE3737 /* SystemConfiguration.framework */; };
+		EEA8093B1ADFF67000CE3737 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA8093A1ADFF67000CE3737 /* CoreLocation.framework */; };
+		EEA8093E1AE0030A00CE3737 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA8093D1AE0030A00CE3737 /* RegisterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEA809171ADFEE5B00CE3737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA808F51ADFEE5A00CE3737 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEA808FC1ADFEE5A00CE3737;
+			remoteInfo = IronTips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A8BCE9B58890C0694717349 /* libPods-IronTips.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IronTips.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DFD95C592FA05277BA7B14 /* Pods-IronTips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronTips.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronTips/Pods-IronTips.debug.xcconfig"; sourceTree = "<group>"; };
+		7554FA57F08444F87782B813 /* Pods-IronTips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronTips.release.xcconfig"; path = "Pods/Target Support Files/Pods-IronTips/Pods-IronTips.release.xcconfig"; sourceTree = "<group>"; };
+		EEA808FD1ADFEE5A00CE3737 /* IronTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IronTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA809011ADFEE5A00CE3737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA809021ADFEE5A00CE3737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEA809041ADFEE5A00CE3737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EEA809051ADFEE5A00CE3737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EEA809071ADFEE5A00CE3737 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EEA809081ADFEE5A00CE3737 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EEA8090D1ADFEE5B00CE3737 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EEA809101ADFEE5B00CE3737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EEA809161ADFEE5B00CE3737 /* IronTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA8091B1ADFEE5B00CE3737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA8091C1ADFEE5B00CE3737 /* IronTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IronTipsTests.m; sourceTree = "<group>"; };
+		EEA809261ADFF5B400CE3737 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EEA809281ADFF5C000CE3737 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEA8092A1ADFF5D700CE3737 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEA8092C1ADFF5EC00CE3737 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EEA8092E1ADFF5F900CE3737 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EEA809301ADFF60D00CE3737 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EEA809321ADFF62F00CE3737 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EEA809341ADFF63C00CE3737 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EEA809361ADFF64800CE3737 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EEA809381ADFF65600CE3737 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EEA8093A1ADFF67000CE3737 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EEA8093C1AE0030A00CE3737 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = ../RegisterViewController.h; sourceTree = "<group>"; };
+		EEA8093D1AE0030A00CE3737 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = ../RegisterViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEA808FA1ADFEE5A00CE3737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA8093B1ADFF67000CE3737 /* CoreLocation.framework in Frameworks */,
+				EEA809391ADFF65600CE3737 /* SystemConfiguration.framework in Frameworks */,
+				EEA809371ADFF64800CE3737 /* StoreKit.framework in Frameworks */,
+				EEA809351ADFF63C00CE3737 /* Security.framework in Frameworks */,
+				EEA809331ADFF62F00CE3737 /* MobileCoreServices.framework in Frameworks */,
+				EEA809291ADFF5C000CE3737 /* CoreGraphics.framework in Frameworks */,
+				EEA809271ADFF5B400CE3737 /* CFNetwork.framework in Frameworks */,
+				EEA809311ADFF60D00CE3737 /* AudioToolbox.framework in Frameworks */,
+				EEA8092F1ADFF5F900CE3737 /* libsqlite3.dylib in Frameworks */,
+				EEA8092D1ADFF5EC00CE3737 /* libz.dylib in Frameworks */,
+				EEA8092B1ADFF5D700CE3737 /* QuartzCore.framework in Frameworks */,
+				21EAE851CC866B3519A953CE /* libPods-IronTips.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA809131ADFEE5B00CE3737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D98F9BB8E2C41997C32E2EA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34DFD95C592FA05277BA7B14 /* Pods-IronTips.debug.xcconfig */,
+				7554FA57F08444F87782B813 /* Pods-IronTips.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EEA808F41ADFEE5A00CE3737 = {
+			isa = PBXGroup;
+			children = (
+				EEA808FF1ADFEE5A00CE3737 /* IronTips */,
+				EEA809191ADFEE5B00CE3737 /* IronTipsTests */,
+				EEA808FE1ADFEE5A00CE3737 /* Products */,
+				D98F9BB8E2C41997C32E2EA6 /* Pods */,
+				FB94B607A6099FAD16F97361 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEA808FE1ADFEE5A00CE3737 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEA808FD1ADFEE5A00CE3737 /* IronTips.app */,
+				EEA809161ADFEE5B00CE3737 /* IronTipsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEA808FF1ADFEE5A00CE3737 /* IronTips */ = {
+			isa = PBXGroup;
+			children = (
+				EEA809041ADFEE5A00CE3737 /* AppDelegate.h */,
+				EEA809051ADFEE5A00CE3737 /* AppDelegate.m */,
+				EEA809071ADFEE5A00CE3737 /* LoginViewController.h */,
+				EEA809081ADFEE5A00CE3737 /* LoginViewController.m */,
+				EEA8093C1AE0030A00CE3737 /* RegisterViewController.h */,
+				EEA8093D1AE0030A00CE3737 /* RegisterViewController.m */,
+				EEA8090D1ADFEE5B00CE3737 /* Images.xcassets */,
+				EEA8090F1ADFEE5B00CE3737 /* LaunchScreen.xib */,
+				EEA809001ADFEE5A00CE3737 /* Supporting Files */,
+			);
+			path = IronTips;
+			sourceTree = "<group>";
+		};
+		EEA809001ADFEE5A00CE3737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEA809011ADFEE5A00CE3737 /* Info.plist */,
+				EEA809021ADFEE5A00CE3737 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEA809191ADFEE5B00CE3737 /* IronTipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8091C1ADFEE5B00CE3737 /* IronTipsTests.m */,
+				EEA8091A1ADFEE5B00CE3737 /* Supporting Files */,
+			);
+			path = IronTipsTests;
+			sourceTree = "<group>";
+		};
+		EEA8091A1ADFEE5B00CE3737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8091B1ADFEE5B00CE3737 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB94B607A6099FAD16F97361 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8093A1ADFF67000CE3737 /* CoreLocation.framework */,
+				EEA809381ADFF65600CE3737 /* SystemConfiguration.framework */,
+				EEA809361ADFF64800CE3737 /* StoreKit.framework */,
+				EEA809341ADFF63C00CE3737 /* Security.framework */,
+				EEA809321ADFF62F00CE3737 /* MobileCoreServices.framework */,
+				EEA809301ADFF60D00CE3737 /* AudioToolbox.framework */,
+				EEA8092E1ADFF5F900CE3737 /* libsqlite3.dylib */,
+				EEA8092C1ADFF5EC00CE3737 /* libz.dylib */,
+				EEA8092A1ADFF5D700CE3737 /* QuartzCore.framework */,
+				EEA809281ADFF5C000CE3737 /* CoreGraphics.framework */,
+				EEA809261ADFF5B400CE3737 /* CFNetwork.framework */,
+				0A8BCE9B58890C0694717349 /* libPods-IronTips.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEA808FC1ADFEE5A00CE3737 /* IronTips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA809201ADFEE5B00CE3737 /* Build configuration list for PBXNativeTarget "IronTips" */;
+			buildPhases = (
+				AEE0FCC291BE8A897FD67C22 /* Check Pods Manifest.lock */,
+				EEA808F91ADFEE5A00CE3737 /* Sources */,
+				EEA808FA1ADFEE5A00CE3737 /* Frameworks */,
+				EEA808FB1ADFEE5A00CE3737 /* Resources */,
+				98E4E7DF3DA17EED0C51EFBF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IronTips;
+			productName = IronTips;
+			productReference = EEA808FD1ADFEE5A00CE3737 /* IronTips.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEA809151ADFEE5B00CE3737 /* IronTipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA809231ADFEE5B00CE3737 /* Build configuration list for PBXNativeTarget "IronTipsTests" */;
+			buildPhases = (
+				EEA809121ADFEE5B00CE3737 /* Sources */,
+				EEA809131ADFEE5B00CE3737 /* Frameworks */,
+				EEA809141ADFEE5B00CE3737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEA809181ADFEE5B00CE3737 /* PBXTargetDependency */,
+			);
+			name = IronTipsTests;
+			productName = IronTipsTests;
+			productReference = EEA809161ADFEE5B00CE3737 /* IronTipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEA808F51ADFEE5A00CE3737 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EEA808FC1ADFEE5A00CE3737 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					EEA809151ADFEE5B00CE3737 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = EEA808FC1ADFEE5A00CE3737;
+					};
+				};
+			};
+			buildConfigurationList = EEA808F81ADFEE5A00CE3737 /* Build configuration list for PBXProject "IronTips" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEA808F41ADFEE5A00CE3737;
+			productRefGroup = EEA808FE1ADFEE5A00CE3737 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEA808FC1ADFEE5A00CE3737 /* IronTips */,
+				EEA809151ADFEE5B00CE3737 /* IronTipsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEA808FB1ADFEE5A00CE3737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA809111ADFEE5B00CE3737 /* LaunchScreen.xib in Resources */,
+				EEA8090E1ADFEE5B00CE3737 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA809141ADFEE5B00CE3737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98E4E7DF3DA17EED0C51EFBF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IronTips/Pods-IronTips-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE0FCC291BE8A897FD67C22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEA808F91ADFEE5A00CE3737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA809091ADFEE5A00CE3737 /* LoginViewController.m in Sources */,
+				EEA809061ADFEE5A00CE3737 /* AppDelegate.m in Sources */,
+				EEA809031ADFEE5A00CE3737 /* main.m in Sources */,
+				EEA8093E1AE0030A00CE3737 /* RegisterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA809121ADFEE5B00CE3737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA8091D1ADFEE5B00CE3737 /* IronTipsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEA809181ADFEE5B00CE3737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEA808FC1ADFEE5A00CE3737 /* IronTips */;
+			targetProxy = EEA809171ADFEE5B00CE3737 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEA8090F1ADFEE5B00CE3737 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA809101ADFEE5B00CE3737 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEA8091E1ADFEE5B00CE3737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEA8091F1ADFEE5B00CE3737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEA809211ADFEE5B00CE3737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DFD95C592FA05277BA7B14 /* Pods-IronTips.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IronTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEA809221ADFEE5B00CE3737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7554FA57F08444F87782B813 /* Pods-IronTips.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IronTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEA809241ADFEE5B00CE3737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IronTipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronTips.app/IronTips";
+			};
+			name = Debug;
+		};
+		EEA809251ADFEE5B00CE3737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IronTipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronTips.app/IronTips";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEA808F81ADFEE5A00CE3737 /* Build configuration list for PBXProject "IronTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA8091E1ADFEE5B00CE3737 /* Debug */,
+				EEA8091F1ADFEE5B00CE3737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA809201ADFEE5B00CE3737 /* Build configuration list for PBXNativeTarget "IronTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA809211ADFEE5B00CE3737 /* Debug */,
+				EEA809221ADFEE5B00CE3737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA809231ADFEE5B00CE3737 /* Build configuration list for PBXNativeTarget "IronTipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA809241ADFEE5B00CE3737 /* Debug */,
+				EEA809251ADFEE5B00CE3737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEA808F51ADFEE5A00CE3737 /* Project object */;
+}

@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE1AE4691AD415120015536D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE4681AD415120015536D /* main.m */; };
+		EE1AE46C1AD415120015536D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE46B1AD415120015536D /* AppDelegate.m */; };
+		EE1AE46F1AD415120015536D /* PinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE46E1AD415120015536D /* PinsViewController.m */; };
+		EE1AE4741AD415120015536D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1AE4731AD415120015536D /* Images.xcassets */; };
+		EE1AE4771AD415120015536D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1AE4751AD415120015536D /* LaunchScreen.xib */; };
+		EE1AE4831AD415120015536D /* PickitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE4821AD415120015536D /* PickitTests.m */; };
+		EE1AE48E1AD41F1F0015536D /* Picmark.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE48D1AD41F1F0015536D /* Picmark.m */; };
+		EE1AE4911AD4248D0015536D /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AE4901AD4248D0015536D /* ImageDetailViewController.m */; };
+		EE1AE4941AD427780015536D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1AE4931AD427780015536D /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE1AE47D1AD415120015536D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1AE45B1AD415120015536D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1AE4621AD415120015536D;
+			remoteInfo = Pickit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE1AE4631AD415120015536D /* Pickit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1AE4671AD415120015536D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1AE4681AD415120015536D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE1AE46A1AD415120015536D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE1AE46B1AD415120015536D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE1AE46D1AD415120015536D /* PinsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinsViewController.h; sourceTree = "<group>"; };
+		EE1AE46E1AD415120015536D /* PinsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinsViewController.m; sourceTree = "<group>"; };
+		EE1AE4731AD415120015536D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE1AE4761AD415120015536D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE1AE47C1AD415120015536D /* PickitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1AE4811AD415120015536D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1AE4821AD415120015536D /* PickitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickitTests.m; sourceTree = "<group>"; };
+		EE1AE48C1AD41F1F0015536D /* Picmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picmark.h; sourceTree = "<group>"; };
+		EE1AE48D1AD41F1F0015536D /* Picmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picmark.m; sourceTree = "<group>"; };
+		EE1AE48F1AD4248D0015536D /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
+		EE1AE4901AD4248D0015536D /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
+		EE1AE4921AD426950015536D /* Pickit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pickit.entitlements; sourceTree = "<group>"; };
+		EE1AE4931AD427780015536D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1AE4601AD415120015536D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1AE4941AD427780015536D /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1AE4791AD415120015536D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE1AE45A1AD415120015536D = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4931AD427780015536D /* CloudKit.framework */,
+				EE1AE4651AD415120015536D /* Pickit */,
+				EE1AE47F1AD415120015536D /* PickitTests */,
+				EE1AE4641AD415120015536D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE1AE4641AD415120015536D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4631AD415120015536D /* Pickit.app */,
+				EE1AE47C1AD415120015536D /* PickitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE1AE4651AD415120015536D /* Pickit */ = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4921AD426950015536D /* Pickit.entitlements */,
+				EE1AE46A1AD415120015536D /* AppDelegate.h */,
+				EE1AE46B1AD415120015536D /* AppDelegate.m */,
+				EE1AE46D1AD415120015536D /* PinsViewController.h */,
+				EE1AE46E1AD415120015536D /* PinsViewController.m */,
+				EE1AE4731AD415120015536D /* Images.xcassets */,
+				EE1AE4751AD415120015536D /* LaunchScreen.xib */,
+				EE1AE4661AD415120015536D /* Supporting Files */,
+				EE1AE48C1AD41F1F0015536D /* Picmark.h */,
+				EE1AE48D1AD41F1F0015536D /* Picmark.m */,
+				EE1AE48F1AD4248D0015536D /* ImageDetailViewController.h */,
+				EE1AE4901AD4248D0015536D /* ImageDetailViewController.m */,
+			);
+			path = Pickit;
+			sourceTree = "<group>";
+		};
+		EE1AE4661AD415120015536D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4671AD415120015536D /* Info.plist */,
+				EE1AE4681AD415120015536D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE1AE47F1AD415120015536D /* PickitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4821AD415120015536D /* PickitTests.m */,
+				EE1AE4801AD415120015536D /* Supporting Files */,
+			);
+			path = PickitTests;
+			sourceTree = "<group>";
+		};
+		EE1AE4801AD415120015536D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE1AE4811AD415120015536D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE1AE4621AD415120015536D /* Pickit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1AE4861AD415120015536D /* Build configuration list for PBXNativeTarget "Pickit" */;
+			buildPhases = (
+				EE1AE45F1AD415120015536D /* Sources */,
+				EE1AE4601AD415120015536D /* Frameworks */,
+				EE1AE4611AD415120015536D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pickit;
+			productName = Pickit;
+			productReference = EE1AE4631AD415120015536D /* Pickit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE1AE47B1AD415120015536D /* PickitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1AE4891AD415120015536D /* Build configuration list for PBXNativeTarget "PickitTests" */;
+			buildPhases = (
+				EE1AE4781AD415120015536D /* Sources */,
+				EE1AE4791AD415120015536D /* Frameworks */,
+				EE1AE47A1AD415120015536D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1AE47E1AD415120015536D /* PBXTargetDependency */,
+			);
+			name = PickitTests;
+			productName = PickitTests;
+			productReference = EE1AE47C1AD415120015536D /* PickitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1AE45B1AD415120015536D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EE1AE4621AD415120015536D = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 9CKJLF4498;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					EE1AE47B1AD415120015536D = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EE1AE4621AD415120015536D;
+					};
+				};
+			};
+			buildConfigurationList = EE1AE45E1AD415120015536D /* Build configuration list for PBXProject "Pickit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE1AE45A1AD415120015536D;
+			productRefGroup = EE1AE4641AD415120015536D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE1AE4621AD415120015536D /* Pickit */,
+				EE1AE47B1AD415120015536D /* PickitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1AE4611AD415120015536D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1AE4771AD415120015536D /* LaunchScreen.xib in Resources */,
+				EE1AE4741AD415120015536D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1AE47A1AD415120015536D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE1AE45F1AD415120015536D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1AE46F1AD415120015536D /* PinsViewController.m in Sources */,
+				EE1AE4911AD4248D0015536D /* ImageDetailViewController.m in Sources */,
+				EE1AE46C1AD415120015536D /* AppDelegate.m in Sources */,
+				EE1AE4691AD415120015536D /* main.m in Sources */,
+				EE1AE48E1AD41F1F0015536D /* Picmark.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1AE4781AD415120015536D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1AE4831AD415120015536D /* PickitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE1AE47E1AD415120015536D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1AE4621AD415120015536D /* Pickit */;
+			targetProxy = EE1AE47D1AD415120015536D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE1AE4751AD415120015536D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE1AE4761AD415120015536D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE1AE4841AD415120015536D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE1AE4851AD415120015536D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE1AE4871AD415120015536D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pickit/Pickit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Pickit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		EE1AE4881AD415120015536D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pickit/Pickit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Pickit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		EE1AE48A1AD415120015536D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PickitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pickit.app/Pickit";
+			};
+			name = Debug;
+		};
+		EE1AE48B1AD415120015536D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PickitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pickit.app/Pickit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE1AE45E1AD415120015536D /* Build configuration list for PBXProject "Pickit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1AE4841AD415120015536D /* Debug */,
+				EE1AE4851AD415120015536D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1AE4861AD415120015536D /* Build configuration list for PBXNativeTarget "Pickit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1AE4871AD415120015536D /* Debug */,
+				EE1AE4881AD415120015536D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE1AE4891AD415120015536D /* Build configuration list for PBXNativeTarget "PickitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1AE48A1AD415120015536D /* Debug */,
+				EE1AE48B1AD415120015536D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE1AE45B1AD415120015536D /* Project object */;
+}

@@ -20,7 +20,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xet-rB-Dpz" id="uZx-nT-POi">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvW-cP-Wpr">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvW-cP-Wpr">
                                             <rect key="frame" x="20" y="5" width="40" height="49"/>
                                             <state key="normal" image="Unchecked">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,7 +30,7 @@
                                                 <action selector="checkmarkTapped:" destination="w9V-kc-1QL" eventType="touchUpInside" id="FAj-RN-gqb"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="25" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Todo goes here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-hq-idU">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="25" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Todo goes here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-hq-idU">
                                             <rect key="frame" x="80" y="17" width="500" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="479" id="prN-BX-oaa"/>
@@ -114,13 +114,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knJ-ZB-FQo" id="1h2-AD-i1b">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge0-WL-yaS">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge0-WL-yaS">
                                                     <rect key="frame" x="20" y="8" width="95" height="40"/>
                                                     <state key="normal" title="Button" image="Unchecked">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wN-28-kxN">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wN-28-kxN">
                                                     <rect key="frame" x="122" y="13" width="385" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="385" id="a86-p1-POf"/>

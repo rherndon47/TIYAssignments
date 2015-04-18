@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Venue" representedClassName="Venue" syncable="YES">
+        <attribute name="myVenueRating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="venueCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="venueLng" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="venueName" attributeType="String" syncable="YES"/>
+        <attribute name="venueState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueStreet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueZipCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Venue" positionX="-63" positionY="-18" width="128" height="165"/>
+    </elements>
+</model>
