@@ -10,6 +10,5 @@
 
 @interface ConcertSecondViewController : UIViewController
 
-
 @end
 
