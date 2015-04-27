@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="auT-9z-3Hk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK8-dR-FRX">
+                                <rect key="frame" x="252" y="84" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ret-pC-4fe">
+                                <rect key="frame" x="252" y="113" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-yQ-ghn">
+                                <rect key="frame" x="280" y="142" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2u-hm-Ecy">
+                                <rect key="frame" x="275" y="252" width="50" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPauseSong:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lIp-JV-pLd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCX-jS-jNK">
+                                <rect key="frame" x="275" y="290" width="50" height="30"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartSong:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VPQ-Hr-ON6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W2u-hm-Ecy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="188" id="2Gm-xF-sfa"/>
+                            <constraint firstItem="DK8-dR-FRX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="45m-sB-mo2"/>
+                            <constraint firstAttribute="centerX" secondItem="DK8-dR-FRX" secondAttribute="centerX" id="6z0-l1-ftT"/>
+                            <constraint firstItem="yCX-jS-jNK" firstAttribute="top" secondItem="W2u-hm-Ecy" secondAttribute="bottom" constant="8" id="8D6-jG-ZGG"/>
+                            <constraint firstItem="Ret-pC-4fe" firstAttribute="width" secondItem="DK8-dR-FRX" secondAttribute="width" id="CqA-GS-ByN"/>
+                            <constraint firstItem="Ret-pC-4fe" firstAttribute="centerX" secondItem="DK8-dR-FRX" secondAttribute="centerX" id="FRV-vf-C9B"/>
+                            <constraint firstItem="hD6-yQ-ghn" firstAttribute="top" secondItem="Ret-pC-4fe" secondAttribute="bottom" constant="8" id="Nd0-rd-IJF"/>
+                            <constraint firstAttribute="centerX" secondItem="W2u-hm-Ecy" secondAttribute="centerX" id="ORo-Oc-azv"/>
+                            <constraint firstItem="yCX-jS-jNK" firstAttribute="width" secondItem="W2u-hm-Ecy" secondAttribute="width" id="PNW-YA-A1H"/>
+                            <constraint firstAttribute="centerY" secondItem="DK8-dR-FRX" secondAttribute="centerY" constant="190.5" id="PZh-rq-Flg"/>
+                            <constraint firstAttribute="centerY" secondItem="W2u-hm-Ecy" secondAttribute="centerY" constant="33" id="QvW-9I-pjO"/>
+                            <constraint firstItem="Ret-pC-4fe" firstAttribute="centerY" secondItem="hD6-yQ-ghn" secondAttribute="centerY" id="WLq-l4-j2e"/>
+                            <constraint firstItem="yCX-jS-jNK" firstAttribute="centerX" secondItem="W2u-hm-Ecy" secondAttribute="centerX" id="ayA-T7-ZMy"/>
+                            <constraint firstItem="Ret-pC-4fe" firstAttribute="top" secondItem="DK8-dR-FRX" secondAttribute="bottom" constant="8" id="dUW-gJ-ex8"/>
+                            <constraint firstItem="Ret-pC-4fe" firstAttribute="centerX" secondItem="hD6-yQ-ghn" secondAttribute="centerX" id="yxg-Z8-bxf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PZh-rq-Flg"/>
+                                <exclude reference="WLq-l4-j2e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="RO2-95-cRi"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="hD6-yQ-ghn" id="l5u-ZP-h6S"/>
+                        <outlet property="playPauseButton" destination="W2u-hm-Ecy" id="1xn-d1-Xef"/>
+                        <outlet property="restartButton" destination="yCX-jS-jNK" id="V45-q5-3Ok"/>
+                        <outlet property="songTitleLabel" destination="Ret-pC-4fe" id="NCO-bR-URM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oo7-Ia-RTL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="auT-9z-3Hk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l68-94-Hja">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jGC-IZ-U3a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vo8-0p-BGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-356"/>
+        </scene>
+    </scenes>
+</document>

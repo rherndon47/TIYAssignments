@@ -918,6 +918,10 @@
                                 <exclude reference="Lw4-m6-LaW"/>
                                 <exclude reference="arS-35-TFh"/>
                                 <exclude reference="emV-6i-nMA"/>
+                                <exclude reference="DVT-qR-Pns"/>
+                                <exclude reference="REg-gw-J7K"/>
+                                <exclude reference="ZiP-Mu-a7M"/>
+                                <exclude reference="rII-eW-wPF"/>
                                 <exclude reference="47Q-7u-MC5"/>
                                 <exclude reference="5BH-Ue-UbO"/>
                                 <exclude reference="5FW-pZ-jcL"/>
@@ -926,10 +930,6 @@
                                 <exclude reference="nMm-cQ-SCi"/>
                                 <exclude reference="qdl-4i-PC0"/>
                                 <exclude reference="xda-mW-pNA"/>
-                                <exclude reference="DVT-qR-Pns"/>
-                                <exclude reference="REg-gw-J7K"/>
-                                <exclude reference="ZiP-Mu-a7M"/>
-                                <exclude reference="rII-eW-wPF"/>
                                 <exclude reference="7am-rO-3L4"/>
                                 <exclude reference="9gr-eW-IrL"/>
                                 <exclude reference="ICn-hO-Hog"/>
@@ -957,6 +957,11 @@
                                 <exclude reference="arS-35-TFh"/>
                                 <include reference="emV-6i-nMA"/>
                                 <exclude reference="iTt-H6-ucD"/>
+                                <exclude reference="DVT-qR-Pns"/>
+                                <exclude reference="REg-gw-J7K"/>
+                                <exclude reference="ZiP-Mu-a7M"/>
+                                <include reference="rII-eW-wPF"/>
+                                <exclude reference="xfw-XF-Npo"/>
                                 <include reference="47Q-7u-MC5"/>
                                 <exclude reference="5BH-Ue-UbO"/>
                                 <include reference="5FW-pZ-jcL"/>
@@ -969,11 +974,6 @@
                                 <exclude reference="nMm-cQ-SCi"/>
                                 <exclude reference="qdl-4i-PC0"/>
                                 <exclude reference="xda-mW-pNA"/>
-                                <exclude reference="DVT-qR-Pns"/>
-                                <exclude reference="REg-gw-J7K"/>
-                                <exclude reference="ZiP-Mu-a7M"/>
-                                <include reference="rII-eW-wPF"/>
-                                <exclude reference="xfw-XF-Npo"/>
                                 <include reference="9gr-eW-IrL"/>
                                 <exclude reference="RVr-o3-CAT"/>
                                 <exclude reference="RiN-fc-QuM"/>

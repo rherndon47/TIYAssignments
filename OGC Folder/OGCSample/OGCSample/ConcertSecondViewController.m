@@ -67,7 +67,8 @@
 - (void)setImageURL:(NSURL *)imageURL
 {
     _imageURL = imageURL;
-    self.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.imageURL]];
+//    self.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.imageURL]];
+    self.image = [UIImage imageNamed:@"OGCPoster"];
     self.scrollView.contentSize = self.image ? self.image.size :CGSizeZero;
 }
 

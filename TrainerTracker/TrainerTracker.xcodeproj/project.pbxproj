@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE6C84F51AEBFC28009F5625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84F41AEBFC28009F5625 /* main.m */; };
+		EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84F71AEBFC28009F5625 /* AppDelegate.m */; };
+		EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84FA1AEBFC28009F5625 /* FirstViewController.m */; };
+		EE6C84FE1AEBFC28009F5625 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */; };
+		EE6C85011AEBFC28009F5625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6C84FF1AEBFC28009F5625 /* Main.storyboard */; };
+		EE6C85031AEBFC28009F5625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6C85021AEBFC28009F5625 /* Images.xcassets */; };
+		EE6C85061AEBFC28009F5625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */; };
+		EE6C85121AEBFC28009F5625 /* TrainerTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C85111AEBFC28009F5625 /* TrainerTrackerTests.m */; };
+		EE6C851E1AEBFCFF009F5625 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C851D1AEBFCFF009F5625 /* AudioToolbox.framework */; };
+		EE6C85201AEBFD09009F5625 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C851F1AEBFD09009F5625 /* CFNetwork.framework */; };
+		EE6C85221AEBFD13009F5625 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85211AEBFD13009F5625 /* CoreGraphics.framework */; };
+		EE6C85241AEBFD20009F5625 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85231AEBFD20009F5625 /* CoreLocation.framework */; };
+		EE6C85261AEBFD2B009F5625 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85251AEBFD2B009F5625 /* MobileCoreServices.framework */; };
+		EE6C85281AEBFD36009F5625 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85271AEBFD36009F5625 /* QuartzCore.framework */; };
+		EE6C852A1AEBFD41009F5625 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85291AEBFD41009F5625 /* Security.framework */; };
+		EE6C852C1AEBFD48009F5625 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C852B1AEBFD48009F5625 /* StoreKit.framework */; };
+		EE6C852E1AEBFD51009F5625 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C852D1AEBFD51009F5625 /* SystemConfiguration.framework */; };
+		EE6C85301AEBFD67009F5625 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C852F1AEBFD67009F5625 /* libz.dylib */; };
+		EE6C85321AEBFD74009F5625 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85311AEBFD74009F5625 /* libsqlite3.dylib */; };
+		EE6C853E1AEC037A009F5625 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85381AEC037A009F5625 /* Bolts.framework */; };
+		EE6C853F1AEC037A009F5625 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C85391AEC037A009F5625 /* Parse.framework */; };
+		EE6C85401AEC037A009F5625 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C853A1AEC037A009F5625 /* ParseCrashReporting.framework */; };
+		EE6C85411AEC037A009F5625 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C853B1AEC037A009F5625 /* ParseFacebookUtils.framework */; };
+		EE6C85421AEC037A009F5625 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C853C1AEC037A009F5625 /* ParseFacebookUtilsV4.framework */; };
+		EE6C85431AEC037A009F5625 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C853D1AEC037A009F5625 /* ParseUI.framework */; };
+		EE76D8C01AED65E200D3FA3C /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */; };
+		EE76D8C31AED951D00D3FA3C /* ExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE6C850C1AEBFC28009F5625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE6C84E71AEBFC28009F5625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE6C84EE1AEBFC28009F5625;
+			remoteInfo = TrainerTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE6C84EF1AEBFC28009F5625 /* TrainerTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainerTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6C84F31AEBFC28009F5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6C84F41AEBFC28009F5625 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE6C84F61AEBFC28009F5625 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE6C84F71AEBFC28009F5625 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE6C84F91AEBFC28009F5625 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		EE6C84FA1AEBFC28009F5625 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EE6C84FC1AEBFC28009F5625 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		EE6C85001AEBFC28009F5625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE6C85021AEBFC28009F5625 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE6C85051AEBFC28009F5625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE6C850B1AEBFC28009F5625 /* TrainerTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainerTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6C85101AEBFC28009F5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6C85111AEBFC28009F5625 /* TrainerTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainerTrackerTests.m; sourceTree = "<group>"; };
+		EE6C851D1AEBFCFF009F5625 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EE6C851F1AEBFD09009F5625 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EE6C85211AEBFD13009F5625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EE6C85231AEBFD20009F5625 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EE6C85251AEBFD2B009F5625 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EE6C85271AEBFD36009F5625 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EE6C85291AEBFD41009F5625 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EE6C852B1AEBFD48009F5625 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EE6C852D1AEBFD51009F5625 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EE6C852F1AEBFD67009F5625 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EE6C85311AEBFD74009F5625 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EE6C85331AEBFD89009F5625 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EE6C85351AEBFD90009F5625 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		EE6C85381AEC037A009F5625 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library/Bolts.framework"; sourceTree = "<group>"; };
+		EE6C85391AEC037A009F5625 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library/Parse.framework"; sourceTree = "<group>"; };
+		EE6C853A1AEC037A009F5625 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		EE6C853B1AEC037A009F5625 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		EE6C853C1AEC037A009F5625 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		EE6C853D1AEC037A009F5625 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library/ParseUI.framework"; sourceTree = "<group>"; };
+		EE76D8BE1AED65E200D3FA3C /* AddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseTableViewController.h; sourceTree = "<group>"; };
+		EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseTableViewController.m; sourceTree = "<group>"; };
+		EE76D8C11AED951D00D3FA3C /* ExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseCell.h; sourceTree = "<group>"; };
+		EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE6C84EC1AEBFC28009F5625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6C85321AEBFD74009F5625 /* libsqlite3.dylib in Frameworks */,
+				EE6C85301AEBFD67009F5625 /* libz.dylib in Frameworks */,
+				EE6C852E1AEBFD51009F5625 /* SystemConfiguration.framework in Frameworks */,
+				EE6C853E1AEC037A009F5625 /* Bolts.framework in Frameworks */,
+				EE6C852C1AEBFD48009F5625 /* StoreKit.framework in Frameworks */,
+				EE6C85401AEC037A009F5625 /* ParseCrashReporting.framework in Frameworks */,
+				EE6C852A1AEBFD41009F5625 /* Security.framework in Frameworks */,
+				EE6C853F1AEC037A009F5625 /* Parse.framework in Frameworks */,
+				EE6C85411AEC037A009F5625 /* ParseFacebookUtils.framework in Frameworks */,
+				EE6C85431AEC037A009F5625 /* ParseUI.framework in Frameworks */,
+				EE6C85281AEBFD36009F5625 /* QuartzCore.framework in Frameworks */,
+				EE6C85421AEC037A009F5625 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				EE6C85261AEBFD2B009F5625 /* MobileCoreServices.framework in Frameworks */,
+				EE6C85241AEBFD20009F5625 /* CoreLocation.framework in Frameworks */,
+				EE6C85221AEBFD13009F5625 /* CoreGraphics.framework in Frameworks */,
+				EE6C85201AEBFD09009F5625 /* CFNetwork.framework in Frameworks */,
+				EE6C851E1AEBFCFF009F5625 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6C85081AEBFC28009F5625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE6C84E61AEBFC28009F5625 = {
+			isa = PBXGroup;
+			children = (
+				EE6C85371AEBFF4C009F5625 /* FrameWorks */,
+				EE6C84F11AEBFC28009F5625 /* TrainerTracker */,
+				EE6C850E1AEBFC28009F5625 /* TrainerTrackerTests */,
+				EE6C84F01AEBFC28009F5625 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE6C84F01AEBFC28009F5625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE6C84EF1AEBFC28009F5625 /* TrainerTracker.app */,
+				EE6C850B1AEBFC28009F5625 /* TrainerTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE6C84F11AEBFC28009F5625 /* TrainerTracker */ = {
+			isa = PBXGroup;
+			children = (
+				EE76D8C11AED951D00D3FA3C /* ExerciseCell.h */,
+				EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */,
+				EE6C84F61AEBFC28009F5625 /* AppDelegate.h */,
+				EE6C84F71AEBFC28009F5625 /* AppDelegate.m */,
+				EE6C84F91AEBFC28009F5625 /* FirstViewController.h */,
+				EE6C84FA1AEBFC28009F5625 /* FirstViewController.m */,
+				EE6C84FC1AEBFC28009F5625 /* SecondViewController.h */,
+				EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */,
+				EE76D8BE1AED65E200D3FA3C /* AddExerciseTableViewController.h */,
+				EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */,
+				EE6C84FF1AEBFC28009F5625 /* Main.storyboard */,
+				EE6C85021AEBFC28009F5625 /* Images.xcassets */,
+				EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */,
+				EE6C84F21AEBFC28009F5625 /* Supporting Files */,
+			);
+			path = TrainerTracker;
+			sourceTree = "<group>";
+		};
+		EE6C84F21AEBFC28009F5625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE6C84F31AEBFC28009F5625 /* Info.plist */,
+				EE6C84F41AEBFC28009F5625 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE6C850E1AEBFC28009F5625 /* TrainerTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE6C85111AEBFC28009F5625 /* TrainerTrackerTests.m */,
+				EE6C850F1AEBFC28009F5625 /* Supporting Files */,
+			);
+			path = TrainerTrackerTests;
+			sourceTree = "<group>";
+		};
+		EE6C850F1AEBFC28009F5625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE6C85101AEBFC28009F5625 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE6C85371AEBFF4C009F5625 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				EE6C85381AEC037A009F5625 /* Bolts.framework */,
+				EE6C85391AEC037A009F5625 /* Parse.framework */,
+				EE6C853A1AEC037A009F5625 /* ParseCrashReporting.framework */,
+				EE6C853B1AEC037A009F5625 /* ParseFacebookUtils.framework */,
+				EE6C853C1AEC037A009F5625 /* ParseFacebookUtilsV4.framework */,
+				EE6C853D1AEC037A009F5625 /* ParseUI.framework */,
+				EE6C85351AEBFD90009F5625 /* Social.framework */,
+				EE6C85331AEBFD89009F5625 /* Accounts.framework */,
+				EE6C85311AEBFD74009F5625 /* libsqlite3.dylib */,
+				EE6C852F1AEBFD67009F5625 /* libz.dylib */,
+				EE6C852D1AEBFD51009F5625 /* SystemConfiguration.framework */,
+				EE6C852B1AEBFD48009F5625 /* StoreKit.framework */,
+				EE6C85291AEBFD41009F5625 /* Security.framework */,
+				EE6C85271AEBFD36009F5625 /* QuartzCore.framework */,
+				EE6C85251AEBFD2B009F5625 /* MobileCoreServices.framework */,
+				EE6C85231AEBFD20009F5625 /* CoreLocation.framework */,
+				EE6C85211AEBFD13009F5625 /* CoreGraphics.framework */,
+				EE6C851F1AEBFD09009F5625 /* CFNetwork.framework */,
+				EE6C851D1AEBFCFF009F5625 /* AudioToolbox.framework */,
+			);
+			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE6C84EE1AEBFC28009F5625 /* TrainerTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6C85151AEBFC28009F5625 /* Build configuration list for PBXNativeTarget "TrainerTracker" */;
+			buildPhases = (
+				EE6C84EB1AEBFC28009F5625 /* Sources */,
+				EE6C84EC1AEBFC28009F5625 /* Frameworks */,
+				EE6C84ED1AEBFC28009F5625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainerTracker;
+			productName = TrainerTracker;
+			productReference = EE6C84EF1AEBFC28009F5625 /* TrainerTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE6C850A1AEBFC28009F5625 /* TrainerTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6C85181AEBFC28009F5625 /* Build configuration list for PBXNativeTarget "TrainerTrackerTests" */;
+			buildPhases = (
+				EE6C85071AEBFC28009F5625 /* Sources */,
+				EE6C85081AEBFC28009F5625 /* Frameworks */,
+				EE6C85091AEBFC28009F5625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE6C850D1AEBFC28009F5625 /* PBXTargetDependency */,
+			);
+			name = TrainerTrackerTests;
+			productName = TrainerTrackerTests;
+			productReference = EE6C850B1AEBFC28009F5625 /* TrainerTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE6C84E71AEBFC28009F5625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Richard Herndon";
+				TargetAttributes = {
+					EE6C84EE1AEBFC28009F5625 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					EE6C850A1AEBFC28009F5625 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = EE6C84EE1AEBFC28009F5625;
+					};
+				};
+			};
+			buildConfigurationList = EE6C84EA1AEBFC28009F5625 /* Build configuration list for PBXProject "TrainerTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE6C84E61AEBFC28009F5625;
+			productRefGroup = EE6C84F01AEBFC28009F5625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE6C84EE1AEBFC28009F5625 /* TrainerTracker */,
+				EE6C850A1AEBFC28009F5625 /* TrainerTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE6C84ED1AEBFC28009F5625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6C85011AEBFC28009F5625 /* Main.storyboard in Resources */,
+				EE6C85061AEBFC28009F5625 /* LaunchScreen.xib in Resources */,
+				EE6C85031AEBFC28009F5625 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6C85091AEBFC28009F5625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE6C84EB1AEBFC28009F5625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6C84FE1AEBFC28009F5625 /* SecondViewController.m in Sources */,
+				EE76D8C31AED951D00D3FA3C /* ExerciseCell.m in Sources */,
+				EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */,
+				EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */,
+				EE6C84F51AEBFC28009F5625 /* main.m in Sources */,
+				EE76D8C01AED65E200D3FA3C /* AddExerciseTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6C85071AEBFC28009F5625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6C85121AEBFC28009F5625 /* TrainerTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE6C850D1AEBFC28009F5625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE6C84EE1AEBFC28009F5625 /* TrainerTracker */;
+			targetProxy = EE6C850C1AEBFC28009F5625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE6C84FF1AEBFC28009F5625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6C85001AEBFC28009F5625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6C85051AEBFC28009F5625 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE6C85131AEBFC28009F5625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE6C85141AEBFC28009F5625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE6C85161AEBFC28009F5625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library",
+				);
+				INFOPLIST_FILE = TrainerTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE6C85171AEBFC28009F5625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library",
+				);
+				INFOPLIST_FILE = TrainerTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE6C85191AEBFC28009F5625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TrainerTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainerTracker.app/TrainerTracker";
+			};
+			name = Debug;
+		};
+		EE6C851A1AEBFC28009F5625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TrainerTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainerTracker.app/TrainerTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE6C84EA1AEBFC28009F5625 /* Build configuration list for PBXProject "TrainerTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6C85131AEBFC28009F5625 /* Debug */,
+				EE6C85141AEBFC28009F5625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6C85151AEBFC28009F5625 /* Build configuration list for PBXNativeTarget "TrainerTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6C85161AEBFC28009F5625 /* Debug */,
+				EE6C85171AEBFC28009F5625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6C85181AEBFC28009F5625 /* Build configuration list for PBXNativeTarget "TrainerTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6C85191AEBFC28009F5625 /* Debug */,
+				EE6C851A1AEBFC28009F5625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE6C84E71AEBFC28009F5625 /* Project object */;
+}
