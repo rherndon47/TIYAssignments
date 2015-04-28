@@ -7,12 +7,16 @@
 //
 
 #import "AddExerciseTableViewController.h"
+#import "AddExerciseViewController.h"
+
 #import "ExerciseCell.h"
 
 @interface AddExerciseTableViewController ()
+{
+    
+}
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
-
 
 @end
 
@@ -27,24 +31,27 @@
     //    [testObject saveInBackground];
 
     
-    PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
-    exerciseObject[@"exerciseName"] = @"Bench Press";
-    exerciseObject[@"exerciseNotes"] = @"Remember not to lock your elbows";
-    exerciseObject[@"exerciseReps"] = @10;
-    exerciseObject[@"exerciseWeight"] = @100;
-    
-    [exerciseObject saveInBackground];
+//    PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
+//    exerciseObject[@"exerciseName"] = @"Leg Extension";
+//    exerciseObject[@"exerciseNotes"] = @"Seat Legs";
+//    exerciseObject[@"exerciseReps"] = @10;
+//    exerciseObject[@"exerciseWeight"] = @45;
+//    
+//    [exerciseObject saveInBackground];
     
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
-    
+    NSLog(@"queryExercise %@", queryExercise);
 //    [queryExercise fromLocalDatastore];
     
-    [queryExercise whereKey:@"exerciseName" equalTo:@"Leg Press"];
+//    [queryExercise whereKey:@"exerciseName" equalTo:@"Leg Press"];
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
     {
         if (!error)
         {
+            
+            self.exerciseArray = [[NSMutableArray alloc] init];
             [self.exerciseArray addObjectsFromArray:objects];
+            [self.tableView reloadData];
                 
         }
         else
@@ -82,9 +89,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
      ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
+//    [aDictionary objectForKey:@"results"]
     
+    NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
     
-    cell.exerciseNameLabel.text = @"some text";
+    cell.exerciseNameLabel.text = name;
     
     return cell;
 }
@@ -124,14 +133,18 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"addExerciseDetailSeque"])
+    {
+        AddExerciseViewController *destVC = (AddExerciseViewController *)[segue destinationViewController];
+//        [self.navigationController pushViewController:destVC animated:YES];
+
+    }
 }
-*/
+
 
 @end

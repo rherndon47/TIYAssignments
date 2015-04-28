@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="538" y="-504"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="360"/>
+            <point key="canvasLocation" x="1306" y="-460"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -103,7 +103,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-252" y="-56"/>
         </scene>
         <!--Add Exercise Table View Controller-->
         <scene sceneID="Ysk-KK-N4h">
@@ -149,13 +149,149 @@
                         <barButtonItem title="Item" id="lk5-ZT-lCU"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Dyo-0J-0L2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3r-LD-EiP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3r-LD-EiP">
+                            <connections>
+                                <segue destination="bdn-qs-GVL" kind="show" identifier="addExerciseDetailSeque" id="yYg-Gn-9zt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFG-vO-MAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="800"/>
+            <point key="canvasLocation" x="-210" y="1784"/>
+        </scene>
+        <!--Add Exercise View Controller-->
+        <scene sceneID="7ye-P7-gW5">
+            <objects>
+                <viewController id="bdn-qs-GVL" customClass="AddExerciseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AyF-Rj-NpQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5MC-Wf-HEh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJM-Ge-rpq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exercise Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y55-1P-7gt">
+                                <rect key="frame" x="96" y="84" width="442" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OY1-xU-CyE">
+                                <rect key="frame" x="184" y="202" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-Ib-yAP">
+                                <rect key="frame" x="96" y="274" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Speed" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzR-LY-z2X">
+                                <rect key="frame" x="184" y="274" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ful-gV-Z8H">
+                                <rect key="frame" x="272" y="274" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC3-9j-DUb">
+                                <rect key="frame" x="22" y="206" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aerobic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V07-hf-KiJ">
+                                <rect key="frame" x="29" y="277" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqZ-AY-S6z">
+                                <rect key="frame" x="96" y="202" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7lY-UJ-Mh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exercise Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CcC-oy-unA">
+                                <rect key="frame" x="96" y="122" width="442" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-kO-Ryg">
+                                <rect key="frame" x="238" y="325" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveExercise:" destination="bdn-qs-GVL" eventType="touchUpInside" id="L7z-dm-zlL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RqZ-AY-S6z" firstAttribute="top" secondItem="CcC-oy-unA" secondAttribute="bottom" constant="50" id="3Iz-Xg-NCi"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="top" secondItem="RqZ-AY-S6z" secondAttribute="bottom" constant="42" id="3vp-Tc-PrV"/>
+                            <constraint firstItem="OY1-xU-CyE" firstAttribute="leading" secondItem="RqZ-AY-S6z" secondAttribute="trailing" constant="8" id="B9s-Pd-XqZ"/>
+                            <constraint firstItem="WzR-LY-z2X" firstAttribute="leading" secondItem="HjV-Ib-yAP" secondAttribute="trailing" constant="8" id="D2s-yP-KqB"/>
+                            <constraint firstItem="fG8-kO-Ryg" firstAttribute="baseline" secondItem="WzR-LY-z2X" secondAttribute="baseline" constant="52" id="EDr-ea-MF9"/>
+                            <constraint firstItem="CcC-oy-unA" firstAttribute="top" secondItem="Y55-1P-7gt" secondAttribute="bottom" constant="8" id="EKy-4D-DqH"/>
+                            <constraint firstItem="WzR-LY-z2X" firstAttribute="height" secondItem="Ful-gV-Z8H" secondAttribute="height" id="H8w-Ue-adx"/>
+                            <constraint firstItem="RqZ-AY-S6z" firstAttribute="leading" secondItem="CcC-oy-unA" secondAttribute="leading" id="L00-QJ-U60"/>
+                            <constraint firstItem="OY1-xU-CyE" firstAttribute="width" secondItem="RqZ-AY-S6z" secondAttribute="width" id="L7k-kC-hsl"/>
+                            <constraint firstAttribute="centerX" secondItem="fG8-kO-Ryg" secondAttribute="centerX" constant="45" id="Mwp-LC-0Vd"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="centerY" secondItem="WzR-LY-z2X" secondAttribute="centerY" id="NHk-zw-0Wa"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="centerY" secondItem="V07-hf-KiJ" secondAttribute="centerY" constant="1.5" id="Pe4-bD-DYD"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="leading" secondItem="V07-hf-KiJ" secondAttribute="trailing" constant="8" id="QdT-5w-WoC"/>
+                            <constraint firstItem="RqZ-AY-S6z" firstAttribute="height" secondItem="CcC-oy-unA" secondAttribute="height" id="R5h-Gb-zaU"/>
+                            <constraint firstItem="Y55-1P-7gt" firstAttribute="leading" secondItem="fJM-Ge-rpq" secondAttribute="leadingMargin" constant="80" id="VGK-Y2-gFG"/>
+                            <constraint firstItem="Y55-1P-7gt" firstAttribute="width" secondItem="CcC-oy-unA" secondAttribute="width" id="WJZ-Ap-xD3"/>
+                            <constraint firstItem="nC3-9j-DUb" firstAttribute="centerY" secondItem="RqZ-AY-S6z" secondAttribute="centerY" id="a1a-Rx-Aa2"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="height" secondItem="WzR-LY-z2X" secondAttribute="height" id="a9T-cU-qAF"/>
+                            <constraint firstItem="WzR-LY-z2X" firstAttribute="centerY" secondItem="Ful-gV-Z8H" secondAttribute="centerY" id="agz-8Z-6JD"/>
+                            <constraint firstItem="RqZ-AY-S6z" firstAttribute="leading" secondItem="nC3-9j-DUb" secondAttribute="trailing" constant="8" id="c3l-wW-cYQ"/>
+                            <constraint firstItem="OY1-xU-CyE" firstAttribute="height" secondItem="RqZ-AY-S6z" secondAttribute="height" id="dh2-YS-W01"/>
+                            <constraint firstAttribute="trailing" secondItem="Y55-1P-7gt" secondAttribute="trailing" constant="62" id="lpz-n7-Xvz"/>
+                            <constraint firstItem="Y55-1P-7gt" firstAttribute="leading" secondItem="CcC-oy-unA" secondAttribute="leading" id="niQ-E7-ZQ9"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="height" secondItem="RqZ-AY-S6z" secondAttribute="height" id="o8q-8l-BHP"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="width" secondItem="RqZ-AY-S6z" secondAttribute="width" id="oVq-Ni-l47"/>
+                            <constraint firstItem="Ful-gV-Z8H" firstAttribute="leading" secondItem="WzR-LY-z2X" secondAttribute="trailing" constant="8" id="tRO-QL-na6"/>
+                            <constraint firstItem="OY1-xU-CyE" firstAttribute="centerY" secondItem="RqZ-AY-S6z" secondAttribute="centerY" id="thA-Ck-k8h"/>
+                            <constraint firstItem="fG8-kO-Ryg" firstAttribute="top" secondItem="WzR-LY-z2X" secondAttribute="bottom" constant="21" id="ue8-6B-7Yv"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="width" secondItem="WzR-LY-z2X" secondAttribute="width" id="vM6-oV-STN"/>
+                            <constraint firstAttribute="centerY" secondItem="fG8-kO-Ryg" secondAttribute="centerY" constant="-40" id="ygP-Tq-t2A"/>
+                            <constraint firstItem="HjV-Ib-yAP" firstAttribute="leading" secondItem="RqZ-AY-S6z" secondAttribute="leading" id="zJy-fO-1uJ"/>
+                            <constraint firstItem="Y55-1P-7gt" firstAttribute="top" secondItem="AyF-Rj-NpQ" secondAttribute="bottom" constant="20" id="zSi-yG-5wT"/>
+                            <constraint firstItem="fG8-kO-Ryg" firstAttribute="centerY" secondItem="WzR-LY-z2X" secondAttribute="centerY" constant="51" id="zvL-kE-P2E"/>
+                            <constraint firstItem="WzR-LY-z2X" firstAttribute="width" secondItem="Ful-gV-Z8H" secondAttribute="width" id="zwE-Kd-eR7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EDr-ea-MF9"/>
+                                <exclude reference="ygP-Tq-t2A"/>
+                                <exclude reference="zvL-kE-P2E"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="exerciseDistance" destination="Ful-gV-Z8H" id="2pm-fP-0wu"/>
+                        <outlet property="exerciseLengthOfTime" destination="HjV-Ib-yAP" id="Vqm-Zw-IcG"/>
+                        <outlet property="exerciseName" destination="Y55-1P-7gt" id="BsW-1n-ITa"/>
+                        <outlet property="exerciseNotes" destination="CcC-oy-unA" id="gad-NN-hZR"/>
+                        <outlet property="exerciseReps" destination="RqZ-AY-S6z" id="CW0-ZM-F6h"/>
+                        <outlet property="exerciseSpeed" destination="WzR-LY-z2X" id="tKU-8l-aNX"/>
+                        <outlet property="exerciseWeight" destination="OY1-xU-CyE" id="v1L-iD-3xx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4c-gy-ZfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="1659"/>
         </scene>
         <!--Regiments-->
         <scene sceneID="5cD-Ip-s0P">

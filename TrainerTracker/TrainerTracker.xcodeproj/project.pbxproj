@@ -34,6 +34,7 @@
 		EE6C85431AEC037A009F5625 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6C853D1AEC037A009F5625 /* ParseUI.framework */; };
 		EE76D8C01AED65E200D3FA3C /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */; };
 		EE76D8C31AED951D00D3FA3C /* ExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */; };
+		EE76D8C61AEE946F00D3FA3C /* AddExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseTableViewController.m; sourceTree = "<group>"; };
 		EE76D8C11AED951D00D3FA3C /* ExerciseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseCell.h; sourceTree = "<group>"; };
 		EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseCell.m; sourceTree = "<group>"; };
+		EE76D8C41AEE946F00D3FA3C /* AddExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseViewController.h; sourceTree = "<group>"; };
+		EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */,
 				EE76D8BE1AED65E200D3FA3C /* AddExerciseTableViewController.h */,
 				EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */,
+				EE76D8C41AEE946F00D3FA3C /* AddExerciseViewController.h */,
+				EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */,
 				EE6C84FF1AEBFC28009F5625 /* Main.storyboard */,
 				EE6C85021AEBFC28009F5625 /* Images.xcassets */,
 				EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */,
@@ -317,6 +322,7 @@
 				EE6C84FE1AEBFC28009F5625 /* SecondViewController.m in Sources */,
 				EE76D8C31AED951D00D3FA3C /* ExerciseCell.m in Sources */,
 				EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */,
+				EE76D8C61AEE946F00D3FA3C /* AddExerciseViewController.m in Sources */,
 				EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */,
 				EE6C84F51AEBFC28009F5625 /* main.m in Sources */,
 				EE76D8C01AED65E200D3FA3C /* AddExerciseTableViewController.m in Sources */,
