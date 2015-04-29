@@ -25,25 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    //    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    //    testObject[@"foo"] = @"bar";
-    //    [testObject saveInBackground];
-
-    
-//    PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
-//    exerciseObject[@"exerciseName"] = @"Leg Extension";
-//    exerciseObject[@"exerciseNotes"] = @"Seat Legs";
-//    exerciseObject[@"exerciseReps"] = @10;
-//    exerciseObject[@"exerciseWeight"] = @45;
-//    
-//    [exerciseObject saveInBackground];
-    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
-//    [queryExercise fromLocalDatastore];
-    
-//    [queryExercise whereKey:@"exerciseName" equalTo:@"Leg Press"];
+
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
     {
         if (!error)
@@ -89,7 +73,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
      ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
-//    [aDictionary objectForKey:@"results"]
     
     NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
     

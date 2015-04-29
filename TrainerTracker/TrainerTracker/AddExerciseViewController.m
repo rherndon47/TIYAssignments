@@ -50,9 +50,7 @@
     PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
     exerciseObject[@"exerciseName"] = self.exerciseName.text;
     exerciseObject[@"exerciseNotes"] = self.exerciseNotes.text;
-//    NSNumber *textNumber = [self.exerciseReps.text string;
-//    NSNumber *aNum = [NSNumber numberWithInteger: [self.exerciseReps.text integerValue]];
-//    NSNumber number = [self.exerciseReps.text intValue];
+
     exerciseObject[@"exerciseReps"] = [NSNumber numberWithInteger: [self.exerciseReps.text integerValue]];
     exerciseObject[@"exerciseWeight"] = [NSNumber numberWithInteger: [self.exerciseWeight.text integerValue]];
     exerciseObject[@"exerciseDistance"] = [NSNumber numberWithInteger: [self.exerciseDistance.text integerValue]];
