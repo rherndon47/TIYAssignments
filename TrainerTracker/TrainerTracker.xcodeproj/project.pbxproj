@@ -10,11 +10,15 @@
 		EE63B1A11AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */; };
 		EE63B1A41AF0131E00CF1463 /* RegimentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A31AF0131E00CF1463 /* RegimentTableViewCell.m */; };
 		EE63B1A91AF11E1400CF1463 /* SaveRegimentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */; };
+		EE63B1AC1AF162C400CF1463 /* GetListRegimentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */; };
+		EE63B1AF1AF1666000CF1463 /* PerformRegimentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1AE1AF1666000CF1463 /* PerformRegimentTableViewCell.m */; };
+		EE63B1B21AF1733F00CF1463 /* PerformExercisesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */; };
+		EE63B1B51AF174C100CF1463 /* PerformExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1B41AF174C100CF1463 /* PerformExerciseTableViewCell.m */; };
+		EE63B1B71AF2AF8300CF1463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE63B1B61AF2AF8300CF1463 /* Main.storyboard */; };
 		EE6C84F51AEBFC28009F5625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84F41AEBFC28009F5625 /* main.m */; };
 		EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84F71AEBFC28009F5625 /* AppDelegate.m */; };
 		EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84FA1AEBFC28009F5625 /* FirstViewController.m */; };
 		EE6C84FE1AEBFC28009F5625 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */; };
-		EE6C85011AEBFC28009F5625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6C84FF1AEBFC28009F5625 /* Main.storyboard */; };
 		EE6C85031AEBFC28009F5625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6C85021AEBFC28009F5625 /* Images.xcassets */; };
 		EE6C85061AEBFC28009F5625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */; };
 		EE6C85121AEBFC28009F5625 /* TrainerTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6C85111AEBFC28009F5625 /* TrainerTrackerTests.m */; };
@@ -57,6 +61,15 @@
 		EE63B1A31AF0131E00CF1463 /* RegimentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegimentTableViewCell.m; sourceTree = "<group>"; };
 		EE63B1A71AF11E1400CF1463 /* SaveRegimentPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveRegimentPopoverViewController.h; sourceTree = "<group>"; };
 		EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveRegimentPopoverViewController.m; sourceTree = "<group>"; };
+		EE63B1AA1AF162C400CF1463 /* GetListRegimentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetListRegimentsTableViewController.h; sourceTree = "<group>"; };
+		EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetListRegimentsTableViewController.m; sourceTree = "<group>"; };
+		EE63B1AD1AF1666000CF1463 /* PerformRegimentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformRegimentTableViewCell.h; sourceTree = "<group>"; };
+		EE63B1AE1AF1666000CF1463 /* PerformRegimentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformRegimentTableViewCell.m; sourceTree = "<group>"; };
+		EE63B1B01AF1733F00CF1463 /* PerformExercisesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformExercisesTableViewController.h; sourceTree = "<group>"; };
+		EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformExercisesTableViewController.m; sourceTree = "<group>"; };
+		EE63B1B31AF174C100CF1463 /* PerformExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformExerciseTableViewCell.h; sourceTree = "<group>"; };
+		EE63B1B41AF174C100CF1463 /* PerformExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformExerciseTableViewCell.m; sourceTree = "<group>"; };
+		EE63B1B61AF2AF8300CF1463 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EE6C84EF1AEBFC28009F5625 /* TrainerTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainerTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6C84F31AEBFC28009F5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE6C84F41AEBFC28009F5625 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,7 +79,6 @@
 		EE6C84FA1AEBFC28009F5625 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		EE6C84FC1AEBFC28009F5625 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		EE6C84FD1AEBFC28009F5625 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		EE6C85001AEBFC28009F5625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE6C85021AEBFC28009F5625 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EE6C85051AEBFC28009F5625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EE6C850B1AEBFC28009F5625 /* TrainerTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainerTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +153,10 @@
 				EE76D8C21AED951D00D3FA3C /* ExerciseCell.m */,
 				EE63B1A21AF0131E00CF1463 /* RegimentTableViewCell.h */,
 				EE63B1A31AF0131E00CF1463 /* RegimentTableViewCell.m */,
+				EE63B1AD1AF1666000CF1463 /* PerformRegimentTableViewCell.h */,
+				EE63B1AE1AF1666000CF1463 /* PerformRegimentTableViewCell.m */,
+				EE63B1B31AF174C100CF1463 /* PerformExerciseTableViewCell.h */,
+				EE63B1B41AF174C100CF1463 /* PerformExerciseTableViewCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -182,7 +198,11 @@
 				EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */,
 				EE63B1A71AF11E1400CF1463 /* SaveRegimentPopoverViewController.h */,
 				EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */,
-				EE6C84FF1AEBFC28009F5625 /* Main.storyboard */,
+				EE63B1AA1AF162C400CF1463 /* GetListRegimentsTableViewController.h */,
+				EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */,
+				EE63B1B01AF1733F00CF1463 /* PerformExercisesTableViewController.h */,
+				EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */,
+				EE63B1B61AF2AF8300CF1463 /* Main.storyboard */,
 				EE6C85021AEBFC28009F5625 /* Images.xcassets */,
 				EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */,
 				EE6C84F21AEBFC28009F5625 /* Supporting Files */,
@@ -322,9 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE6C85011AEBFC28009F5625 /* Main.storyboard in Resources */,
 				EE6C85061AEBFC28009F5625 /* LaunchScreen.xib in Resources */,
 				EE6C85031AEBFC28009F5625 /* Images.xcassets in Resources */,
+				EE63B1B71AF2AF8300CF1463 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,10 +368,14 @@
 				EE63B1A41AF0131E00CF1463 /* RegimentTableViewCell.m in Sources */,
 				EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */,
 				EE76D8C61AEE946F00D3FA3C /* AddExerciseViewController.m in Sources */,
+				EE63B1B21AF1733F00CF1463 /* PerformExercisesTableViewController.m in Sources */,
+				EE63B1AF1AF1666000CF1463 /* PerformRegimentTableViewCell.m in Sources */,
 				EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */,
 				EE6C84F51AEBFC28009F5625 /* main.m in Sources */,
 				EE63B1A11AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m in Sources */,
+				EE63B1B51AF174C100CF1463 /* PerformExerciseTableViewCell.m in Sources */,
 				EE76D8C01AED65E200D3FA3C /* AddExerciseTableViewController.m in Sources */,
+				EE63B1AC1AF162C400CF1463 /* GetListRegimentsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +398,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE6C84FF1AEBFC28009F5625 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE6C85001AEBFC28009F5625 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -12,11 +12,9 @@
 
 @interface SelectExercisesForRegimentTableViewController () <UITextFieldDelegate,UIPopoverPresentationControllerDelegate>
 
-
 @property (strong, nonatomic) NSMutableArray *regimentArray;
 @property (strong, nonatomic) NSMutableArray *selectedExercisesArray;
 
-- (IBAction)saveRegiment:(UIBarButtonItem *)sender;
 
 @end
 
@@ -83,10 +81,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
     {
         [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-    }else
+    }
+    else
     {
         [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
 
@@ -96,6 +96,22 @@
     }
 
 }
+
+//- (void)clearCheckmarks
+//{
+//    int i = 0;
+//    for (NSString * in self.regimentArray)
+//    {
+//        [UITableView cellForRowAtIndexPath:i].accessoryType = UITableViewCellAccessoryNone;
+//
+//    }
+//}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+    return UIModalPresentationNone;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -143,20 +159,6 @@
     }
 }
 
-#pragma mark - IBAction
-
-- (IBAction)saveRegiment:(UIBarButtonItem *)sender
-{
-    NSLog(@"Entered SaveRegiment");
-    PFObject *exerciseObject = [PFObject objectWithClassName:@"Regiments"];
-    exerciseObject[@"regimentName"] = @"First Regiment";
-    exerciseObject[@"objectIdArray"] = self.selectedExercisesArray;
-
-    
-    [exerciseObject saveInBackground];
-
-}
-
 #pragma mark - RegimentNamePopoverViewController delegate
 
 - (void)RegimentNameWasChosen:(NSString *)regimentName
@@ -168,14 +170,11 @@
     exerciseObject[@"regimentName"] = regimentName;
     exerciseObject[@"objectIdArray"] = self.selectedExercisesArray;
     
-    
     [exerciseObject saveInBackground];
+    
+    [self.tableView reloadData];
+    [self.selectedExercisesArray removeAllObjects];
 
-}
-
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
-{
-    return UIModalPresentationNone;
 }
 
 @end
