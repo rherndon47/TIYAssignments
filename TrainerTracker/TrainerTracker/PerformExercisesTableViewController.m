@@ -16,6 +16,10 @@
 @end
 
 @implementation PerformExercisesTableViewController
+{
+    PFQuery *query;
+    NSMutableArray *exerciseObjectIds;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +32,12 @@
     
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
+//    for (int i = 0; i < [exerciseObjectIds count]; i++)
+//    {
         [self getExerciseNames];
+//    }
+    
+        
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,10 +71,15 @@
 {
     PerformExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExerciseCell" forIndexPath:indexPath];
     
+    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
+    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
     
-//    NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"regimentName"];
+    if( [indexPath row] % 2)
+        [cell setBackgroundColor:cellColor];
+    else
+        [cell setBackgroundColor:cellColor2];
+
     
-//    cell.performExerciseNameLabel.text = self.exerciseArray[indexPath.row];
     cell.textLabel.text = self.exerciseArray[indexPath.row];
     
     return cell;
@@ -118,16 +132,26 @@
 
 - (void)getExerciseNames
 {
-    NSMutableArray *exerciseObjectIds = self.passedPFObject[@"objectIdArray"];
-    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
-    
-    NSString *queryObjectId = exerciseObjectIds[0];
-    [query getObjectInBackgroundWithId:queryObjectId block:^(PFObject *aExercise, NSError *error) {
+//    NSMutableArray *exerciseObjectIds = self.passedPFObject[@"objectIdArray"];
+//    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
+    exerciseObjectIds = self.passedPFObject[@"objectIdArray"];
+    query = [PFQuery queryWithClassName:@"Exercise"];
+//    NSString *queryObjectId = exerciseObjectIds[0];
+    [query whereKey:@"objectId" containedIn:exerciseObjectIds];
+//    [query getObjectInBackgroundWithId:queryObjectId block:^(PFObject *aExercise, NSError *error)
+    [query findObjectsInBackgroundWithBlock:^(NSArray *result, NSError *error)
+
+    {
         // Do something with the returned PFObject in the aExercise variable.
-        NSLog(@"aExercise %@", aExercise);
-        NSString *aName = aExercise[@"exerciseName"];
-        NSLog(@"aName %@",aName);
-        self.exerciseArray[0] = aName;
+    
+        NSLog(@"aExercise %@", result);
+        for (int i =0; i < [result count]; i++)
+        {
+            PFObject *aExercise = result[i];
+            NSString *aName = aExercise[@"exerciseName"];
+            NSLog(@"aName %@",aName);
+            self.exerciseArray[i] = aName;
+        }
         [self.tableView reloadData];
     }];
     

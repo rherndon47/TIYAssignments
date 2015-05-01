@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Select Regiment";
+    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Regiments"];
     NSLog(@"queryExercise %@", queryExercise);
     
@@ -67,6 +69,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PerformRegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"performRegimentCell" forIndexPath:indexPath];
+    
+    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
+    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
+    
+    if( [indexPath row] % 2)
+        [cell setBackgroundColor:cellColor];
+    else
+        [cell setBackgroundColor:cellColor2];
     
     NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"regimentName"];
     

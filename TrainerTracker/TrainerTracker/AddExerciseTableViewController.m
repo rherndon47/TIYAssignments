@@ -11,6 +11,12 @@
 
 #import "ExerciseCell.h"
 
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
 @interface AddExerciseTableViewController ()
 {
     
@@ -24,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Add Exercises";
     
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
@@ -75,6 +83,14 @@
      ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     
     NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+    
+    UIColor *cellColor = [UIColor colorWithRed:0.906 green:0.745 blue:0.443 alpha:1]; /*E1AD07*/
+    UIColor *cellColor2 = [UIColor colorWithRed:0.851 green:0.678 blue:0.051 alpha:1] /*#d9ad0d*/;
+    
+    if( [indexPath row] % 2)
+        [cell setBackgroundColor:cellColor];
+    else
+        [cell setBackgroundColor:cellColor2];
     
     cell.exerciseNameLabel.text = name;
     

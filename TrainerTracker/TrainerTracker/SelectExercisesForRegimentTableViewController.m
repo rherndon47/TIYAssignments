@@ -72,6 +72,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"regimentsCells" forIndexPath:indexPath];
     
+    UIColor *cellColor = [UIColor colorWithRed:0.451 green:0.82 blue:0.408 alpha:1]; /*#73d168*/
+    UIColor *cellColor2 = [UIColor colorWithRed:0.322 green:0.796 blue:0.412 alpha:1]; /*#52cb69*/
+    
+    if( [indexPath row] % 2)
+        [cell setBackgroundColor:cellColor];
+    else
+        [cell setBackgroundColor:cellColor2];
+
+    
     NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"exerciseName"];
 
     cell.regimentNameLabel.text = name;
@@ -173,7 +182,7 @@
     [exerciseObject saveInBackground];
     
     [self.tableView reloadData];
-    [self.selectedExercisesArray removeAllObjects];
+//    [self.selectedExercisesArray removeAllObjects];
 
 }
 
