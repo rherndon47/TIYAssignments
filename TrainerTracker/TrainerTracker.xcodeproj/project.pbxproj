@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28711C151AF69A7A00C060F0 /* PerformDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */; };
+		28711C181AF6A94C00C060F0 /* UpdateExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */; };
 		EE63B1A11AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */; };
 		EE63B1A41AF0131E00CF1463 /* RegimentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A31AF0131E00CF1463 /* RegimentTableViewCell.m */; };
 		EE63B1A91AF11E1400CF1463 /* SaveRegimentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */; };
@@ -55,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28711C131AF69A7A00C060F0 /* PerformDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformDetailViewController.h; sourceTree = "<group>"; };
+		28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformDetailViewController.m; sourceTree = "<group>"; };
+		28711C161AF6A94C00C060F0 /* UpdateExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateExerciseViewController.h; sourceTree = "<group>"; };
+		28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateExerciseViewController.m; sourceTree = "<group>"; };
 		EE63B19F1AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectExercisesForRegimentTableViewController.h; sourceTree = "<group>"; };
 		EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectExercisesForRegimentTableViewController.m; sourceTree = "<group>"; };
 		EE63B1A21AF0131E00CF1463 /* RegimentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegimentTableViewCell.h; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 				EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */,
 				EE76D8C41AEE946F00D3FA3C /* AddExerciseViewController.h */,
 				EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */,
+				28711C161AF6A94C00C060F0 /* UpdateExerciseViewController.h */,
+				28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */,
 				EE63B19F1AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.h */,
 				EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */,
 				EE63B1A71AF11E1400CF1463 /* SaveRegimentPopoverViewController.h */,
@@ -202,6 +210,8 @@
 				EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */,
 				EE63B1B01AF1733F00CF1463 /* PerformExercisesTableViewController.h */,
 				EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */,
+				28711C131AF69A7A00C060F0 /* PerformDetailViewController.h */,
+				28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */,
 				EE63B1B61AF2AF8300CF1463 /* Main.storyboard */,
 				EE6C85021AEBFC28009F5625 /* Images.xcassets */,
 				EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */,
@@ -365,12 +375,14 @@
 				EE63B1A91AF11E1400CF1463 /* SaveRegimentPopoverViewController.m in Sources */,
 				EE6C84FE1AEBFC28009F5625 /* SecondViewController.m in Sources */,
 				EE76D8C31AED951D00D3FA3C /* ExerciseCell.m in Sources */,
+				28711C181AF6A94C00C060F0 /* UpdateExerciseViewController.m in Sources */,
 				EE63B1A41AF0131E00CF1463 /* RegimentTableViewCell.m in Sources */,
 				EE6C84F81AEBFC28009F5625 /* AppDelegate.m in Sources */,
 				EE76D8C61AEE946F00D3FA3C /* AddExerciseViewController.m in Sources */,
 				EE63B1B21AF1733F00CF1463 /* PerformExercisesTableViewController.m in Sources */,
 				EE63B1AF1AF1666000CF1463 /* PerformRegimentTableViewCell.m in Sources */,
 				EE6C84FB1AEBFC28009F5625 /* FirstViewController.m in Sources */,
+				28711C151AF69A7A00C060F0 /* PerformDetailViewController.m in Sources */,
 				EE6C84F51AEBFC28009F5625 /* main.m in Sources */,
 				EE63B1A11AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m in Sources */,
 				EE63B1B51AF174C100CF1463 /* PerformExerciseTableViewCell.m in Sources */,

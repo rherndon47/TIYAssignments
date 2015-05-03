@@ -8,6 +8,7 @@
 
 #import "AddExerciseTableViewController.h"
 #import "AddExerciseViewController.h"
+#import "UpdateExerciseViewController.h"
 
 #import "ExerciseCell.h"
 
@@ -40,11 +41,9 @@ alpha:1.0]
     {
         if (!error)
         {
-            
             self.exerciseArray = [[NSMutableArray alloc] init];
             [self.exerciseArray addObjectsFromArray:objects];
             [self.tableView reloadData];
-                
         }
         else
         {
@@ -57,6 +56,28 @@ alpha:1.0]
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
+    NSLog(@"queryExercise %@", queryExercise);
+    
+    [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+     {
+         if (!error)
+         {
+             self.exerciseArray = [[NSMutableArray alloc] init];
+             [self.exerciseArray addObjectsFromArray:objects];
+             [self.tableView reloadData];
+         }
+         else
+         {
+             NSLog(@"Error reading exercise records: %@", [error userInfo]);
+         }
+     }];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,9 +101,7 @@ alpha:1.0]
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
-    
-    NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+    ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     
     UIColor *cellColor = [UIColor colorWithRed:0.906 green:0.745 blue:0.443 alpha:1]; /*E1AD07*/
     UIColor *cellColor2 = [UIColor colorWithRed:0.851 green:0.678 blue:0.051 alpha:1] /*#d9ad0d*/;
@@ -92,11 +111,21 @@ alpha:1.0]
     else
         [cell setBackgroundColor:cellColor2];
     
+    NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
     cell.exerciseNameLabel.text = name;
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UpdateExerciseViewController *secondViewController = [[UpdateExerciseViewController alloc] init];
+    secondViewController.passedPFObject = self.exerciseArray[indexPath.row];
+    
+    //    secondViewController.passedPFObject = self.regimentArray[indexPath.row];
+    //    secondViewController.delegate = self;
+//    [self.navigationController pushViewController:secondViewController animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -106,17 +135,29 @@ alpha:1.0]
 }
 */
 
-/*
+
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        PFObject *aexercise = [[PFObject alloc] init];
+        aexercise = self.exerciseArray[indexPath.row];
+        [aexercise deleteInBackground];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        
+        
+        [self.exerciseArray removeObjectAtIndex:indexPath.row];
+        
+        
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert)
+    {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -143,6 +184,18 @@ alpha:1.0]
 //        [self.navigationController pushViewController:destVC animated:YES];
 
     }
+    if ([segue.identifier isEqualToString:@"updateSeque"])
+    {
+        UpdateExerciseViewController *destVC = (UpdateExerciseViewController *)[segue destinationViewController];
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        
+        destVC.passedPFObject = self.exerciseArray[path.row];
+    }
+//        destVC.delegate = self;
+//        destVC.passedPFObject = ;
+        //        [self.navigationController pushViewController:destVC animated:YES];
+        
+    
 }
 
 
