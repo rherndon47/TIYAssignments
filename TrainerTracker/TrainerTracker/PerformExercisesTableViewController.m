@@ -8,6 +8,7 @@
 
 #import "PerformExercisesTableViewController.h"
 #import "PerformExerciseTableViewCell.h"
+#import "PerformDetailViewController.h"
 
 @interface PerformExercisesTableViewController ()
 
@@ -32,10 +33,9 @@
     
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
-//    for (int i = 0; i < [exerciseObjectIds count]; i++)
-//    {
-        [self getExerciseNames];
-//    }
+
+    [self getExerciseNames];
+
     
         
     
@@ -85,6 +85,32 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+//    PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
+    
+    
+//    AddExerciseViewController *destVC = (AddExerciseViewController *)[segue destinationViewController];
+    
+    
+//    secondViewController.passedPFObject = self.regimentArray[indexPath.row];
+//    secondViewController.delegate = self;
+//    [self.navigationController pushViewController:secondViewController animated:YES];
+//    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
+//    {
+//        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+//    }
+//    else
+//    {
+//        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+//        
+//        PFObject *aRegiment = self.regimentArray[indexPath.row];
+//        NSString *aObjectId = aRegiment.objectId;
+//        [self.selectedExercisesArray addObject:aObjectId];
+//    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -120,25 +146,40 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"performExerciseSeque"])
+    {
+        PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
+        
+//        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+//        PerformDetailViewController *controller = (PerformDetailViewController *)navController.topViewController;
+        
+        destVC.passedPFObject = self.passedPFObject;
+        
+//        destVC.delegate = self;
+        //        [self.navigationController pushViewController:destVC animated:YES];
+        
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+
+#pragma mark - getExerciseNames
 
 - (void)getExerciseNames
 {
-//    NSMutableArray *exerciseObjectIds = self.passedPFObject[@"objectIdArray"];
-//    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
+
     exerciseObjectIds = self.passedPFObject[@"objectIdArray"];
     query = [PFQuery queryWithClassName:@"Exercise"];
-//    NSString *queryObjectId = exerciseObjectIds[0];
+
     [query whereKey:@"objectId" containedIn:exerciseObjectIds];
-//    [query getObjectInBackgroundWithId:queryObjectId block:^(PFObject *aExercise, NSError *error)
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *result, NSError *error)
 
     {
@@ -155,7 +196,6 @@
         [self.tableView reloadData];
     }];
     
-//    self.exerciseArray = self.passedPFObject[@"objectIDArray"];
 }
 
 - (void)passDataBack
