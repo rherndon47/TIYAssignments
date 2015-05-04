@@ -11,7 +11,7 @@
 
 #import "PerformRegimentTableViewCell.h"
 
-@interface GetListRegimentsTableViewController () <UITextFieldDelegate, PerformExercisesTableViewDelegate>
+@interface GetListRegimentsTableViewController () <UITextFieldDelegate, PerformDetailViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *regimentArray;
 

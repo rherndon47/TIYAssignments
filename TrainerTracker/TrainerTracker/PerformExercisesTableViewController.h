@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+#import "PerformDetailViewController.h"
 #import "PerformExerciseTableViewCell.h"
 
-@protocol PerformExercisesTableViewDelegate <NSObject>
+@protocol PerformDetailViewDelegate <NSObject>
 
 @required
 - (void)dataFromController:(NSString *)data;
@@ -21,6 +22,6 @@
 @interface PerformExercisesTableViewController : UITableViewController
 
 @property (strong, nonatomic) PFObject *passedPFObject;
-@property (nonatomic, weak) id<PerformExercisesTableViewDelegate> delegate;
+@property (nonatomic, weak) id<PerformDetailViewDelegate> delegate;
 
 @end

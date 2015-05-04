@@ -186,4 +186,10 @@
 
 }
 
+- (void)PopoverCanceled:(NSString *)regimentName
+{
+    NSLog(@"PopoverCanceled");
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 @end

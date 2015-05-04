@@ -12,6 +12,7 @@
 @protocol SaveRegimentViewControllerDelegate
 
 - (void)RegimentNameWasChosen:(NSString *)regimentName;
+- (void)PopoverCanceled:(NSString *)regimentName;
 
 @end
 

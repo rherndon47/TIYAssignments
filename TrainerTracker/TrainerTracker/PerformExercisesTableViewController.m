@@ -10,7 +10,7 @@
 #import "PerformExerciseTableViewCell.h"
 #import "PerformDetailViewController.h"
 
-@interface PerformExercisesTableViewController ()
+@interface PerformExercisesTableViewController () <UITextFieldDelegate, PerformDetailDelegate>
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
 
@@ -87,8 +87,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"Cellid %@",cell.reuseIdentifier);
+    
+    PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
+    destVC.passedPFObject = self.exerciseArray[indexPath.row];
+//    destVC.passedPFObject = self.passedPFObject;
+    
+    [self.navigationController pushViewController:destVC animated:YES];
 //    PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
+//    PerformDetailViewController *secondViewController = [[PerformDetailViewController alloc] init];
+    
+//    secondViewController.delegate = self;
+//    [self.navigationController pushViewController:secondViewController animated:YES];
+
     
     
 //    AddExerciseViewController *destVC = (AddExerciseViewController *)[segue destinationViewController];
@@ -150,24 +162,21 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"performExerciseSeque"])
-    {
-        PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
-        
-//        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-//        PerformDetailViewController *controller = (PerformDetailViewController *)navController.topViewController;
-        
-        destVC.passedPFObject = self.passedPFObject;
-        
-//        destVC.delegate = self;
-        //        [self.navigationController pushViewController:destVC animated:YES];
-        
-    }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"performExerciseSeque"])
+//    {
+//        PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
+//        
+//        destVC.passedPFObject = self.passedPFObject;
+//        
+////        destVC.delegate = self;
+//        //        [self.navigationController pushViewController:destVC animated:YES];
+//        
+//    }
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//}
 
 
 #pragma mark - getExerciseNames
@@ -198,14 +207,14 @@
     
 }
 
-- (void)passDataBack
-{
-    if ([_delegate respondsToSelector:@selector(dataFromController:)])
-    {
-        [_delegate dataFromController:@"This data is from the second view controller."];
-    }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//- (void)passDataBack
+//{
+//    if ([_delegate respondsToSelector:@selector(dataFromController:)])
+//    {
+//        [_delegate dataFromController:@"This data is from the second view controller."];
+//    }
+//    
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
 
 @end

@@ -38,7 +38,10 @@
 }
 - (IBAction)cancelName:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"CancelName");
+    self.regimentName = self.regimentNameTextField.text;
+    [self.delegate PopoverCanceled:self.regimentName];
+   
 }
 
 @end

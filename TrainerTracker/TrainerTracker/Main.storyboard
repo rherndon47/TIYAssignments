@@ -82,9 +82,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Zoj-Ny-F2A" kind="show" identifier="performExerciseSeque" id="Hqd-Wc-U9V"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -688,7 +685,7 @@
         <!--Perform Detail View Controller-->
         <scene sceneID="M1X-Ux-Xe6">
             <objects>
-                <viewController id="Zoj-Ny-F2A" customClass="PerformDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="performDetailView" id="Zoj-Ny-F2A" customClass="PerformDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1kK-ji-hAT"/>
                         <viewControllerLayoutGuide type="bottom" id="Pwq-W4-sEn"/>
@@ -819,6 +816,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="completeButton" destination="BaH-48-Dai" id="0cn-NZ-9PP"/>
                         <outlet property="exerciseDistance" destination="apP-tq-DRh" id="E0G-ge-PaV"/>
                         <outlet property="exerciseLengthOfTime" destination="Zrb-8N-kM9" id="tF4-If-zQY"/>
                         <outlet property="exerciseName" destination="zSh-eT-BYL" id="J1K-2v-euT"/>
@@ -826,6 +824,7 @@
                         <outlet property="exerciseReps" destination="ERo-D6-C1E" id="YDr-ze-vKz"/>
                         <outlet property="exerciseSpeed" destination="Hvk-iM-vfd" id="yJm-3x-DfJ"/>
                         <outlet property="exerciseWeight" destination="Swi-Bj-8L5" id="h3x-p5-Sq7"/>
+                        <outlet property="startButton" destination="GuT-gL-ZtI" id="AY6-ic-eDi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veY-Lp-EGi" userLabel="First Responder" sceneMemberID="firstResponder"/>

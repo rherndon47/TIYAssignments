@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "PerformExercisesTableViewController.h"
+
+@protocol PerformDetailDelegate <NSObject>
+
+@end
 
 @interface PerformDetailViewController : UIViewController
 
-
 @property (strong, nonatomic) PFObject *passedPFObject;
+@property (nonatomic, weak) id<PerformDetailDelegate> delegate;
 
 @end

@@ -141,13 +141,33 @@ alpha:1.0]
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        PFObject *aexercise = [[PFObject alloc] init];
-        aexercise = self.exerciseArray[indexPath.row];
-        [aexercise deleteInBackground];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
+        
+        NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+        
+        [query whereKey:@"exerciseName" equalTo:name];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+         {
+             
+             NSLog(@"placeholder %@", query);
+//             NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+
+             [objects[0] deleteInBackground];
+             [self.exerciseArray removeObject:self.exerciseArray[indexPath.row] ];
+             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+             [self.tableView reloadData];
+
+             
+         }];
+        
+//        PFObject *aexercise = [[PFObject alloc] init];
+//        aexercise = self.exerciseArray[indexPath.row];
+//        [aexercise deleteInBackground];
         
         
-        [self.exerciseArray removeObjectAtIndex:indexPath.row];
+        
+        
+//        [self.exerciseArray removeObjectAtIndex:indexPath.row];
         
         
         
@@ -181,7 +201,6 @@ alpha:1.0]
     if ([segue.identifier isEqualToString:@"addExerciseDetailSeque"])
     {
         AddExerciseViewController *destVC = (AddExerciseViewController *)[segue destinationViewController];
-//        [self.navigationController pushViewController:destVC animated:YES];
 
     }
     if ([segue.identifier isEqualToString:@"updateSeque"])
@@ -191,11 +210,6 @@ alpha:1.0]
         
         destVC.passedPFObject = self.exerciseArray[path.row];
     }
-//        destVC.delegate = self;
-//        destVC.passedPFObject = ;
-        //        [self.navigationController pushViewController:destVC animated:YES];
-        
-    
 }
 
 
