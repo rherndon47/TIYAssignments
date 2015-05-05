@@ -122,6 +122,8 @@ alpha:1.0]
     UpdateExerciseViewController *secondViewController = [[UpdateExerciseViewController alloc] init];
     secondViewController.passedPFObject = self.exerciseArray[indexPath.row];
     
+    
+    
     //    secondViewController.passedPFObject = self.regimentArray[indexPath.row];
     //    secondViewController.delegate = self;
 //    [self.navigationController pushViewController:secondViewController animated:YES];

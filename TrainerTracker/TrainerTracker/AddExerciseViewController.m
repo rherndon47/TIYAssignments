@@ -18,11 +18,15 @@
 @property (strong, nonatomic) IBOutlet UITextField *exerciseSpeed;
 @property (strong, nonatomic) IBOutlet UITextField *exerciseLengthOfTime;
 
+
 - (IBAction)SaveExercise:(UIButton *)sender;
 
 @end
 
 @implementation AddExerciseViewController
+{
+    NSString *typeOfExercise;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,6 +62,16 @@
     exerciseObject[@"exerciseDistance"] = [NSNumber numberWithInteger: [self.exerciseDistance.text integerValue]];
     exerciseObject[@"exerciseSpeed"] = [NSNumber numberWithInteger: [self.exerciseSpeed.text integerValue]];
     exerciseObject[@"exerciseLengthOfTime"] = [NSNumber numberWithInteger: [self.exerciseLengthOfTime.text integerValue]];;
+    
+    if (![self.exerciseReps.text isEqualToString:@""] || ![self.exerciseWeight.text isEqualToString:@""])
+    {
+        typeOfExercise = @"Weight";
+    }
+    else if (![self.exerciseDistance.text isEqualToString:@""] || ![self.exerciseSpeed.text isEqualToString:@""])
+    {
+        typeOfExercise = @"Aerobic";
+    }
+    exerciseObject[@"typeOfExercise"] = typeOfExercise;
     
     [exerciseObject saveInBackground];
     
