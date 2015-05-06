@@ -63,11 +63,11 @@
     exerciseObject[@"exerciseSpeed"] = [NSNumber numberWithInteger: [self.exerciseSpeed.text integerValue]];
     exerciseObject[@"exerciseLengthOfTime"] = [NSNumber numberWithInteger: [self.exerciseLengthOfTime.text integerValue]];;
     
-    if (![self.exerciseReps.text isEqualToString:@""] || ![self.exerciseWeight.text isEqualToString:@""])
+    if (![self.exerciseReps.text isEqualToString:@"0"] || ![self.exerciseWeight.text isEqualToString:@"0"])
     {
         typeOfExercise = @"Weight";
     }
-    else if (![self.exerciseDistance.text isEqualToString:@""] || ![self.exerciseSpeed.text isEqualToString:@""])
+    else if (![self.exerciseDistance.text isEqualToString:@"0"] || ![self.exerciseSpeed.text isEqualToString:@"0"])
     {
         typeOfExercise = @"Aerobic";
     }

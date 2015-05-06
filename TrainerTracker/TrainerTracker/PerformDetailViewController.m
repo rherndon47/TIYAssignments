@@ -31,6 +31,7 @@
     NSDate *todaysDate;
     NSString *exerciseStartTime;
     NSString *exerciseStopTime;
+    NSString *typeOfExercise;
 }
 
 - (void)viewDidLoad {
@@ -103,6 +104,7 @@
              self.exerciseLengthOfTime.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseLengthOfTime"]];
              self.exerciseSpeed.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseSpeed"]];
              self.exerciseDistance.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseDistance"]];
+
             
          }
          else
@@ -118,16 +120,26 @@
     PFObject *exerciseObject = [PFObject objectWithClassName:@"ExerciseLog"];
     exerciseObject[@"exerciseName"] = self.exerciseName.text;
     exerciseObject[@"exerciseNote"] = self.exerciseNotes.text;
-    
+    NSLog(@"exercise note %@", self.exerciseNotes.text);
     exerciseObject[@"exerciseReps"] = [NSNumber numberWithInteger: [self.exerciseReps.text integerValue]];
     exerciseObject[@"exerciseWeight"] = [NSNumber numberWithInteger: [self.exerciseWeight.text integerValue]];
     exerciseObject[@"exerciseDistance"] = [NSNumber numberWithInteger: [self.exerciseDistance.text integerValue]];
     exerciseObject[@"exerciseSpeed"] = [NSNumber numberWithInteger: [self.exerciseSpeed.text integerValue]];
+    NSLog(@"exercise speed %@", self.exerciseSpeed.text);
     exerciseObject[@"exerciseLengthOfTime"] = [NSNumber numberWithInteger: [self.exerciseLengthOfTime.text integerValue]];;
     exerciseObject[@"exerciseStartTime"] = exerciseStartTime;
     exerciseObject[@"exerciseStopTime"] = exerciseStopTime;
     exerciseObject[@"exerciseDate"] = todaysDate;
-    
+    if (![self.exerciseReps.text isEqualToString:@"0"] || ![self.exerciseWeight.text isEqualToString:@"0"])
+    {
+        typeOfExercise = @"Weight";
+    }
+    else if (![self.exerciseDistance.text isEqualToString:@"0"] || ![self.exerciseSpeed.text isEqualToString:@"0"])
+    {
+        typeOfExercise = @"Aerobic";
+    }
+    exerciseObject[@"typeOfExercise"] = typeOfExercise;
+
     [exerciseObject saveInBackground];
     
     [self.navigationController popViewControllerAnimated:YES];

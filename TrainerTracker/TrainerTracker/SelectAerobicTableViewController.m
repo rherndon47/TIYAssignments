@@ -1,41 +1,39 @@
 //
-//  PerformExercisesTableViewController.m
+//  SelectAerobicTableViewController.m
 //  TrainerTracker
 //
-//  Created by Richard Herndon on 4/29/15.
+//  Created by Richard Herndon on 5/6/15.
 //  Copyright (c) 2015 Richard Herndon. All rights reserved.
 //
 
-#import "GetListRegimentsTableViewController.h"
-#import "PerformExercisesTableViewController.h"
+#import "SelectAerobicTableViewController.h"
 
-#import "PerformRegimentTableViewCell.h"
+#import "AerobicGraphExerciseTableViewCell.h"
 
-@interface GetListRegimentsTableViewController () <UITextFieldDelegate, PerformDetailViewDelegate>
+@interface SelectAerobicTableViewController ()
 
-@property (strong, nonatomic) NSMutableArray *regimentArray;
+@property (strong, nonatomic) NSMutableArray *exerciseArray;
 
 @end
 
-@implementation GetListRegimentsTableViewController
+@implementation SelectAerobicTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Select Regiment";
+    self.navigationItem.title = @"Aerobic Exercises";
     
-    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Regiments"];
+    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
+    [queryExercise whereKey:@"typeOfExercise" equalTo:@"Aerobic"];
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
      {
          if (!error)
          {
-             
-             self.regimentArray = [[NSMutableArray alloc] init];
-             [self.regimentArray addObjectsFromArray:objects];
+             self.exerciseArray = [[NSMutableArray alloc] init];
+             [self.exerciseArray addObjectsFromArray:objects];
              [self.tableView reloadData];
-             
          }
          else
          {
@@ -43,7 +41,33 @@
          }
      }];
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
+    NSLog(@"queryExercise %@", queryExercise);
+    [queryExercise whereKey:@"typeOfExercise" equalTo:@"Aerobic"];
+    
+    [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+     {
+         if (!error)
+         {
+             self.exerciseArray = [[NSMutableArray alloc] init];
+             [self.exerciseArray addObjectsFromArray:objects];
+             [self.tableView reloadData];
+         }
+         else
+         {
+             NSLog(@"Error reading exercise records: %@", [error userInfo]);
+         }
+     }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,41 +86,29 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [self.regimentArray count];
+    return [self.exerciseArray count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PerformRegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"performRegimentCell" forIndexPath:indexPath];
+    AerobicGraphExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"aerobicGraphExerciseCell" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
-    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
+    UIColor *cellColor = [UIColor colorWithRed:0.675 green:0.447 blue:0.137 alpha:1]; /*#ac7223*/
+    UIColor *cellColor2 = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
     else
         [cell setBackgroundColor:cellColor2];
     
-    NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"regimentName"];
-    
-    cell.performRegimentNameLabel.text = name;
+    NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+    cell.exerciseNameLabel.text = name;
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    PerformExercisesTableViewController *secondViewController = [[PerformExercisesTableViewController alloc] init];
-    secondViewController.passedPFObject = self.regimentArray[indexPath.row];
-    secondViewController.delegate = self;
-    [self.navigationController pushViewController:secondViewController animated:YES];
-    
-//    PerformExercisesTableViewController *viewControllerB = [[PerformExercisesTableViewController alloc] initWithNib:@"PerformExercisesTableViewController" bundle:nil];
-//    PerformExercisesTableViewController.passedPFObject = self.regimentArray[indexPath.row];
-//
-//    [self pushViewController:PerformExercisesTableViewController animated:YES];
-}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,19 +143,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"listOfExercisesSeque"])
-    {
-        
-        PerformExercisesTableViewController *performExerciseVC = (PerformExercisesTableViewController *)[segue destinationViewController];
-    
-    }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  TrainerTracker
 //
 //  Created by Richard Herndon on 4/25/15.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface SecondViewController : UIViewController
+@interface SelectGraphTypeViewController : UIViewController
 
 
 @end

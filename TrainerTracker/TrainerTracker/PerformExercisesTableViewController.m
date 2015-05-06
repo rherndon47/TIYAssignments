@@ -92,35 +92,8 @@
     
     PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
     destVC.passedPFObject = self.exerciseArray[indexPath.row];
-//    destVC.passedPFObject = self.passedPFObject;
     
     [self.navigationController pushViewController:destVC animated:YES];
-//    PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
-//    PerformDetailViewController *secondViewController = [[PerformDetailViewController alloc] init];
-    
-//    secondViewController.delegate = self;
-//    [self.navigationController pushViewController:secondViewController animated:YES];
-
-    
-    
-//    AddExerciseViewController *destVC = (AddExerciseViewController *)[segue destinationViewController];
-    
-    
-//    secondViewController.passedPFObject = self.regimentArray[indexPath.row];
-//    secondViewController.delegate = self;
-//    [self.navigationController pushViewController:secondViewController animated:YES];
-//    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
-//    {
-//        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-//    }
-//    else
-//    {
-//        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-//        
-//        PFObject *aRegiment = self.regimentArray[indexPath.row];
-//        NSString *aObjectId = aRegiment.objectId;
-//        [self.selectedExercisesArray addObject:aObjectId];
-//    }
     
 }
 

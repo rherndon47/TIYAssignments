@@ -23,6 +23,9 @@
 @end
 
 @implementation UpdateExerciseViewController
+{
+    NSString *typeOfExercise;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +54,7 @@
 {
     NSLog(@"Entered updateExercise");
     PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
+    
     exerciseObject[@"exerciseName"] = self.exerciseName.text;
     exerciseObject[@"exerciseNotes"] = self.exerciseNotes.text;
     
@@ -59,6 +63,16 @@
     exerciseObject[@"exerciseDistance"] = [NSNumber numberWithInteger: [self.exerciseDistance.text integerValue]];
     exerciseObject[@"exerciseSpeed"] = [NSNumber numberWithInteger: [self.exerciseSpeed.text integerValue]];
     exerciseObject[@"exerciseLengthOfTime"] = [NSNumber numberWithInteger: [self.exerciseLengthOfTime.text integerValue]];;
+    
+    if (![self.exerciseReps.text isEqualToString:@"0"] || ![self.exerciseWeight.text isEqualToString:@"0"])
+    {
+        typeOfExercise = @"Weight";
+    }
+    else if (![self.exerciseDistance.text isEqualToString:@"0"] || ![self.exerciseSpeed.text isEqualToString:@"0"])
+    {
+        typeOfExercise = @"Aerobic";
+    }
+    exerciseObject[@"typeOfExercise"] = typeOfExercise;
     
     [exerciseObject saveInBackground];
     
