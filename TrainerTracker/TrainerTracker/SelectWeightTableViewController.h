@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) PFObject *passedPFObject;
 
+@property (strong, nonatomic) NSString *selectedExerciseName;
+
 @end

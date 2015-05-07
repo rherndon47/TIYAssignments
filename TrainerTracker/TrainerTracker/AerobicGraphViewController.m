@@ -1,32 +1,32 @@
 //
-//  WeightGraphViewController.m
+//  AerobicGraphViewController.m
 //  TrainerTracker
 //
-//  Created by Richard Herndon on 5/6/15.
+//  Created by Richard Herndon on 5/7/15.
 //  Copyright (c) 2015 Richard Herndon. All rights reserved.
 //
 
-#import "WeightGraphViewController.h"
+#import "AerobicGraphViewController.h"
 #import "FSLineChart.h"
 #import "UIColor+FSPalette.h"
 
-@interface WeightGraphViewController ()
+@interface AerobicGraphViewController ()
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
 
 @end
 
-@implementation WeightGraphViewController
+@implementation AerobicGraphViewController
 {
-    NSMutableArray *exerciseRepsArray;
-    NSMutableArray *exerciseWeightArray;
+    NSMutableArray *exerciseDistanceArray;
+    NSMutableArray *exerciseLengthOfTimeArray;
+    NSMutableArray *exerciseSpeedArray;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"Entered WeightGraph - viewDidLoad");
+    NSLog(@"Entered AerobicGraph - viewDidLoad");
     
     self.navigationItem.title = self.selectedExerciseName;
     
@@ -35,8 +35,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -46,7 +45,7 @@
 - (void)readWeightExercises
 {
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"ExerciseLog"];
-
+    
     NSLog(@"selectedExerciseName %@", self.selectedExerciseName);
     [queryExercise whereKey:@"exerciseName" equalTo:self.selectedExerciseName];
     
@@ -54,22 +53,25 @@
      {
          if (!error)
          {
-//             PFObject *aExercise = [[PFObject alloc] init];
-             exerciseRepsArray = [[NSMutableArray alloc] init];
-             exerciseWeightArray = [[NSMutableArray alloc] init];
              
-//             [self.exerciseArray addObjectsFromArray:objects];
+             exerciseDistanceArray = [[NSMutableArray alloc] init];
+             exerciseLengthOfTimeArray = [[NSMutableArray alloc] init];
+             exerciseSpeedArray = [[NSMutableArray alloc] init];
+             
+             //             [self.exerciseArray addObjectsFromArray:objects];
              for (int i=0; i<[objects count]; i++)
              {
                  PFObject *aExercise = objects[i];
                  
-                 exerciseRepsArray[i] = [aExercise objectForKey:@"exerciseReps"];
-                 exerciseWeightArray[i] = [aExercise objectForKey:@"exerciseWeight"];
+                 exerciseDistanceArray[i] = [aExercise objectForKey:@"exerciseDistance"];
+                 exerciseLengthOfTimeArray[i] = [aExercise objectForKey:@"exerciseLengthOfTime"];
+                 exerciseSpeedArray[i] = [aExercise objectForKey:@"exerciseSpeed"];
              }
              
              dispatch_async(dispatch_get_main_queue(), ^{
-                 [self.view addSubview:[self chart1]];
-                 [self.view addSubview:[self chart2]];
+//                 [self.view addSubview:[self chart1]];
+//                 [self.view addSubview:[self chart2]];
+//                 [self.view addSubview:[self chart3]];
              });
              
          }
@@ -82,29 +84,25 @@
 
 #pragma mark - Creating the charts
 
--(FSLineChart*)chart1
-{
+-(FSLineChart*)chart1 {
     // Generating some dummy data
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseRepsArray count]];
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:20];
     
-    for(int i=0;i<[exerciseRepsArray count];i++)
-    {
-        chartData[i] = [NSNumber numberWithInt:exerciseRepsArray[i]];
+    for(int i=0;i<20;i++) {
+        chartData[i] = [NSNumber numberWithInt:rand() % 100];
     }
     
     // Creating the line chart
     FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
-    lineChart.gridStep = 2;
+    lineChart.gridStep = 3;
     
-    lineChart.labelForIndex = ^(NSUInteger item)
-    {
+    lineChart.labelForIndex = ^(NSUInteger item) {
         return [NSString stringWithFormat:@"%lu",(unsigned long)item];
     };
     
-    lineChart.labelForValue = ^(CGFloat value)
-    {
-        return [NSString stringWithFormat:@"%.f", value*.1];
+    lineChart.labelForValue = ^(CGFloat value) {
+        return [NSString stringWithFormat:@"%.f", value];
     };
     
     [lineChart setChartData:chartData];
@@ -112,30 +110,26 @@
     return lineChart;
 }
 
--(FSLineChart*)chart2
-{
+-(FSLineChart*)chart2 {
     // Generating some dummy data
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseWeightArray count]];
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:101];
     
-    for(int i=0;i<[exerciseWeightArray count];i++)
-    {
-        chartData[i] = [NSNumber numberWithInt:exerciseWeightArray[i]];
+    for(int i=0;i<101;i++) {
+        chartData[i] = [NSNumber numberWithFloat: (float)i / 30.0f + (float)(rand() % 100) / 500.0f];
     }
     
     // Creating the line chart
     FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 260, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
-    lineChart.gridStep = 3;
+    lineChart.gridStep = 4;
     lineChart.color = [UIColor fsOrange];
     
-    lineChart.labelForIndex = ^(NSUInteger item)
-    {
-        return [NSString stringWithFormat:@"%lu",(unsigned long)item];
+    lineChart.labelForIndex = ^(NSUInteger item) {
+        return [NSString stringWithFormat:@"%lu%%",(unsigned long)item];
     };
     
-    lineChart.labelForValue = ^(CGFloat value)
-    {
-        return [NSString stringWithFormat:@"%.f", value*.07];
+    lineChart.labelForValue = ^(CGFloat value) {
+        return [NSString stringWithFormat:@"%.f €", value];
     };
     
     [lineChart setChartData:chartData];

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>206D56A0-DE0C-4546-8514-CE6024CFE709</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>OGCSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OGC Folder/OGCSample/OGCSample.xcodeproj/project.xcworkspace</string>
+	<string>OGC Folder/OGCSample/OGCSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>

@@ -7,6 +7,7 @@
 //
 
 #import "SelectAerobicTableViewController.h"
+#import "AerobicGraphViewController.h"
 
 #import "AerobicGraphExerciseTableViewCell.h"
 
@@ -143,14 +144,20 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"aerobicGraphSeque"])
+    {
+        
+        AerobicGraphViewController *performExerciseVC = (AerobicGraphViewController *)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        performExerciseVC.selectedExerciseName = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+        
+    }
 }
-*/
 
 @end

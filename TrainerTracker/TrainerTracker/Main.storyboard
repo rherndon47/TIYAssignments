@@ -90,6 +90,7 @@
                                 <color key="backgroundColor" red="0.67450980390000004" green="0.47058823529999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="exerciseNameLabel" destination="lZR-Hc-dQd" id="82I-mc-4MK"/>
+                                    <segue destination="5qd-1H-JgU" kind="show" identifier="aerobicGraphSeque" id="h6T-mD-Gka"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -107,7 +108,7 @@
         <scene sceneID="xmA-Pd-gv6">
             <objects>
                 <tableViewController id="p64-0b-Njp" customClass="SelectWeightTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bjz-nr-CQc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="weightExerciseCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bjz-nr-CQc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.68235294117647061" green="0.40784313725490196" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,7 +134,7 @@
                                 <color key="backgroundColor" red="0.67450980390000004" green="0.47058823529999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="exerciseNameLabel" destination="0HW-R1-YJM" id="ROV-JX-vlb"/>
-                                    <segue destination="Z72-ZT-Pv1" kind="show" id="YSb-EL-Lgp"/>
+                                    <segue destination="Z72-ZT-Pv1" kind="show" identifier="weightGraphSeque" id="YSb-EL-Lgp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -323,6 +324,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Dyo-0J-0L2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="81I-bP-tIm"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3r-LD-EiP">
                             <connections>
                                 <segue destination="bdn-qs-GVL" kind="show" identifier="addExerciseDetailSeque" id="yYg-Gn-9zt"/>
@@ -679,6 +681,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Regiment" id="W6C-vn-kOo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ByQ-qR-oP1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gGc-4a-DYN">
                             <connections>
                                 <segue destination="KqQ-Nx-7lR" kind="popoverPresentation" identifier="saveRegimentPopoverSeque" popoverAnchorBarButtonItem="gGc-4a-DYN" id="F3v-4y-Ky2">
@@ -766,10 +769,28 @@
             </objects>
             <point key="canvasLocation" x="911" y="2318"/>
         </scene>
+        <!--Aerobic Graph View Controller-->
+        <scene sceneID="JyB-a3-dCQ">
+            <objects>
+                <viewController id="5qd-1H-JgU" customClass="AerobicGraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SNZ-Iw-FAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="k3a-tY-RS8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vat-1z-gnv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHf-J4-aIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2650" y="3051"/>
+        </scene>
         <!--Weight Graph View Controller-->
         <scene sceneID="TT8-cg-vJ6">
             <objects>
-                <viewController id="Z72-ZT-Pv1" customClass="WeightGraphViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeightGraphViewController" id="Z72-ZT-Pv1" customClass="WeightGraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="peg-o7-GQG"/>
                         <viewControllerLayoutGuide type="bottom" id="xvk-Fw-mO3"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28711C151AF69A7A00C060F0 /* PerformDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */; };
 		28711C181AF6A94C00C060F0 /* UpdateExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */; };
+		EE0DDB481AFBFC44002EC131 /* AerobicGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0DDB471AFBFC44002EC131 /* AerobicGraphViewController.m */; };
 		EE4767E61AFA644F008C8D9D /* SelectWeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4767E51AFA644F008C8D9D /* SelectWeightTableViewController.m */; };
 		EE4767E91AFA6474008C8D9D /* SelectAerobicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4767E81AFA6474008C8D9D /* SelectAerobicTableViewController.m */; };
 		EE4767EC1AFA9233008C8D9D /* WeightGraphExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4767EB1AFA9233008C8D9D /* WeightGraphExerciseTableViewCell.m */; };
@@ -67,6 +68,8 @@
 		28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformDetailViewController.m; sourceTree = "<group>"; };
 		28711C161AF6A94C00C060F0 /* UpdateExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateExerciseViewController.h; sourceTree = "<group>"; };
 		28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateExerciseViewController.m; sourceTree = "<group>"; };
+		EE0DDB461AFBFC44002EC131 /* AerobicGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerobicGraphViewController.h; sourceTree = "<group>"; };
+		EE0DDB471AFBFC44002EC131 /* AerobicGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerobicGraphViewController.m; sourceTree = "<group>"; };
 		EE4767E41AFA644F008C8D9D /* SelectWeightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectWeightTableViewController.h; sourceTree = "<group>"; };
 		EE4767E51AFA644F008C8D9D /* SelectWeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectWeightTableViewController.m; sourceTree = "<group>"; };
 		EE4767E71AFA6474008C8D9D /* SelectAerobicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAerobicTableViewController.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				EE4767E81AFA6474008C8D9D /* SelectAerobicTableViewController.m */,
 				EE4767F31AFAB3B4008C8D9D /* WeightGraphViewController.h */,
 				EE4767F41AFAB3B4008C8D9D /* WeightGraphViewController.m */,
+				EE0DDB461AFBFC44002EC131 /* AerobicGraphViewController.h */,
+				EE0DDB471AFBFC44002EC131 /* AerobicGraphViewController.m */,
 				EE4767F91AFABD73008C8D9D /* UIColor+FSPalette.h */,
 				EE4767FA1AFABD73008C8D9D /* UIColor+FSPalette.m */,
 				EE4767F61AFABD5F008C8D9D /* FSLineChart.h */,
@@ -418,6 +423,7 @@
 				EE4767E91AFA6474008C8D9D /* SelectAerobicTableViewController.m in Sources */,
 				EE6C84FB1AEBFC28009F5625 /* SelectGraphTypeViewController.m in Sources */,
 				28711C151AF69A7A00C060F0 /* PerformDetailViewController.m in Sources */,
+				EE0DDB481AFBFC44002EC131 /* AerobicGraphViewController.m in Sources */,
 				EE6C84F51AEBFC28009F5625 /* main.m in Sources */,
 				EE63B1A11AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m in Sources */,
 				EE4767EC1AFA9233008C8D9D /* WeightGraphExerciseTableViewCell.m in Sources */,

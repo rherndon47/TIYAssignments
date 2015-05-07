@@ -11,7 +11,7 @@
 
 #import "WeightGraphExerciseTableViewCell.h"
 
-@interface SelectWeightTableViewController ()
+@interface SelectWeightTableViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
 
@@ -23,6 +23,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Weight Exercises";
+    
+    NSLog(@"Entered SelectWeight - viewDidLoad");
     
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
@@ -109,13 +111,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"Cellid %@",cell.reuseIdentifier);
+//    WeightGraphExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weightGraphExerciseCell" forIndexPath:indexPath];
     
-    WeightGraphViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
-    destVC.passedPFObject = self.exerciseArray[indexPath.row];
+
+    self.selectedExerciseName = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+
     
-    [self.navigationController pushViewController:destVC animated:YES];
+//    WeightGraphExerciseTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    NSLog(@"weightExerciseCell %@",cell.reuseIdentifier);
+//    
+//    WeightGraphViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"WeightGraphViewController"];
+//    destVC.passedPFObject = self.exerciseArray[indexPath.row];
+//    
+//    [self.navigationController pushViewController:destVC animated:YES];
     
 }
 
@@ -153,14 +161,23 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"weightGraphSeque"])
+    {
+        
+        WeightGraphViewController *performExerciseVC = (WeightGraphViewController *)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+//        NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+        
+        performExerciseVC.selectedExerciseName = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+        
+    }
 }
-*/
+
 
 @end
