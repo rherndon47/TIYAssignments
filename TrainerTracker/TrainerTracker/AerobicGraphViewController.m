@@ -69,9 +69,9 @@
              }
              
              dispatch_async(dispatch_get_main_queue(), ^{
-//                 [self.view addSubview:[self chart1]];
-//                 [self.view addSubview:[self chart2]];
-//                 [self.view addSubview:[self chart3]];
+                 [self.view addSubview:[self chart1]];
+                 [self.view addSubview:[self chart2]];
+                 [self.view addSubview:[self chart3]];
              });
              
          }
@@ -86,10 +86,10 @@
 
 -(FSLineChart*)chart1 {
     // Generating some dummy data
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:20];
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseLengthOfTimeArray count]];
     
-    for(int i=0;i<20;i++) {
-        chartData[i] = [NSNumber numberWithInt:rand() % 100];
+    for(int i=0;i<[exerciseLengthOfTimeArray count];i++) {
+        chartData[i] = [NSNumber numberWithInt:exerciseLengthOfTimeArray[i]];
     }
     
     // Creating the line chart
@@ -102,7 +102,7 @@
     };
     
     lineChart.labelForValue = ^(CGFloat value) {
-        return [NSString stringWithFormat:@"%.f", value];
+        return [NSString stringWithFormat:@"%.f", value*.060];
     };
     
     [lineChart setChartData:chartData];
@@ -112,10 +112,62 @@
 
 -(FSLineChart*)chart2 {
     // Generating some dummy data
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:101];
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseSpeedArray count]];
     
-    for(int i=0;i<101;i++) {
-        chartData[i] = [NSNumber numberWithFloat: (float)i / 30.0f + (float)(rand() % 100) / 500.0f];
+    for(int i=0;i<[exerciseSpeedArray count];i++) {
+        chartData[i] = [NSNumber numberWithInt:exerciseSpeedArray[i]];
+    }
+    
+    // Creating the line chart
+    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 250, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    
+    lineChart.gridStep = 3;
+    
+    lineChart.labelForIndex = ^(NSUInteger item) {
+        return [NSString stringWithFormat:@"%lu",(unsigned long)item];
+    };
+    
+    lineChart.labelForValue = ^(CGFloat value) {
+        return [NSString stringWithFormat:@"%.f", value*.06];
+    };
+    
+    [lineChart setChartData:chartData];
+    
+    return lineChart;
+}
+
+-(FSLineChart*)chart3 {
+    // Generating some dummy data
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseDistanceArray count]];
+    
+    for(int i=0;i<[exerciseDistanceArray count];i++) {
+        chartData[i] = [NSNumber numberWithInt:exerciseDistanceArray[i]];
+    }
+    
+    // Creating the line chart
+    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 440, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    
+    lineChart.gridStep = 3;
+    
+    lineChart.labelForIndex = ^(NSUInteger item) {
+        return [NSString stringWithFormat:@"%lu",(unsigned long)item];
+    };
+    
+    lineChart.labelForValue = ^(CGFloat value) {
+        return [NSString stringWithFormat:@"%.f", value*.05];
+    };
+    
+    [lineChart setChartData:chartData];
+    
+    return lineChart;
+}
+
+-(FSLineChart*)chart4 {
+    // Generating some dummy data
+    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseSpeedArray count]];
+    
+    for(int i=0;i<[exerciseSpeedArray count];i++) {
+//        chartData[i] = [NSNumber numberWithFloat: exerciseSpeedArray[i]];
     }
     
     // Creating the line chart

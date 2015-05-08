@@ -40,7 +40,14 @@
     NSLog(@"PerformDetail - entered viewDidLoad");
     self.navigationItem.title = @"Perform Exercise";
     
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
+    
     NSLog(@"passedPFObject %@",self.passedPFObject);
+    
+    if ([self.allOrOneParameter isEqualToString:@"all"])
+    {
+        
+    }
     
     [self readCurrentExercise];
     
@@ -50,6 +57,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//#pragma mark = Perform all Exercises
+//
+//-(void)performAllExercises
+//{
+//    NSLog(@"Entered performAllExercises");
+//}
 
 #pragma mark - IBAction methods
 
@@ -116,6 +130,8 @@
 
 - (void)saveExerciseLog
 {
+    // this method saves the exercise data in the ExerciseLog entity
+    
     NSLog(@"Entered SaveExerciseLog");
     PFObject *exerciseObject = [PFObject objectWithClassName:@"ExerciseLog"];
     exerciseObject[@"exerciseName"] = self.exerciseName.text;
@@ -130,6 +146,8 @@
     exerciseObject[@"exerciseStartTime"] = exerciseStartTime;
     exerciseObject[@"exerciseStopTime"] = exerciseStopTime;
     exerciseObject[@"exerciseDate"] = todaysDate;
+    
+    // estabish if exercise is weight or aerobic. used for graphing
     if (![self.exerciseReps.text isEqualToString:@"0"] || ![self.exerciseWeight.text isEqualToString:@"0"])
     {
         typeOfExercise = @"Weight";

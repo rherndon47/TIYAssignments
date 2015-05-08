@@ -31,9 +31,10 @@
     
     self.navigationItem.title = self.passedPFObject[@"regimentName"];
     
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
+    
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
-
     [self getExerciseNames];
 
     
@@ -50,6 +51,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark = Perform all Exercises
+
+-(void)performAllExercises
+{
+    NSLog(@"Entered performAllExercises");
+    PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
+    destVC.allOrOneParameter = @"all";
+    destVC.passedPFObject = self.passedPFObject;
+    
+    [self.navigationController pushViewController:destVC animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -92,6 +105,7 @@
     
     PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
     destVC.passedPFObject = self.exerciseArray[indexPath.row];
+    destVC.allOrOneParameter = @"one";
     
     [self.navigationController pushViewController:destVC animated:YES];
     
@@ -165,7 +179,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *result, NSError *error)
 
     {
-        // Do something with the returned PFObject in the aExercise variable.
+        // Getting the exercise names for the passed Regiment.
     
         NSLog(@"aExercise %@", result);
         for (int i =0; i < [result count]; i++)
@@ -179,15 +193,5 @@
     }];
     
 }
-
-//- (void)passDataBack
-//{
-//    if ([_delegate respondsToSelector:@selector(dataFromController:)])
-//    {
-//        [_delegate dataFromController:@"This data is from the second view controller."];
-//    }
-//    
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
 
 @end

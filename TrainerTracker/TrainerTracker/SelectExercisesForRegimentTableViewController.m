@@ -26,7 +26,6 @@
     self.selectedExercisesArray = [[NSMutableArray alloc] init];
     
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
-    NSLog(@"queryExercise %@", queryExercise);
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
      {

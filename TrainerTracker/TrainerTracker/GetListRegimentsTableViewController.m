@@ -43,7 +43,6 @@
          }
      }];
     
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {

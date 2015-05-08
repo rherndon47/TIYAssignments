@@ -17,6 +17,7 @@
 @interface PerformDetailViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *passedPFObject;
+@property (strong, nonatomic) NSString *allOrOneParameter;
 @property (nonatomic, weak) id<PerformDetailDelegate> delegate;
 
 @end
