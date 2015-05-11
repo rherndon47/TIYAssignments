@@ -7,6 +7,7 @@
 //
 
 #import "PerformDetailViewController.h"
+#import "PerformExercisesTableViewController.h"
 
 @interface PerformDetailViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *exerciseName;
@@ -40,16 +41,22 @@
     NSLog(@"PerformDetail - entered viewDidLoad");
     self.navigationItem.title = @"Perform Exercise";
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
-    
     NSLog(@"passedPFObject %@",self.passedPFObject);
     
     if ([self.allOrOneParameter isEqualToString:@"all"])
     {
+        if (self.passedExerciseIndex < [self.passedExerciseObjectsArray count])
+        {
+            [self readExercise];
+            self.passedExerciseIndex = self.passedExerciseIndex + 1;
+        }
         
     }
-    
-    [self readCurrentExercise];
+    else
+    {
+//        [self readCurrentExercise];
+        [self readExercise];
+    }
     
 }
 
@@ -57,13 +64,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//#pragma mark = Perform all Exercises
-//
-//-(void)performAllExercises
-//{
-//    NSLog(@"Entered performAllExercises");
-//}
 
 #pragma mark - IBAction methods
 
@@ -98,34 +98,48 @@
     exerciseStopTime = stopDateString;
     
     [self saveExerciseLog];
+    
 }
 
 #pragma mark - Data Methods
 
-- (void)readCurrentExercise
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
-    [query whereKey:@"exerciseName" equalTo:self.passedPFObject];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-     {
-         if (!error)
-         {
-             self.exerciseName.text = [objects[0] objectForKey:@"exerciseName"];
-             self.exerciseNotes.text = [objects[0] objectForKey:@"exerciseNotes"];
-             
-             self.exerciseReps.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseReps"]];
-             self.exerciseWeight.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseWeight"]];
-             self.exerciseLengthOfTime.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseLengthOfTime"]];
-             self.exerciseSpeed.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseSpeed"]];
-             self.exerciseDistance.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseDistance"]];
+//- (void)readCurrentExercise
+//{
+//    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
+//    [query whereKey:@"exerciseName" equalTo:self.passedPFObject];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+//     {
+//         if (!error)
+//         {
+//             self.exerciseName.text = [objects[0] objectForKey:@"exerciseName"];
+//             self.exerciseNotes.text = [objects[0] objectForKey:@"exerciseNotes"];
+//             
+//             self.exerciseReps.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseReps"]];
+//             self.exerciseWeight.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseWeight"]];
+//             self.exerciseLengthOfTime.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseLengthOfTime"]];
+//             self.exerciseSpeed.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseSpeed"]];
+//             self.exerciseDistance.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseDistance"]];
+//         }
+//         else
+//         {
+//             NSLog(@"Error durining Exercise read: %@ %@", error, [error userInfo]);
+//         }
+//     }];
+//}
 
-            
-         }
-         else
-         {
-             NSLog(@"Error durining Exercise read: %@ %@", error, [error userInfo]);
-         }
-     }];
+- (void)readExercise
+{
+    // this method reads the exercise information from the passed array of objects and puts data on the view
+    
+    self.exerciseName.text = [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseName"];
+    self.exerciseNotes.text = [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseNotes"];
+             
+    self.exerciseReps.text = [NSString stringWithFormat:@"%@", [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseReps"]];
+    self.exerciseWeight.text = [NSString stringWithFormat:@"%@", [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseWeight"]];
+    self.exerciseLengthOfTime.text = [NSString stringWithFormat:@"%@", [self.passedExerciseObjectsArray[self.passedExerciseIndex]  objectForKey:@"exerciseLengthOfTime"]];
+    self.exerciseSpeed.text = [NSString stringWithFormat:@"%@", [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseSpeed"]];
+    self.exerciseDistance.text = [NSString stringWithFormat:@"%@", [self.passedExerciseObjectsArray[self.passedExerciseIndex] objectForKey:@"exerciseDistance"]];
+    
 }
 
 - (void)saveExerciseLog
@@ -160,7 +174,27 @@
 
     [exerciseObject saveInBackground];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([self.allOrOneParameter isEqualToString:@"one"])
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        if (self.passedExerciseIndex < [self.passedExerciseObjectsArray count])
+        {
+            [self readExercise];
+            self.passedExerciseIndex = self.passedExerciseIndex + 1;
+            [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
+        }
+        else
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
+//        [self.view setNeedsDisplay];
+
+    
+//
 }
 
 @end

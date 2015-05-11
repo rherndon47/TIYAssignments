@@ -10,9 +10,10 @@
 #import "FSLineChart.h"
 #import "UIColor+FSPalette.h"
 
-@interface AerobicGraphViewController ()
+@interface AerobicGraphViewController () 
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
+
 
 @end
 

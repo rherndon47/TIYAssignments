@@ -26,25 +26,21 @@
     [super viewDidLoad];
     
     self.exerciseArray = [[NSMutableArray alloc] init];
+    self.passedExerciseObjectsArray = [[NSMutableArray alloc] init];
+    self.passedExerciseIndex = 0;
     
     NSLog(@"Entering ViewDidLoad %@",self.passedPFObject);
     
     self.navigationItem.title = self.passedPFObject[@"regimentName"];
     
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
     
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
     [self getExerciseNames];
 
-    
-        
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,10 +53,15 @@
 
 -(void)performAllExercises
 {
+    // user has clicked on the all button and wants to view each individual exercise without coming back to the table view
+    
     NSLog(@"Entered performAllExercises");
     PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
-    destVC.allOrOneParameter = @"all";
+    self.passedExerciseIndex = 0;
+    destVC.allOrOneParameter = @"all";  // Telling PerformDetailView to perform all of the exercises in passedPFObjectArray
     destVC.passedPFObject = self.passedPFObject;
+    destVC.passedExerciseIndex = self.passedExerciseIndex;
+    destVC.passedExerciseObjectsArray = self.passedExerciseObjectsArray;
     
     [self.navigationController pushViewController:destVC animated:YES];
 }
@@ -105,66 +106,13 @@
     
     PerformDetailViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"performDetailView"];
     destVC.passedPFObject = self.exerciseArray[indexPath.row];
-    destVC.allOrOneParameter = @"one";
+    destVC.passedExerciseObjectsArray = self.passedExerciseObjectsArray;
+    destVC.passedExerciseIndex = indexPath.row;
+    destVC.allOrOneParameter = @"one";  // telling PerformDetailView to only perform this one exercise
     
     [self.navigationController pushViewController:destVC animated:YES];
     
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"performExerciseSeque"])
-//    {
-//        PerformDetailViewController *destVC = (PerformDetailViewController *)[segue destinationViewController];
-//        
-//        destVC.passedPFObject = self.passedPFObject;
-//        
-////        destVC.delegate = self;
-//        //        [self.navigationController pushViewController:destVC animated:YES];
-//        
-//    }
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
-
 
 #pragma mark - getExerciseNames
 
@@ -188,6 +136,7 @@
             NSString *aName = aExercise[@"exerciseName"];
             NSLog(@"aName %@",aName);
             self.exerciseArray[i] = aName;
+            self.passedExerciseObjectsArray[i] = result[i];
         }
         [self.tableView reloadData];
     }];

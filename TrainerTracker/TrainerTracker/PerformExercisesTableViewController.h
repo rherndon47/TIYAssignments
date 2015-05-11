@@ -22,6 +22,8 @@
 @interface PerformExercisesTableViewController : UITableViewController
 
 @property (strong, nonatomic) PFObject *passedPFObject;
+@property (strong, nonatomic) NSMutableArray *passedExerciseObjectsArray;
+@property int passedExerciseIndex;
 @property (strong, nonatomic) NSString *allOrOneParameter;
 @property (nonatomic, weak) id<PerformDetailViewDelegate> delegate;
 
