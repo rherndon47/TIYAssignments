@@ -72,6 +72,9 @@
     UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
     UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
     
+//        UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
+//        UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
+    
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
     else
@@ -90,11 +93,37 @@
     secondViewController.passedPFObject = self.regimentArray[indexPath.row];
     secondViewController.delegate = self;
     [self.navigationController pushViewController:secondViewController animated:YES];
-    
-//    PerformExercisesTableViewController *viewControllerB = [[PerformExercisesTableViewController alloc] initWithNib:@"PerformExercisesTableViewController" bundle:nil];
-//    PerformExercisesTableViewController.passedPFObject = self.regimentArray[indexPath.row];
-//
-//    [self pushViewController:PerformExercisesTableViewController animated:YES];
+
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        PFQuery *query = [PFQuery queryWithClassName:@"Regiments"];
+        
+        NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"regimentName"];
+        
+        [query whereKey:@"regimentName" equalTo:name];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+         {
+             
+             NSLog(@"placeholder %@", query);
+             //             NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
+             
+             [objects[0] deleteInBackground];
+             [self.regimentArray removeObject:self.regimentArray[indexPath.row] ];
+             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+             [self.tableView reloadData];
+             
+         }];
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert)
+    {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
 }
 /*
 // Override to support conditional editing of the table view.

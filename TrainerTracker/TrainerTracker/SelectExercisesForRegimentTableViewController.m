@@ -25,6 +25,39 @@
     
     self.selectedExercisesArray = [[NSMutableArray alloc] init];
     
+//    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
+//    
+//    [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+//     {
+//         if (!error)
+//         {
+//             
+//             self.regimentArray = [[NSMutableArray alloc] init];
+//             [self.regimentArray addObjectsFromArray:objects];
+//             [self.tableView reloadData];
+//             
+//         }
+//         else
+//         {
+//             NSLog(@"Error reading exercise records: %@", [error userInfo]);
+//         }
+//     }];
+    [self readInRegimentData];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)readInRegimentData
+{
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
@@ -42,17 +75,6 @@
              NSLog(@"Error reading exercise records: %@", [error userInfo]);
          }
      }];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -71,13 +93,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"regimentsCells" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.451 green:0.82 blue:0.408 alpha:1]; /*#73d168*/
-    UIColor *cellColor2 = [UIColor colorWithRed:0.322 green:0.796 blue:0.412 alpha:1]; /*#52cb69*/
+//    UIColor *cellColor = [UIColor colorWithRed:0.451 green:0.82 blue:0.408 alpha:1]; /*#73d168*/
+//    UIColor *cellColor2 = [UIColor colorWithRed:0.322 green:0.796 blue:0.412 alpha:1]; /*#52cb69*/
+    
+    UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
+    UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
+
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
     else
         [cell setBackgroundColor:cellColor2];
+    
+    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
+    {
+        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+    }
 
     
     NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"exerciseName"];
@@ -180,6 +211,8 @@
     
     [exerciseObject saveInBackground];
     
+    [self readInRegimentData];
+    
     [self.tableView reloadData];
 //    [self.selectedExercisesArray removeAllObjects];
 
@@ -189,6 +222,7 @@
 {
     NSLog(@"PopoverCanceled");
     [self dismissViewControllerAnimated:NO completion:nil];
+    [self readInRegimentData];
 }
 
 @end

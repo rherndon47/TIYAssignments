@@ -55,6 +55,16 @@
     NSLog(@"Entered updateExercise");
     PFObject *exerciseObject = [PFObject objectWithClassName:@"Exercise"];
     
+//    NSString *temp = [exerciseObject objectForKey:@"objectId"];
+//    NSLog(@"objectId: %@",temp);
+//    [exerciseObject getObjectInBackgroundWithId:[exerciseObject objectForKey:@"objectId"]
+//                                 block:^(PFObject *exerciseObject, NSError *error)
+//    {
+                                     // Now let's update it with some new data. In this case, only cheatMode and score
+                                     // will get sent to the cloud. playerName hasn't changed.
+
+                                     
+        
     exerciseObject[@"exerciseName"] = self.exerciseName.text;
     exerciseObject[@"exerciseNotes"] = self.exerciseNotes.text;
     
@@ -77,6 +87,7 @@
     [exerciseObject saveInBackground];
     
     [self.navigationController popViewControllerAnimated:YES];
+//        }];
 }
 
 /*

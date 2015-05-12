@@ -103,29 +103,6 @@
 
 #pragma mark - Data Methods
 
-//- (void)readCurrentExercise
-//{
-//    PFQuery *query = [PFQuery queryWithClassName:@"Exercise"];
-//    [query whereKey:@"exerciseName" equalTo:self.passedPFObject];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-//     {
-//         if (!error)
-//         {
-//             self.exerciseName.text = [objects[0] objectForKey:@"exerciseName"];
-//             self.exerciseNotes.text = [objects[0] objectForKey:@"exerciseNotes"];
-//             
-//             self.exerciseReps.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseReps"]];
-//             self.exerciseWeight.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseWeight"]];
-//             self.exerciseLengthOfTime.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseLengthOfTime"]];
-//             self.exerciseSpeed.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseSpeed"]];
-//             self.exerciseDistance.text = [NSString stringWithFormat:@"%@", [objects[0] objectForKey:@"exerciseDistance"]];
-//         }
-//         else
-//         {
-//             NSLog(@"Error durining Exercise read: %@ %@", error, [error userInfo]);
-//         }
-//     }];
-//}
 
 - (void)readExercise
 {
@@ -191,10 +168,7 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
     }
-//        [self.view setNeedsDisplay];
 
-    
-//
 }
 
 @end
