@@ -19,9 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
+    self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
 
     // Do any additional setup after loading the view, typically from a nib.
 }

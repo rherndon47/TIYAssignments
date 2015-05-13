@@ -24,6 +24,8 @@
     
     self.navigationItem.title = @"Aerobic Exercises";
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
+    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
     [queryExercise whereKey:@"typeOfExercise" equalTo:@"Aerobic"];

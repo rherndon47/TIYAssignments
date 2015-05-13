@@ -25,30 +25,9 @@
     
     self.selectedExercisesArray = [[NSMutableArray alloc] init];
     
-//    PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
-//    
-//    [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-//     {
-//         if (!error)
-//         {
-//             
-//             self.regimentArray = [[NSMutableArray alloc] init];
-//             [self.regimentArray addObjectsFromArray:objects];
-//             [self.tableView reloadData];
-//             
-//         }
-//         else
-//         {
-//             NSLog(@"Error reading exercise records: %@", [error userInfo]);
-//         }
-//     }];
+
     [self readInRegimentData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
