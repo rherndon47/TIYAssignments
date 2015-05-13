@@ -29,6 +29,9 @@ typedef NSString *(^FSLabelForIndexGetter)(NSUInteger index);
 // Same as above, but for the value (for adding a currency, or a unit symbol for example)
 typedef NSString *(^FSLabelForValueGetter)(CGFloat value);
 
+// Title of Chart -  Added by RLH
+@property (nonatomic, readwrite) NSString *graphTitle;
+
 // Number of visible step in the chart
 @property (nonatomic, readwrite) int gridStep;
 

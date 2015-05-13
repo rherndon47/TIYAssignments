@@ -20,6 +20,7 @@
 {
     NSMutableArray *exerciseRepsArray;
     NSMutableArray *exerciseWeightArray;
+    NSString *graphTitle;
 }
 
 - (void)viewDidLoad
@@ -68,8 +69,8 @@
              }
              
              dispatch_async(dispatch_get_main_queue(), ^{
-                 [self.view addSubview:[self chart1]];
-                 [self.view addSubview:[self chart2]];
+                 [self.view addSubview:[self chart1]];  // Reps
+                 [self.view addSubview:[self chart2]];  // Weight
              });
              
          }
@@ -82,9 +83,10 @@
 
 #pragma mark - Creating the charts
 
--(FSLineChart*)chart1
+-(FSLineChart *)chart1
 {
-    // Generating some dummy data
+    // moving how many reps performed to be graphed
+    
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseRepsArray count]];
     
     for(int i=0;i<[exerciseRepsArray count];i++)
@@ -93,7 +95,9 @@
     }
     
     // Creating the line chart
-    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    
+    lineChart.graphTitle = @"Replications"; // Added by RLH
     
     lineChart.gridStep = 2;
     
@@ -112,10 +116,11 @@
     return lineChart;
 }
 
--(FSLineChart*)chart2
+-(FSLineChart *)chart2
 {
-    // Generating some dummy data
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseWeightArray count]];
+    // moving how much weight used to be graphed
+    
+    NSMutableArray *chartData = [NSMutableArray arrayWithCapacity:[exerciseWeightArray count]];
     
     for(int i=0;i<[exerciseWeightArray count];i++)
     {
@@ -123,8 +128,9 @@
     }
     
     // Creating the line chart
-    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 260, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 260, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
+    lineChart.graphTitle = @"Weight"; // Added by RLH
     lineChart.gridStep = 3;
     lineChart.color = [UIColor fsOrange];
     

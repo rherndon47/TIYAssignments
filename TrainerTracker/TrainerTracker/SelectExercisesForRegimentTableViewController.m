@@ -43,8 +43,11 @@
      {
          if (!error)
          {
+             if (self.regimentArray == nil)
+             {
+                 self.regimentArray = [[NSMutableArray alloc] init];
+             }
              
-             self.regimentArray = [[NSMutableArray alloc] init];
              [self.regimentArray addObjectsFromArray:objects];
              [self.tableView reloadData];
              
@@ -72,12 +75,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"regimentsCells" forIndexPath:indexPath];
     
-//    UIColor *cellColor = [UIColor colorWithRed:0.451 green:0.82 blue:0.408 alpha:1]; /*#73d168*/
-//    UIColor *cellColor2 = [UIColor colorWithRed:0.322 green:0.796 blue:0.412 alpha:1]; /*#52cb69*/
-    
     UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
     UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
-
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
@@ -89,7 +88,6 @@
         [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
     }
 
-    
     NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"exerciseName"];
 
     cell.regimentNameLabel.text = name;
@@ -110,59 +108,16 @@
 
         PFObject *aRegiment = self.regimentArray[indexPath.row];
         NSString *aObjectId = aRegiment.objectId;
+    
         [self.selectedExercisesArray addObject:aObjectId];
     }
 
 }
 
-//- (void)clearCheckmarks
-//{
-//    int i = 0;
-//    for (NSString * in self.regimentArray)
-//    {
-//        [UITableView cellForRowAtIndexPath:i].accessoryType = UITableViewCellAccessoryNone;
-//
-//    }
-//}
-
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
 {
     return UIModalPresentationNone;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Navigation
 
@@ -201,7 +156,35 @@
 {
     NSLog(@"PopoverCanceled");
     [self dismissViewControllerAnimated:NO completion:nil];
+    
+//    [self clearCheckMarks];
+    
     [self readInRegimentData];
+    
+    
+    [self.tableView reloadData];
+}
+
+- (void)clearCheckMarks
+{
+    
+//    for (NSIndexPath *indexPath in [[NSUserDefaults standardUserDefaults] mutableArrayValueForKey:@"mySavedMutableArray"])
+
+//        for (int section = 0, sectionCount = self.tableView.numberOfSections; section < sectionCount; ++section)
+//        {
+    for (int row = 0;  row < [self.regimentArray count]; ++row)
+            {
+                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:1]];
+                
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.accessoryView = nil;
+            }
+//        }
+//    }
+
+    [self.regimentArray removeAllObjects];
+    [self.selectedExercisesArray removeAllObjects];
+    [self.tableView reloadData];
 }
 
 @end
