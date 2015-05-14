@@ -33,13 +33,11 @@
     
     [self readWeightExercises];
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma marks - Data Methods
@@ -48,7 +46,6 @@
 {
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"ExerciseLog"];
 
-    NSLog(@"selectedExerciseName %@", self.selectedExerciseName);
     [queryExercise whereKey:@"exerciseName" equalTo:self.selectedExerciseName];
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)

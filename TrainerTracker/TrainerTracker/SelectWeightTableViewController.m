@@ -26,8 +26,6 @@
     
     self.tableView.backgroundColor = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
     
-    NSLog(@"Entered SelectWeight - viewDidLoad");
-    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
     [queryExercise whereKey:@"typeOfExercise" equalTo:@"Weight"];
@@ -45,12 +43,6 @@
              NSLog(@"Error reading exercise records: %@", [error userInfo]);
          }
      }];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -113,56 +105,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    WeightGraphExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weightGraphExerciseCell" forIndexPath:indexPath];
-    
 
     self.selectedExerciseName = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
-
-    
-//    WeightGraphExerciseTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    NSLog(@"weightExerciseCell %@",cell.reuseIdentifier);
-//    
-//    WeightGraphViewController *destVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"WeightGraphViewController"];
-//    destVC.passedPFObject = self.exerciseArray[indexPath.row];
-//    
-//    [self.navigationController pushViewController:destVC animated:YES];
     
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 
@@ -174,7 +120,6 @@
         
         WeightGraphViewController *performExerciseVC = (WeightGraphViewController *)[segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-//        NSString *name = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
         
         performExerciseVC.selectedExerciseName = [self.exerciseArray[indexPath.row] objectForKey:@"exerciseName"];
         

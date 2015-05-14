@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     self.regimentNameLabel.text = @"";
+    self.checkBoxButton.image = [UIImage imageNamed:@"Unchecked.png"];
 }
 
 @end

@@ -10,6 +10,7 @@
 
 @interface RegimentTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *checkBoxButton;
 @property (weak, nonatomic) IBOutlet UILabel *regimentNameLabel;
 
 @end

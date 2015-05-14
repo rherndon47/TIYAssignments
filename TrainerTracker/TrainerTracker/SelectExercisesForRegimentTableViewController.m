@@ -15,7 +15,6 @@
 @property (strong, nonatomic) NSMutableArray *regimentArray;
 @property (strong, nonatomic) NSMutableArray *selectedExercisesArray;
 
-
 @end
 
 @implementation SelectExercisesForRegimentTableViewController
@@ -59,19 +58,22 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     // Return the number of rows in the section.
     return [self.regimentArray count];
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     RegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"regimentsCells" forIndexPath:indexPath];
+    cell.checkBoxButton.image = [UIImage imageNamed:@"Unchecked.png"];
     
     UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
     UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
@@ -80,11 +82,6 @@
         [cell setBackgroundColor:cellColor];
     else
         [cell setBackgroundColor:cellColor2];
-    
-    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
-    {
-        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-    }
 
     NSString *name = [self.regimentArray[indexPath.row] objectForKey:@"exerciseName"];
 
@@ -95,20 +92,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
+    RegimentTableViewCell *cell = (RegimentTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    PFObject *aRegiment = self.regimentArray[indexPath.row];
+    NSString *aObjectId = aRegiment.objectId;
+    if ([self.selectedExercisesArray containsObject:aObjectId])
     {
-        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+        cell.checkBoxButton.image = [UIImage imageNamed:@"Unchecked.png"];
+        [self.selectedExercisesArray removeObject:aObjectId];
     }
     else
     {
-        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-
-        PFObject *aRegiment = self.regimentArray[indexPath.row];
-        NSString *aObjectId = aRegiment.objectId;
-    
+        cell.checkBoxButton.image = [UIImage imageNamed:@"Checked.png"];
         [self.selectedExercisesArray addObject:aObjectId];
     }
+    
+    UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
+    UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
+    UIView *bgColorView = [[UIView alloc] init];
+    if( [indexPath row] % 2)
+        [bgColorView setBackgroundColor:cellColor];
+    else
+        [bgColorView setBackgroundColor:cellColor2];
+    
+    [cell setSelectedBackgroundView:bgColorView];
 
 }
 
@@ -143,8 +149,6 @@
     
     [exerciseObject saveInBackground];
     
-    [self readInRegimentData];
-    
     [self.tableView reloadData];
     [self.selectedExercisesArray removeAllObjects];
 
@@ -152,36 +156,10 @@
 
 - (void)PopoverCanceled:(NSString *)regimentName
 {
-    NSLog(@"PopoverCanceled");
     [self dismissViewControllerAnimated:NO completion:nil];
     
-//    [self clearCheckMarks];
-    
-    [self readInRegimentData];
     [self.selectedExercisesArray removeAllObjects];
     
-    [self.tableView reloadData];
-}
-
-- (void)clearCheckMarks
-{
-    
-//    for (NSIndexPath *indexPath in [[NSUserDefaults standardUserDefaults] mutableArrayValueForKey:@"mySavedMutableArray"])
-
-//        for (int section = 0, sectionCount = self.tableView.numberOfSections; section < sectionCount; ++section)
-//        {
-    for (int row = 0;  row < [self.regimentArray count]; ++row)
-            {
-                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:1]];
-                
-                cell.accessoryType = UITableViewCellAccessoryNone;
-                cell.accessoryView = nil;
-            }
-//        }
-//    }
-
-    [self.regimentArray removeAllObjects];
-    [self.selectedExercisesArray removeAllObjects];
     [self.tableView reloadData];
 }
 

@@ -28,8 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"Entered AerobicGraph - viewDidLoad");
-    
     self.navigationItem.title = self.selectedExerciseName;
     
     [self readWeightExercises];
@@ -47,8 +45,7 @@
 - (void)readWeightExercises
 {
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"ExerciseLog"];
-    
-    NSLog(@"selectedExerciseName %@", self.selectedExerciseName);
+
     [queryExercise whereKey:@"exerciseName" equalTo:self.selectedExerciseName];
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)

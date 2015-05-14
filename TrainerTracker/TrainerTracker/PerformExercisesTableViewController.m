@@ -39,8 +39,6 @@
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
     [self getExerciseNames];
-
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,15 +86,11 @@
     UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
     UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
     
-//    UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
-//    UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
-    
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
     else
         [cell setBackgroundColor:cellColor2];
 
-    
     cell.textLabel.text = self.exerciseArray[indexPath.row];
     
     return cell;
@@ -114,7 +108,6 @@
     destVC.allOrOneParameter = @"one";  // telling PerformDetailView to only perform this one exercise
     
     [self.navigationController pushViewController:destVC animated:YES];
-    
 }
 
 #pragma mark - getExerciseNames

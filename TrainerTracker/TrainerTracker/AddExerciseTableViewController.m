@@ -13,9 +13,6 @@
 #import "ExerciseCell.h"
 
 @interface AddExerciseTableViewController ()
-{
-    
-}
 
 @property (strong, nonatomic) NSMutableArray *exerciseArray;
 
@@ -70,7 +67,6 @@
              NSLog(@"Error reading exercise records: %@", [error userInfo]);
          }
      }];
-
     
 }
 
@@ -96,9 +92,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
-    
-//    UIColor *cellColor = [UIColor colorWithRed:0.906 green:0.745 blue:0.443 alpha:1]; /*E1AD07*/
-//    UIColor *cellColor2 = [UIColor colorWithRed:0.851 green:0.678 blue:0.051 alpha:1] /*#d9ad0d*/;
     
     UIColor *cellColor = [UIColor colorWithRed:0.522 green:0.341 blue:0.137 alpha:1] /*#855723*/;
     UIColor *cellColor2 = [UIColor colorWithRed:0.725 green:0.612 blue:0.42 alpha:1] /*#b99c6b*/;

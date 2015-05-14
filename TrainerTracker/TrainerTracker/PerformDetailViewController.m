@@ -50,14 +50,11 @@
             [self readExercise];
             self.passedExerciseIndex = self.passedExerciseIndex + 1;
         }
-        
     }
     else
     {
-//        [self readCurrentExercise];
         [self readExercise];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,7 +82,6 @@
     {
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
     }
-    
 }
 
 - (IBAction)completeExercise:(UIButton *)sender
@@ -98,11 +94,9 @@
     exerciseStopTime = stopDateString;
     
     [self saveExerciseLog];
-    
 }
 
 #pragma mark - Data Methods
-
 
 - (void)readExercise
 {
@@ -170,5 +164,4 @@
     }
 
 }
-
 @end
