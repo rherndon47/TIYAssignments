@@ -24,10 +24,8 @@
     [super viewDidLoad];
     
     self.selectedExercisesArray = [[NSMutableArray alloc] init];
-    
 
     [self readInRegimentData];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,7 +146,7 @@
     [self readInRegimentData];
     
     [self.tableView reloadData];
-//    [self.selectedExercisesArray removeAllObjects];
+    [self.selectedExercisesArray removeAllObjects];
 
 }
 
@@ -160,7 +158,7 @@
 //    [self clearCheckMarks];
     
     [self readInRegimentData];
-    
+    [self.selectedExercisesArray removeAllObjects];
     
     [self.tableView reloadData];
 }

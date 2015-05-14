@@ -32,7 +32,7 @@
 @property (nonatomic) CGFloat max;
 @property (nonatomic) CGMutablePathRef initialPath;
 @property (nonatomic) CGMutablePathRef newPath;
-@property (nonatomic) CGPoint titlePoint;
+
 
 @end
 
@@ -43,7 +43,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        self.titlePoint = frame.origin;  // added by rlh
         [self setDefaultParameters];
     }
     return self;
@@ -280,12 +279,11 @@
 
 - (void)addChartTitle
 {
-    NSLog(@"Entering addChartTitle");
+//
+//  Added this method to allow individual charts to have a label - Richard Herndon - 5/14/15
+//
     UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 14)];
-//    UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(self.titlePoint.x, self.titlePoint.y, self.frame.size.width, 14)];
-    NSLog(@"x: %f - y: %f frame.size.width: %f", self.titlePoint.x, self.titlePoint.y, self.frame.size.width);
     chartTitle.text = self.graphTitle;
-//    chartTitle.text = @"TempTitle";
     chartTitle.font = [UIFont boldSystemFontOfSize:10.0f];
     chartTitle.textColor = [UIColor grayColor];
     [self addSubview:chartTitle];
