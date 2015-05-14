@@ -55,11 +55,9 @@
      {
          if (!error)
          {
-//             PFObject *aExercise = [[PFObject alloc] init];
              exerciseRepsArray = [[NSMutableArray alloc] init];
              exerciseWeightArray = [[NSMutableArray alloc] init];
              
-//             [self.exerciseArray addObjectsFromArray:objects];
              for (int i=0; i<[objects count]; i++)
              {
                  PFObject *aExercise = objects[i];
@@ -97,7 +95,7 @@
     // Creating the line chart
     FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
-    lineChart.graphTitle = @"Replications"; // Added by RLH
+    lineChart.graphTitle = @"Replications";
     
     lineChart.gridStep = 2;
     
@@ -130,7 +128,7 @@
     // Creating the line chart
     FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 260, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
-    lineChart.graphTitle = @"Weight"; // Added by RLH
+    lineChart.graphTitle = @"Weight Lifted"; // Added by RLH
     lineChart.gridStep = 3;
     lineChart.color = [UIColor fsOrange];
     

@@ -22,6 +22,7 @@
     NSMutableArray *exerciseDistanceArray;
     NSMutableArray *exerciseLengthOfTimeArray;
     NSMutableArray *exerciseSpeedArray;
+    NSString *graphTitle;
 }
 
 - (void)viewDidLoad {
@@ -72,7 +73,7 @@
              dispatch_async(dispatch_get_main_queue(), ^{
                  [self.view addSubview:[self chart1]];
                  [self.view addSubview:[self chart2]];
-                 [self.view addSubview:[self chart3]];
+//                 [self.view addSubview:[self chart3]];
              });
              
          }
@@ -95,6 +96,7 @@
     
     // Creating the line chart
     FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    lineChart.graphTitle = @"Time (minutes)";
     
     lineChart.gridStep = 3;
     
@@ -111,7 +113,7 @@
     return lineChart;
 }
 
--(FSLineChart*)chart2 {
+-(FSLineChart*)chart3 {
     // Generating some dummy data
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseSpeedArray count]];
     
@@ -120,7 +122,8 @@
     }
     
     // Creating the line chart
-    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 250, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 440, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    lineChart.graphTitle = @"Speed (mph)";
     
     lineChart.gridStep = 3;
     
@@ -137,7 +140,7 @@
     return lineChart;
 }
 
--(FSLineChart*)chart3 {
+-(FSLineChart*)chart2 {
     // Generating some dummy data
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:[exerciseDistanceArray count]];
     
@@ -146,7 +149,9 @@
     }
     
     // Creating the line chart
-    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 440, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    FSLineChart* lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 250, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    
+    lineChart.graphTitle = @"Distance (miles)";
     
     lineChart.gridStep = 3;
     

@@ -18,6 +18,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//  Added the ability to pass a chart title to the graph - RLH - 5/14/15
 
 #import <QuartzCore/QuartzCore.h>
 #import "FSLineChart.h"
@@ -31,6 +32,7 @@
 @property (nonatomic) CGFloat max;
 @property (nonatomic) CGMutablePathRef initialPath;
 @property (nonatomic) CGMutablePathRef newPath;
+@property (nonatomic) CGPoint titlePoint;
 
 @end
 
@@ -41,6 +43,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
+        self.titlePoint = frame.origin;  // added by rlh
         [self setDefaultParameters];
     }
     return self;
@@ -52,6 +55,8 @@
     
     _min = MAXFLOAT;
     _max = -MAXFLOAT;
+    
+    [self addChartTitle];
     
     for(int i=0;i<_data.count;i++) {
         NSNumber* number = _data[i];
@@ -271,6 +276,19 @@
     _axisWidth = self.frame.size.width - 2 * _margin;
     _axisHeight = self.frame.size.height - 2 * _margin;
     _axisColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+}
+
+- (void)addChartTitle
+{
+    NSLog(@"Entering addChartTitle");
+    UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 14)];
+//    UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(self.titlePoint.x, self.titlePoint.y, self.frame.size.width, 14)];
+    NSLog(@"x: %f - y: %f frame.size.width: %f", self.titlePoint.x, self.titlePoint.y, self.frame.size.width);
+    chartTitle.text = self.graphTitle;
+//    chartTitle.text = @"TempTitle";
+    chartTitle.font = [UIFont boldSystemFontOfSize:10.0f];
+    chartTitle.textColor = [UIColor grayColor];
+    [self addSubview:chartTitle];
 }
 
 - (CGFloat)getUpperRoundNumber:(CGFloat)value forGridStep:(int)gridStep
