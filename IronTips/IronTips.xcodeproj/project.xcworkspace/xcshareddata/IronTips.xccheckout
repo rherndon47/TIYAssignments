@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F8AEE425-DB39-46D3-9401-C557E7A09021</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>IronTips</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IronTips/IronTips.xcodeproj/project.xcworkspace</string>
+	<string>IronTips/IronTips.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>

@@ -24,6 +24,8 @@
     
     self.navigationItem.title = @"Select Regiment";
     
+    self.view.backgroundColor = [UIColor colorWithRed:0.64 green:0.67 blue:0.70 alpha:1.0];
+    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Regiments"];
     
     [queryExercise findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
@@ -66,8 +68,9 @@
 {
     PerformRegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"performRegimentCell" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
-    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
+    UIColor *cellColor = [UIColor colorWithRed:0.64 green:0.67 blue:0.70 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.58 green:0.62 blue:0.65 alpha:1.0];
+
     
 //        UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
 //        UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;

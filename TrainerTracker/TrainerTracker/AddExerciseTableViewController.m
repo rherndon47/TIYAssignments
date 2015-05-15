@@ -25,6 +25,8 @@
     
     self.navigationItem.title = @"Add Exercises";
     
+    self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.64 blue:0.37 alpha:1.0];
+    
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
 
@@ -93,8 +95,11 @@
 {
     ExerciseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.522 green:0.341 blue:0.137 alpha:1] /*#855723*/;
-    UIColor *cellColor2 = [UIColor colorWithRed:0.725 green:0.612 blue:0.42 alpha:1] /*#b99c6b*/;
+    UIColor *cellColor = [UIColor colorWithRed:0.85 green:0.64 blue:0.37 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.80 green:0.59 blue:0.25 alpha:1.0];
+    
+//    UIColor *cellColor = [UIColor colorWithRed:0.522 green:0.341 blue:0.137 alpha:1] /*#855723*/;
+//    UIColor *cellColor2 = [UIColor colorWithRed:0.725 green:0.612 blue:0.42 alpha:1] /*#b99c6b*/;
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];

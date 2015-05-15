@@ -32,6 +32,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Exercise Detail";
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.64 blue:0.37 alpha:1.0];
+    
     // Do any additional setup after loading the view.
 }
 

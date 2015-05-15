@@ -38,8 +38,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"PerformDetail - entered viewDidLoad");
     self.navigationItem.title = @"Perform Exercise";
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.64 green:0.67 blue:0.70 alpha:1.0];
     
     NSLog(@"passedPFObject %@",self.passedPFObject);
     

@@ -24,7 +24,7 @@
     
     self.navigationItem.title = @"Weight Exercises";
     
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.81 green:0.63 blue:0.58 alpha:1.0];
     
     PFQuery *queryExercise = [PFQuery queryWithClassName:@"Exercise"];
     NSLog(@"queryExercise %@", queryExercise);
@@ -89,8 +89,8 @@
 {
     WeightGraphExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weightGraphExerciseCell" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.675 green:0.447 blue:0.137 alpha:1]; /*#ac7223*/
-    UIColor *cellColor2 = [UIColor colorWithRed:0.741 green:0.486 blue:0.161 alpha:1] /*#bd7c29*/;
+    UIColor *cellColor = [UIColor colorWithRed:0.81 green:0.63 blue:0.58 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.77 green:0.57 blue:0.54 alpha:1.0];
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];

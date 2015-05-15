@@ -32,7 +32,7 @@
     
     self.navigationItem.title = @"Update Exercise";
     
-    NSLog(@"passedPFObject %@",self.passedPFObject);
+    self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.64 blue:0.37 alpha:1.0];
 
     self.exerciseName.text = [self.passedPFObject objectForKey:@"exerciseName"];
     self.exerciseNotes.text = [self.passedPFObject objectForKey:@"exerciseNotes"];

@@ -25,16 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:0.64 green:0.67 blue:0.70 alpha:1.0];
+    
     self.exerciseArray = [[NSMutableArray alloc] init];
     self.passedExerciseObjectsArray = [[NSMutableArray alloc] init];
     self.passedExerciseIndex = 0;
     
-    NSLog(@"Entering ViewDidLoad %@",self.passedPFObject);
-    
     self.navigationItem.title = self.passedPFObject[@"regimentName"];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"All" style:UIBarButtonItemStylePlain target:self action:@selector(performAllExercises)];
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
     
     [self.tableView registerClass: [PerformExerciseTableViewCell class] forCellReuseIdentifier:@"ExerciseCell"];
     
@@ -83,9 +82,11 @@
 {
     PerformExerciseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExerciseCell" forIndexPath:indexPath];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
-    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
+    UIColor *cellColor = [UIColor colorWithRed:0.64 green:0.67 blue:0.70 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.58 green:0.62 blue:0.65 alpha:1.0];
     
+//    UIColor *cellColor = [UIColor colorWithRed:0.561 green:0.706 blue:0.82 alpha:1]; /*#8fb4d1*/
+//    UIColor *cellColor2 = [UIColor colorWithRed:0.451 green:0.569 blue:0.776 alpha:1]; /*#7391c6*/
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
     else

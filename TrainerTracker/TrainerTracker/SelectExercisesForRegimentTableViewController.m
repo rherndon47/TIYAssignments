@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:0.62 green:0.76 blue:0.51 alpha:1.0];
+    
     self.selectedExercisesArray = [[NSMutableArray alloc] init];
 
     [self readInRegimentData];
@@ -75,8 +77,8 @@
     RegimentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"regimentsCells" forIndexPath:indexPath];
     cell.checkBoxButton.image = [UIImage imageNamed:@"Unchecked.png"];
     
-    UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
-    UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
+    UIColor *cellColor = [UIColor colorWithRed:0.62 green:0.76 blue:0.51 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.57 green:0.72 blue:0.44 alpha:1.0];
     
     if( [indexPath row] % 2)
         [cell setBackgroundColor:cellColor];
@@ -106,8 +108,9 @@
         [self.selectedExercisesArray addObject:aObjectId];
     }
     
-    UIColor *cellColor = [UIColor colorWithRed:0.329 green:0.467 blue:0.188 alpha:1] /*#547730*/;
-    UIColor *cellColor2 = [UIColor colorWithRed:0.631 green:0.761 blue:0.451 alpha:1] /*#a1c273*/;
+    UIColor *cellColor = [UIColor colorWithRed:0.62 green:0.76 blue:0.51 alpha:1.0];
+    UIColor *cellColor2 = [UIColor colorWithRed:0.57 green:0.72 blue:0.44 alpha:1.0];
+    
     UIView *bgColorView = [[UIView alloc] init];
     if( [indexPath row] % 2)
         [bgColorView setBackgroundColor:cellColor];

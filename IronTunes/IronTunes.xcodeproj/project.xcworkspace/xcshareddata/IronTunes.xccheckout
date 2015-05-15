@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1C7EDD22-7C6F-441C-8DCD-150B13467BC0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>IronTunes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IronTunes/IronTunes.xcodeproj/project.xcworkspace</string>
+	<string>IronTunes/IronTunes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
