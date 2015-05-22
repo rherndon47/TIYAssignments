@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>17206F16-546E-4B67-AD9C-83F52C1EE4BC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>22 -- VenueMenu</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>22 -- VenueMenu/22 -- VenueMenu.xcodeproj</string>
+	<string>22 -- VenueMenu/22 -- VenueMenu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>

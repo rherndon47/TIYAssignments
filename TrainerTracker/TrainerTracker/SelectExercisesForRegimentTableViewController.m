@@ -153,7 +153,7 @@
     [exerciseObject saveInBackground];
     
     [self.tableView reloadData];
-    [self.selectedExercisesArray removeAllObjects];
+//    [self.selectedExercisesArray removeAllObjects];
 
 }
 

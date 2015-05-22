@@ -94,7 +94,7 @@
     
     lineChart.graphTitle = @"Replications";
     
-    lineChart.gridStep = 2;
+    lineChart.gridStep = 3;
     
     lineChart.labelForIndex = ^(NSUInteger item)
     {
@@ -103,7 +103,7 @@
     
     lineChart.labelForValue = ^(CGFloat value)
     {
-        return [NSString stringWithFormat:@"%.f", value*.1];
+        return [NSString stringWithFormat:@"%.f", value*.089];
     };
     
     [lineChart setChartData:chartData];
