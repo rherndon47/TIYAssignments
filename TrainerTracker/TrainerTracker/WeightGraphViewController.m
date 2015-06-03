@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:0.81 green:0.63 blue:0.58 alpha:1.0];
+    
     self.navigationItem.title = self.selectedExerciseName;
     
     [self readWeightExercises];
@@ -88,7 +90,7 @@
     }
     
     // Creating the line chart
-    FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 60, [UIScreen mainScreen].bounds.size.width - 40, 166)];
+    FSLineChart *lineChart = [[FSLineChart alloc] initWithFrame:CGRectMake(20, 75, [UIScreen mainScreen].bounds.size.width - 40, 166)];
     
     lineChart.graphTitle = @"Replications";
     
