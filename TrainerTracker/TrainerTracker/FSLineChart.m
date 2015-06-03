@@ -280,7 +280,7 @@
 - (void)addChartTitle
 {
 //
-//  Added this method to allow individual charts to have a label - Richard Herndon - 5/14/15
+//  Added this method to allow individual charts to have a Title - Richard Herndon - 5/14/15
 //
     UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 14)];
     chartTitle.text = self.graphTitle;

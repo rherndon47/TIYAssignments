@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B8175BAB-B137-41E9-B7D2-0704CA8F973F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TrainerTracker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TrainerTracker/TrainerTracker.xcodeproj/project.xcworkspace</string>
+	<string>TrainerTracker/TrainerTracker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>

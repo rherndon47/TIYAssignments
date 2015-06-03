@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"Entered WeightGraph - viewDidLoad");
-    
     self.navigationItem.title = self.selectedExerciseName;
     
     [self readWeightExercises];
