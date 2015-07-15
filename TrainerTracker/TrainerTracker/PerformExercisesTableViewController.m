@@ -46,6 +46,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1000);
+}
+
 #pragma mark = Perform all Exercises
 
 -(void)performAllExercises

@@ -173,6 +173,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE237AD41B4C8279000A686F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE76D8BE1AED65E200D3FA3C /* AddExerciseTableViewController.h */,
+				EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */,
+				EE76D8C41AEE946F00D3FA3C /* AddExerciseViewController.h */,
+				EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */,
+				28711C161AF6A94C00C060F0 /* UpdateExerciseViewController.h */,
+				28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */,
+				EE63B19F1AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.h */,
+				EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */,
+				EE63B1A71AF11E1400CF1463 /* SaveRegimentPopoverViewController.h */,
+				EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */,
+				EE63B1AA1AF162C400CF1463 /* GetListRegimentsTableViewController.h */,
+				EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */,
+				EE63B1B01AF1733F00CF1463 /* PerformExercisesTableViewController.h */,
+				EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */,
+				28711C131AF69A7A00C060F0 /* PerformDetailViewController.h */,
+				28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */,
+				EE6C84F91AEBFC28009F5625 /* SelectGraphTypeViewController.h */,
+				EE6C84FA1AEBFC28009F5625 /* SelectGraphTypeViewController.m */,
+				EE4767E41AFA644F008C8D9D /* SelectWeightTableViewController.h */,
+				EE4767E51AFA644F008C8D9D /* SelectWeightTableViewController.m */,
+				EE4767E71AFA6474008C8D9D /* SelectAerobicTableViewController.h */,
+				EE4767E81AFA6474008C8D9D /* SelectAerobicTableViewController.m */,
+				EE0DDB461AFBFC44002EC131 /* AerobicGraphViewController.h */,
+				EE0DDB471AFBFC44002EC131 /* AerobicGraphViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		EE63B1A61AF0137400CF1463 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,37 +247,11 @@
 			children = (
 				EE6C84F61AEBFC28009F5625 /* AppDelegate.h */,
 				EE6C84F71AEBFC28009F5625 /* AppDelegate.m */,
-				EE63B1A61AF0137400CF1463 /* Custom Cells */,
-				EE76D8BE1AED65E200D3FA3C /* AddExerciseTableViewController.h */,
-				EE76D8BF1AED65E200D3FA3C /* AddExerciseTableViewController.m */,
-				EE76D8C41AEE946F00D3FA3C /* AddExerciseViewController.h */,
-				EE76D8C51AEE946F00D3FA3C /* AddExerciseViewController.m */,
-				28711C161AF6A94C00C060F0 /* UpdateExerciseViewController.h */,
-				28711C171AF6A94C00C060F0 /* UpdateExerciseViewController.m */,
-				EE63B19F1AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.h */,
-				EE63B1A01AF0014000CF1463 /* SelectExercisesForRegimentTableViewController.m */,
-				EE63B1A71AF11E1400CF1463 /* SaveRegimentPopoverViewController.h */,
-				EE63B1A81AF11E1400CF1463 /* SaveRegimentPopoverViewController.m */,
-				EE63B1AA1AF162C400CF1463 /* GetListRegimentsTableViewController.h */,
-				EE63B1AB1AF162C400CF1463 /* GetListRegimentsTableViewController.m */,
-				EE63B1B01AF1733F00CF1463 /* PerformExercisesTableViewController.h */,
-				EE63B1B11AF1733F00CF1463 /* PerformExercisesTableViewController.m */,
-				28711C131AF69A7A00C060F0 /* PerformDetailViewController.h */,
-				28711C141AF69A7A00C060F0 /* PerformDetailViewController.m */,
-				EE6C84F91AEBFC28009F5625 /* SelectGraphTypeViewController.h */,
-				EE6C84FA1AEBFC28009F5625 /* SelectGraphTypeViewController.m */,
-				EE4767E41AFA644F008C8D9D /* SelectWeightTableViewController.h */,
-				EE4767E51AFA644F008C8D9D /* SelectWeightTableViewController.m */,
-				EE4767E71AFA6474008C8D9D /* SelectAerobicTableViewController.h */,
-				EE4767E81AFA6474008C8D9D /* SelectAerobicTableViewController.m */,
 				EE4767F31AFAB3B4008C8D9D /* WeightGraphViewController.h */,
 				EE4767F41AFAB3B4008C8D9D /* WeightGraphViewController.m */,
-				EE0DDB461AFBFC44002EC131 /* AerobicGraphViewController.h */,
-				EE0DDB471AFBFC44002EC131 /* AerobicGraphViewController.m */,
-				EE4767F91AFABD73008C8D9D /* UIColor+FSPalette.h */,
-				EE4767FA1AFABD73008C8D9D /* UIColor+FSPalette.m */,
-				EE4767F61AFABD5F008C8D9D /* FSLineChart.h */,
-				EE4767F71AFABD5F008C8D9D /* FSLineChart.m */,
+				EE9A70AE1B4AD2B3009CE2A7 /* FSLineChart Library */,
+				EE63B1A61AF0137400CF1463 /* Custom Cells */,
+				EE237AD41B4C8279000A686F /* Controllers */,
 				EE63B1B61AF2AF8300CF1463 /* Main.storyboard */,
 				EE6C85021AEBFC28009F5625 /* Images.xcassets */,
 				EE6C85041AEBFC28009F5625 /* LaunchScreen.xib */,
@@ -305,6 +310,17 @@
 				EE6C851D1AEBFCFF009F5625 /* AudioToolbox.framework */,
 			);
 			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+		EE9A70AE1B4AD2B3009CE2A7 /* FSLineChart Library */ = {
+			isa = PBXGroup;
+			children = (
+				EE4767F91AFABD73008C8D9D /* UIColor+FSPalette.h */,
+				EE4767FA1AFABD73008C8D9D /* UIColor+FSPalette.m */,
+				EE4767F61AFABD5F008C8D9D /* FSLineChart.h */,
+				EE4767F71AFABD5F008C8D9D /* FSLineChart.m */,
+			);
+			name = "FSLineChart Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

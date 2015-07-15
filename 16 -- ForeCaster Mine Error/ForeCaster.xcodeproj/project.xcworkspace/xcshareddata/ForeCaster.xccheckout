@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C9145433-6655-43BA-831A-362A955F0855</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ForeCaster</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
 		<string>https://www.github.com/rherndon47/TIYAssignments.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>16 -- ForeCaster Mine Error/ForeCaster.xcodeproj/project.xcworkspace</string>
+	<string>16 -- ForeCaster Mine Error/ForeCaster.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81064F2B88941E7F0053AD61544A5ED301727517</key>
